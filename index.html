@@ -13,29 +13,131 @@
         <div class="container">
             <div class="header__nav">
                 <ul class="menu">
-                    <li class="leaf"><a href="#">Общая информация</a></li>
-                    <li class="leaf"><a href="#">Цели и тематика журнала</a></li>
-                    <li class="leaf"><a href="#">Индексирование</a></li>
-                    <li class="leaf"><a href="#">Редакционная коллегия</a></li>
-                    <li class="last leaf"><a href="#">Контакты</a></li>
+                    <li class="menu__item menu__item--lang">
+                        <nav class="menu__lang-switch" aria-label="Выбор языка">
+                            <a href="/ru" hreflang="ru" rel="alternate" class="menu__lang-link active" lang="ru"
+                                aria-current="page">ru</a>
+                            <a href="/en" hreflang="en" rel="alternate" class="menu__lang-link" lang="en">en</a>
+                        </nav>
+                    </li>
+                    <li class="menu__item menu__item--rating">
+                        <a href="#" class="menu__link" aria-label="Рейтинг">
+                            <img src="assets/icons/rating.svg" alt="rating">
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--search">
+                        <a href="#" class="menu__link" aria-label="Лупа">
+                            <img src="assets/icons/lupa.svg" alt="lupa">
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--menu">
+                        <a href="#" class="menu__link" aria-label="Меню">
+                            <img src="assets/icons/menu.svg" alt="menu">
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--login">
+                        <a href="#" class="menu__link" aria-label="Логин">
+                            <img src="assets/icons/login.svg" alt="login">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </header>
 
     <main class="main">
-        <section class="welcome">
+        <section class="hero">
             <div class="container">
-                <div class="welcome__info">
-                    <h2>ISSN 0869-6632 (Print) <br> ISSN 2542-1905 (Online)</h2>
-                    <h2>Известия высших <br> учебных заведений</h2>
-                    <div class="welcome__info-title">
+                <div class="hero__info">
+                    <div class="hero__text">
+                        <h2>ISSN 0869-6632 (Print) <br> ISSN 2542-1905 (Online)</h2>
+                        <h2>Известия высших <br> учебных заведений</h2>
+                    </div>
+                    <div class="hero__info-title">
                         <h1>Прикладная <br> нелинейная <br> динамика</h1>
                     </div>
-                    <div class="welcome__info-button">
-                        <div class="btn__red">ВЫПУСКИ</div>
-                        <div class="btn__white">ЗАГРУЗИТЬ СТАТЬЮ</div>
+                    <div class="hero__info-button">
+                        <div class="btn btn__red">ВЫПУСКИ</div>
+                        <div class="btn btn__white">ЗАГРУЗИТЬ СТАТЬЮ</div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="cards">
+                    <a href="#" class="card" data-bg-icon="icon-1.png">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#info"></use>
+                        </svg>
+                        <p>Общая информация</p>
+                    </a>
+                    <a href="#" class="card">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#book"></use>
+                        </svg>
+                        <p>Цели и тематика журнала</p>
+                    </a>
+                    <a href="#" class="card" data-bg-icon="icon-2.png">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#star"></use>
+                        </svg>
+                        <p>Индексирование</p>
+                    </a>
+                    <a href="#" class="card">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#pencil"></use>
+                        </svg>
+                        <p>Редакционная коллегия</p>
+                    </a>
+                    <a href="#" class="card">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#check_list"></use>
+                        </svg>
+                        <p>Правила представления рукописей</p>
+                    </a>
+                    <a href="#" class="card" data-bg-icon="icon-3.png">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#list"></use>
+                        </svg>
+                        <p>Порядок рецензирования рукописей</p>
+                    </a>
+                    <a href="#" class="card">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#contacts"></use>
+                        </svg>
+                        <p>Авторы</p>
+                    </a>
+                    <a href="#" class="card" data-bg-icon="icon-4.png">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#pen"></use>
+                        </svg>
+                        <p>Издательская этика</p>
+                    </a>
+                    <a href="#" class="card" data-bg-icon="icon-5.png">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#hesh"></use>
+                        </svg>
+                        <p>Рубрики</p>
+                    </a>
+                    <a href="#" class="card">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#speaker"></use>
+                        </svg>
+                        <p>Новости</p>
+                    </a>
+                    <a href="#" class="card" data-bg-icon="icon-6.png">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#handset"></use>
+                        </svg>
+                        <p>Контакты</p>
+                    </a>
+                    <a href="#" class="card">
+                        <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#key"></use>
+                        </svg>
+                        <p>Ранний доступ</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -45,6 +147,10 @@
 
     <footer class="footer">
         <div class="container">
+            <div class="footer__info">
+                <p>© 2013-2023 Дизайн и программное обеспечение сайта. ФГБОУ ВО «Саратовский национальный
+                    исследовательский государственный университет имени Н.Г. Чернышевского»</p>
+            </div>
         </div>
     </footer>
 </body>

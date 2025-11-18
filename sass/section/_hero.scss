@@ -1,0 +1,55 @@
+.hero {
+    overflow: hidden;
+    .container {
+        height: 75rem;
+        background-image: url('/assets/img/header.jpg');
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    &__text {
+        padding: 5.4rem 0 2.1rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14.5rem;
+
+        h2 {
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: $white;
+            margin: 0;
+        }
+    }
+
+    &__info {
+        padding-left: 18.5rem;
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            padding-bottom: 6rem;
+
+            h1 {
+                font-weight: 500;
+                font-size: 6.4rem;
+                line-height: 90%;
+                color: $white;
+            }
+        }
+
+
+
+
+        &-button {
+            display: flex;
+            gap: 20px;
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: 0.22em;
+        }
+    }
+}

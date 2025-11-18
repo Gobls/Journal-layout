@@ -1,5 +1,128 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 html {
   font-size: 0.694444444vw;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,73 +131,241 @@ body {
   background-color: #000;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  margin: 0;
+  color: #000;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .container {
-  width: 144rem;
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 .btn {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rem;
 }
 .btn__red {
-  background-color: #FF0000;
+  background-color: #FF4646;
   color: #FFF;
+  height: 6rem;
+  width: 18.2rem;
 }
 .btn__white {
   background-color: #FFF;
   color: #000;
+  height: 6rem;
+  width: 31.8rem;
 }
 
-.header .header__nav {
+.header__nav {
   width: 11rem;
   height: 75rem;
   background-color: #000;
   position: absolute;
 }
 
-.welcome .container {
+.footer .container {
+  height: 15.3rem;
+}
+.footer__info {
+  color: #FFF;
+  padding: 5.5rem 30rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.6rem;
+  opacity: 0.5;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+}
+.menu__item--lang {
+  padding-top: 4rem;
+}
+.menu__item--rating {
+  padding-top: 1.4rem;
+}
+.menu__item--search {
+  padding-top: 18rem;
+}
+.menu__item--menu {
+  padding-top: 5.7rem;
+}
+.menu__item--login {
+  padding-top: 20.5rem;
+}
+.menu__lang-link {
+  color: #727272;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.menu__lang-switch .active {
+  color: #FF4646;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4.4rem;
+  padding: 11rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 23.4rem;
+  position: relative;
+  background-image: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  mix-blend-mode: color-burn;
+  z-index: 1;
+  pointer-events: none;
+}
+.card[data-bg-icon="icon-1.png"]::before {
+  background-image: url(/assets/icons/background-card/icon-1.png);
+}
+.card[data-bg-icon="icon-2.png"]::before {
+  background-image: url(/assets/icons/background-card/icon-2.png);
+}
+.card[data-bg-icon="icon-3.png"]::before {
+  background-image: url(/assets/icons/background-card/icon-3.png);
+}
+.card[data-bg-icon="icon-4.png"]::before {
+  background-image: url(/assets/icons/background-card/icon-4.png);
+}
+.card[data-bg-icon="icon-5.png"]::before {
+  background-image: url(/assets/icons/background-card/icon-5.png);
+}
+.card[data-bg-icon="icon-6.png"]::before {
+  background-image: url(/assets/icons/background-card/icon-6.png);
+}
+.card p {
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 2rem 2.5rem 4rem 2.5rem;
+}
+.card__svg {
+  overflow: visible;
+  padding-top: 3.2rem;
+  padding-left: 2.5rem;
+  stroke: #FF4646;
+  fill: #FF4646;
+  width: 3.3rem;
+  height: 3.3rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (hover: hover) {
+  .card:hover {
+    background: #FF4646;
+    transition: all 0.5s ease;
+  }
+  .card:hover .card__svg {
+    stroke: #FFF;
+    fill: #FFF;
+    transition: all 0.5s ease;
+  }
+  .card:hover::before {
+    mix-blend-mode: overlay;
+  }
+  .card:hover p {
+    color: #FFF;
+    transition: all 0.5s ease;
+  }
+}
+
+.hero {
+  overflow: hidden;
+}
+.hero .container {
   height: 75rem;
   background-image: url("/assets/img/header.jpg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
+  overflow: hidden;
 }
-.welcome .welcome__info {
+.hero__text {
+  padding: 5.4rem 0 2.1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14.5rem;
+}
+.hero__text h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #FFF;
+  margin: 0;
+}
+.hero__info {
   padding-left: 18.5rem;
   display: flex;
   flex-direction: column;
 }
-.welcome .welcome__info h2 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 150%;
-  text-transform: uppercase;
-  color: #FFF;
+.hero__info-title {
+  padding-bottom: 6rem;
 }
-.welcome .welcome__info h1 {
-  font-family: "Montserrat";
-  font-style: normal;
+.hero__info-title h1 {
   font-weight: 500;
-  font-size: 64px;
-  line-height: 90.4%;
+  font-size: 6.4rem;
+  line-height: 90%;
   color: #FFF;
 }
-.welcome .welcome__info .welcome__info-button {
+.hero__info-button {
   display: flex;
   gap: 20px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.22em;
 }
-.welcome .welcome__info .welcome__info-button button {
-  width: 200px;
-  height: 50px;
-  background-color: #FFF;
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 150%;
-  text-transform: uppercase;
+
+.content .container {
+  height: 102rem;
+  background-color: aliceblue;
 }/*# sourceMappingURL=style.css.map */

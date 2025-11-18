@@ -1,0 +1,42 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+
+    &__item {
+        &--lang {
+            padding-top: 4rem;
+        }
+
+        &--rating {
+            padding-top: 1.4rem;
+        }
+
+        &--search {
+            padding-top: 18rem;
+        }
+
+        &--menu {
+            padding-top: 5.7rem;
+        }
+
+        &--login {
+            padding-top: 20.5rem;
+        }
+    }
+
+    &__lang {
+        &-link {
+            color: $gray;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        &-switch {
+            .active {
+                color: $red;
+            }
+        }
+    }
+}

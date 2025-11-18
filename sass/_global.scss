@@ -1,5 +1,8 @@
 html {
   font-size: 0.694444444vw;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -8,18 +11,61 @@ body {
   background-color: $dark;
 }
 
-.container {
-  width: 144rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
-.btn{
+a{
+  text-decoration: none;
+  color: $dark;
+}
+
+p {
+  margin: 0;
+  color: $dark;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.btn {
   cursor: pointer;
-  &__red{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rem;
+
+  &__red {
     background-color: $red;
     color: $white;
+    height: 6rem;
+    width: 18.2rem;
   }
-  &__white{
+
+  &__white {
     background-color: $white;
     color: $dark;
+    height: 6rem;
+    width: 31.8rem;
   }
 }

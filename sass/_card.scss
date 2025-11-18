@@ -1,0 +1,95 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.4rem;
+    padding: 11rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 23.4rem;
+    position: relative;
+    background-image: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        mix-blend-mode: color-burn;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &[data-bg-icon="icon-1.png"]::before {
+        background-image: url(/assets/icons/background-card/icon-1.png);
+    }
+
+    &[data-bg-icon="icon-2.png"]::before {
+        background-image: url(/assets/icons/background-card/icon-2.png);
+    }
+
+    &[data-bg-icon="icon-3.png"]::before {
+        background-image: url(/assets/icons/background-card/icon-3.png);
+    }
+
+    &[data-bg-icon="icon-4.png"]::before {
+        background-image: url(/assets/icons/background-card/icon-4.png);
+    }
+
+    &[data-bg-icon="icon-5.png"]::before {
+        background-image: url(/assets/icons/background-card/icon-5.png);
+    }
+
+    &[data-bg-icon="icon-6.png"]::before {
+        background-image: url(/assets/icons/background-card/icon-6.png);
+    }
+
+    p {
+        font-weight: 700;
+        font-size: 2rem;
+
+        padding: 2rem 2.5rem 4rem 2.5rem;
+    }
+
+
+    &__svg {
+        overflow: visible;
+        padding-top: 3.2rem;
+        padding-left: 2.5rem;
+        stroke: $red;
+        fill: $red;
+
+        width: 3.3rem;
+        height: 3.3rem;
+        object-fit: contain;
+    }
+
+    @media(hover: hover) {
+        &:hover {
+            background: $red;
+            transition: all 0.5s ease;
+
+            .card__svg{
+                stroke: $white;
+                fill: $white;
+                transition: all 0.5s ease;
+            }
+
+            &::before {
+                mix-blend-mode: overlay;
+            }
+
+            p {
+                color: $white;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+}
