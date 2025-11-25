@@ -1,6 +1,12 @@
 .content {
+    background-color: aliceblue;
     .container {
-        height: 102rem;
-        background-color: aliceblue;
+        width: 122rem;
+    }
+
+    @media (max-width: 48em) {
+        .container {
+            width: 45rem;
+        }
     }
 }

@@ -128,7 +128,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #282828;
 }
 
 h1,
@@ -143,12 +143,12 @@ h6 {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #282828;
 }
 
 p {
   margin: 0;
-  color: #000;
+  color: #282828;
 }
 
 ul {
@@ -164,7 +164,6 @@ ul li {
 
 .container {
   width: 100%;
-  max-width: 144rem;
   margin: 0 auto;
 }
 
@@ -175,36 +174,44 @@ ul li {
   justify-content: center;
   border-radius: 20rem;
 }
-.btn__red {
-  background-color: #FF4646;
+.btn__color {
+  background-color: #ee5656;
   color: #FFF;
   height: 6rem;
   width: 18.2rem;
 }
-.btn__white {
-  background-color: #FFF;
-  color: #000;
+.btn__gray {
+  background-color: #d8e0f5;
+  color: #282828;
   height: 6rem;
   width: 31.8rem;
 }
 
+@media (max-width: 48em) {
+  html {
+    font-size: 2.00833333vw;
+  }
+}
 .header__nav {
   width: 11rem;
   height: 75rem;
-  background-color: #000;
+  background-color: #282828;
   position: absolute;
 }
 
-.footer .container {
-  height: 15.3rem;
-}
 .footer__info {
-  color: #FFF;
   padding: 5.5rem 30rem;
   text-align: center;
   font-weight: 500;
   font-size: 1.6rem;
-  opacity: 0.5;
+}
+.footer__text {
+  color: #616571;
+}
+@media (max-width: 48em) {
+  .footer__info {
+    padding: 3.5rem 1.5rem;
+  }
 }
 
 .menu {
@@ -213,44 +220,71 @@ ul li {
   padding: 0;
   align-items: center;
 }
+.menu__svg {
+  fill: #d8e0f5;
+  width: 5rem;
+  height: 5rem;
+}
+.menu__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.menu__text {
+  color: #d8e0f5;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
 .menu__item--lang {
   padding-top: 4rem;
 }
 .menu__item--rating {
-  padding-top: 1.4rem;
+  padding-top: 3rem;
 }
 .menu__item--search {
-  padding-top: 18rem;
+  padding-top: 16rem;
 }
 .menu__item--menu {
-  padding-top: 5.7rem;
+  padding-top: 2rem;
 }
 .menu__item--login {
-  padding-top: 20.5rem;
+  padding-top: 16rem;
 }
 .menu__lang-link {
-  color: #727272;
+  color: #616571;
   font-weight: 700;
   font-size: 1.2rem;
 }
+.menu__lang-switch {
+  display: flex;
+  gap: 1rem;
+}
 .menu__lang-switch .active {
-  color: #FF4646;
+  color: #FFF;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 4.4rem;
-  padding: 11rem;
+  gap: 2rem;
+  padding: 10rem 0;
+}
+@media (max-width: 48em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 23.4rem;
+  height: 24rem;
+  width: 29rem;
   position: relative;
   background-image: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
+  border-radius: 1rem;
 }
 .card::before {
   content: "";
@@ -283,25 +317,22 @@ ul li {
 .card[data-bg-icon="icon-6.png"]::before {
   background-image: url(/assets/icons/background-card/icon-6.png);
 }
-.card p {
+.card__text {
   font-weight: 700;
-  font-size: 2rem;
-  padding: 2rem 2.5rem 4rem 2.5rem;
+  font-size: 2.6rem;
+  padding: 3rem;
 }
 .card__svg {
   overflow: visible;
-  padding-top: 3.2rem;
-  padding-left: 2.5rem;
-  stroke: #FF4646;
-  fill: #FF4646;
+  padding: 3rem 0 0 3rem;
+  stroke: #ee5656;
+  fill: #ee5656;
   width: 3.3rem;
   height: 3.3rem;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 @media (hover: hover) {
   .card:hover {
-    background: #FF4646;
+    background: #ee5656;
     transition: all 0.5s ease;
   }
   .card:hover .card__svg {
@@ -315,6 +346,19 @@ ul li {
   .card:hover p {
     color: #FFF;
     transition: all 0.5s ease;
+  }
+}
+@media (max-width: 48em) {
+  .card {
+    width: 21.5rem;
+    height: 21.5rem;
+  }
+  .card__text {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+  .card__svg {
+    padding: 1.5rem 0 0 1.5rem;
   }
 }
 
@@ -365,7 +409,14 @@ ul li {
   letter-spacing: 0.22em;
 }
 
-.content .container {
-  height: 102rem;
+.content {
   background-color: aliceblue;
+}
+.content .container {
+  width: 122rem;
+}
+@media (max-width: 48em) {
+  .content .container {
+    width: 45rem;
+  }
 }/*# sourceMappingURL=style.css.map */

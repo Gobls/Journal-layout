@@ -16,28 +16,37 @@
                     <li class="menu__item menu__item--lang">
                         <nav class="menu__lang-switch" aria-label="Выбор языка">
                             <a href="/ru" hreflang="ru" rel="alternate" class="menu__lang-link active" lang="ru"
-                                aria-current="page">ru</a>
+                                aria-current="page">рус</a>
                             <a href="/en" hreflang="en" rel="alternate" class="menu__lang-link" lang="en">en</a>
                         </nav>
                     </li>
-                    <li class="menu__item menu__item--rating">
-                        <a href="#" class="menu__link" aria-label="Рейтинг">
-                            <img src="assets/icons/rating.svg" alt="rating">
+                    <li class="menu__item menu__item--menu">
+                        <a href="#" class="menu__link" aria-label="Меню">
+                            <svg class="menu__svg">
+                                <use href="/assets/icons/sprite.svg#menu"></use>
+                            </svg>
                         </a>
                     </li>
                     <li class="menu__item menu__item--search">
                         <a href="#" class="menu__link" aria-label="Лупа">
-                            <img src="assets/icons/lupa.svg" alt="lupa">
+                            <svg class="menu__svg">
+                                <use href="/assets/icons/sprite.svg#search"></use>
+                            </svg>
                         </a>
                     </li>
-                    <li class="menu__item menu__item--menu">
-                        <a href="#" class="menu__link" aria-label="Меню">
-                            <img src="assets/icons/menu.svg" alt="menu">
+                    <li class="menu__item menu__item--rating">
+                        <a href="#" class="menu__link" aria-label="Рейтинг">
+                            <svg class="menu__svg">
+                                <use href="/assets/icons/sprite.svg#rating"></use>
+                            </svg>
                         </a>
                     </li>
                     <li class="menu__item menu__item--login">
                         <a href="#" class="menu__link" aria-label="Логин">
-                            <img src="assets/icons/login.svg" alt="login">
+                            <p class="menu__text">Войти</p>
+                            <svg class="menu__svg">
+                                <use href="/assets/icons/sprite.svg#login"></use>
+                            </svg>
                         </a>
                     </li>
                 </ul>
@@ -57,8 +66,8 @@
                         <h1>Прикладная <br> нелинейная <br> динамика</h1>
                     </div>
                     <div class="hero__info-button">
-                        <div class="btn btn__red">ВЫПУСКИ</div>
-                        <div class="btn btn__white">ЗАГРУЗИТЬ СТАТЬЮ</div>
+                        <div class="btn btn__color">ВЫПУСКИ</div>
+                        <div class="btn btn__gray">ЗАГРУЗИТЬ СТАТЬЮ</div>
                     </div>
                 </div>
             </div>
@@ -70,73 +79,73 @@
                         <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#info"></use>
                         </svg>
-                        <p>Общая информация</p>
+                        <p class="card__text">Общая информация</p>
                     </a>
                     <a href="#" class="card">
                         <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#book"></use>
                         </svg>
-                        <p>Цели и тематика журнала</p>
-                    </a>
-                    <a href="#" class="card" data-bg-icon="icon-2.png">
-                        <svg class="card__svg">
-                            <use href="/assets/icons/sprite.svg#star"></use>
-                        </svg>
-                        <p>Индексирование</p>
+                        <p class="card__text">Цели и тематика журнала</p>
                     </a>
                     <a href="#" class="card">
                         <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#star"></use>
+                        </svg>
+                        <p class="card__text">Индексирование</p>
+                    </a>
+                    <a href="#" class="card" data-bg-icon="icon-2.png">
+                        <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#pencil"></use>
                         </svg>
-                        <p>Редакционная коллегия</p>
+                        <p class="card__text">Редакционная коллегия</p>
                     </a>
                     <a href="#" class="card">
                         <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#check_list"></use>
                         </svg>
-                        <p>Правила представления рукописей</p>
+                        <p class="card__text">Правила представления рукописей</p>
                     </a>
                     <a href="#" class="card" data-bg-icon="icon-3.png">
                         <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#list"></use>
                         </svg>
-                        <p>Порядок рецензирования рукописей</p>
-                    </a>
-                    <a href="#" class="card">
-                        <svg class="card__svg">
-                            <use href="/assets/icons/sprite.svg#contacts"></use>
-                        </svg>
-                        <p>Авторы</p>
+                        <p class="card__text">Порядок рецензирования рукописей</p>
                     </a>
                     <a href="#" class="card" data-bg-icon="icon-4.png">
                         <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#contacts"></use>
+                        </svg>
+                        <p class="card__text">Авторы</p>
+                    </a>
+                    <a href="#" class="card">
+                        <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#pen"></use>
                         </svg>
-                        <p>Издательская этика</p>
+                        <p class="card__text">Издательская этика</p>
                     </a>
                     <a href="#" class="card" data-bg-icon="icon-5.png">
                         <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#hesh"></use>
                         </svg>
-                        <p>Рубрики</p>
+                        <p class="card__text">Рубрики</p>
                     </a>
                     <a href="#" class="card">
                         <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#speaker"></use>
                         </svg>
-                        <p>Новости</p>
-                    </a>
-                    <a href="#" class="card" data-bg-icon="icon-6.png">
-                        <svg class="card__svg">
-                            <use href="/assets/icons/sprite.svg#handset"></use>
-                        </svg>
-                        <p>Контакты</p>
+                        <p class="card__text">Новости</p>
                     </a>
                     <a href="#" class="card">
                         <svg class="card__svg">
+                            <use href="/assets/icons/sprite.svg#handset"></use>
+                        </svg>
+                        <p class="card__text">Контакты</p>
+                    </a>
+                    <a href="#" class="card" data-bg-icon="icon-6.png">
+                        <svg class="card__svg">
                             <use href="/assets/icons/sprite.svg#key"></use>
                         </svg>
-                        <p>Ранний доступ</p>
+                        <p class="card__text">Ранний доступ</p>
                     </a>
                 </div>
             </div>
@@ -148,8 +157,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__info">
-                <p>© 2013-2023 Дизайн и программное обеспечение сайта. ФГБОУ ВО «Саратовский национальный
-                    исследовательский государственный университет имени Н.Г. Чернышевского»</p>
+                <p class="footer__text">© 2013-2023 Дизайн и программное обеспечение сайта. ФГБОУ ВО «Саратовский
+                    национальный исследовательский государственный университет имени Н.Г. Чернышевского»</p>
             </div>
         </div>
     </footer>
