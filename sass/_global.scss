@@ -53,19 +53,13 @@ ul li {
   align-items: center;
   justify-content: center;
   border-radius: 20rem;
+  gap: 2rem;
+  transition: all 0.3s ease;
 
-  &__color {
-    background-color: $main;
-    color: $white;
-    height: 6rem;
-    width: 18.2rem;
-  }
-
-  &__gray {
-    background-color: $gray;
-    color: $dark;
-    height: 6rem;
-    width: 31.8rem;
+  @media(hover: hover) {
+    &:hover {
+      box-shadow: 0 0 3.5rem $main;
+    }
   }
 }
 

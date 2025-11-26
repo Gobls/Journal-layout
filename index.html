@@ -10,48 +10,42 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header__nav">
-                <ul class="menu">
-                    <li class="menu__item menu__item--lang">
-                        <nav class="menu__lang-switch" aria-label="Выбор языка">
-                            <a href="/ru" hreflang="ru" rel="alternate" class="menu__lang-link active" lang="ru"
-                                aria-current="page">рус</a>
-                            <a href="/en" hreflang="en" rel="alternate" class="menu__lang-link" lang="en">en</a>
-                        </nav>
-                    </li>
-                    <li class="menu__item menu__item--menu">
-                        <a href="#" class="menu__link" aria-label="Меню">
-                            <svg class="menu__svg">
-                                <use href="/assets/icons/sprite.svg#menu"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="menu__item menu__item--search">
-                        <a href="#" class="menu__link" aria-label="Лупа">
-                            <svg class="menu__svg">
-                                <use href="/assets/icons/sprite.svg#search"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="menu__item menu__item--rating">
-                        <a href="#" class="menu__link" aria-label="Рейтинг">
-                            <svg class="menu__svg">
-                                <use href="/assets/icons/sprite.svg#rating"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="menu__item menu__item--login">
-                        <a href="#" class="menu__link" aria-label="Логин">
-                            <p class="menu__text">Войти</p>
-                            <svg class="menu__svg">
-                                <use href="/assets/icons/sprite.svg#login"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <nav class="header__lang-switch" aria-label="Выбор языка">
+            <a href="/ru" hreflang="ru" rel="alternate" class="header__lang-link active" lang="ru"
+                aria-current="page">рус</a>
+            <a href="/en" hreflang="en" rel="alternate" class="header__lang-link" lang="en">en</a>
+        </nav>
+        <ul class="header__nav">
+            <li class="header__item">
+                <a href="#" class="header__link" aria-label="Меню">
+                    <svg class="header__svg">
+                        <use href="/assets/icons/sprite.svg#menu"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="header__item">
+                <a href="#" class="header__link" aria-label="Лупа">
+                    <svg class="header__svg">
+                        <use href="/assets/icons/sprite.svg#search"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="header__item">
+                <a href="#" class="header__link" aria-label="Рейтинг">
+                    <svg class="header__svg">
+                        <use href="/assets/icons/sprite.svg#rating"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="header__item">
+                <a href="#" class="header__link" aria-label="Логин">
+                    <p class="header__text">Войти</p>
+                    <svg class="header__svg">
+                        <use href="/assets/icons/sprite.svg#login"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
     </header>
 
     <main class="main">
@@ -66,8 +60,18 @@
                         <h1>Прикладная <br> нелинейная <br> динамика</h1>
                     </div>
                     <div class="hero__info-button">
-                        <div class="btn btn__color">ВЫПУСКИ</div>
-                        <div class="btn btn__gray">ЗАГРУЗИТЬ СТАТЬЮ</div>
+                        <div class="btn hero__info-button--color">
+                            <svg class="hero__svg">
+                                <use href="/assets/icons/sprite.svg#folder"></use>
+                            </svg>
+                            <span>ВЫПУСКИ</span>
+                        </div>
+                        <div class="btn hero__info-button--gray">
+                            <svg class="hero__svg">
+                                <use href="/assets/icons/sprite.svg#file"></use>
+                            </svg>
+                            <span>ЗАГРУЗИТЬ СТАТЬЮ</span>
+                        </div>
                     </div>
                 </div>
             </div>

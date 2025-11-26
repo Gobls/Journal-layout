@@ -1,8 +1,9 @@
 .hero {
     overflow: hidden;
+
     .container {
         height: 75rem;
-        background-image: url('/assets/img/header.jpg');
+        background-image: url('/assets/img/header.png');
         background-repeat: no-repeat;
         background-position: left top;
         background-size: cover;
@@ -16,13 +17,18 @@
         gap: 14.5rem;
 
         h2 {
-            font-weight: 300;
+            font-weight: 400;
             font-size: 2rem;
             line-height: 150%;
             text-transform: uppercase;
             color: $white;
             margin: 0;
         }
+    }
+
+    &__svg {
+        height: 3.5rem;
+        width: 3.5rem;
     }
 
     &__info {
@@ -41,15 +47,74 @@
             }
         }
 
-
-
-
         &-button {
             display: flex;
-            gap: 20px;
+            gap: 2rem;
             font-weight: 700;
-            font-size: 1.6rem;
-            letter-spacing: 0.22em;
+            font-size: 2rem;
+
+            &--color {
+                background-color: $main;
+                color: $white;
+                height: 9rem;
+                width: 32.7rem;
+
+                svg {
+                    stroke: $white;
+                }
+            }
+
+            &--gray {
+                background-color: $gray;
+                color: $dark;
+                height: 9rem;
+                width: 38.5rem;
+
+                svg {
+                    stroke: $dark;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 48em) {
+        .container {
+            height: 78rem;
+            background-position: center;
+        }
+
+        &__text {
+            text-align: center;
+            gap: 12.8rem;
+            padding: 4rem 0 1rem 0;
+        }
+
+        &__info {
+            padding: 0;
+
+            &-title {
+                text-align: center;
+                padding-bottom: 5rem;
+
+                h1 {
+                    font-size: 4.8rem;
+                }
+            }
+
+            &-button {
+                flex-direction: column;
+                align-items: center;
+
+                &--color {
+                    height: 9rem;
+                    width: 33rem;
+                }
+
+                &--gray {
+                    height: 9rem;
+                    width: 33rem;
+                }
+            }
         }
     }
 }
