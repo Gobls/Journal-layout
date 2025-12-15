@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="sass/style.css">
     <title>Journal</title>
+    <link rel="icon" type="image/svg" sizes="16x16" href="/assets/icons/favicon/favicon-16x16.svg">
+    <link rel="icon" type="image/svg" sizes="32x32" href="/assets/icons/favicon/favicon-32x32.svg">
+    <link rel="icon" type="image/svg" sizes="100x100" href="/assets/icons/favicon/favicon-100x100.svg">
+    <link rel="icon" type="image/svg" sizes="200x200" href="/assets/icons/favicon/favicon-200x200.svg">
 </head>
 
 <body>
@@ -49,23 +53,25 @@
                 </li>
             </ul>
 
-            <ul class="header__content-list">
+            <ul class="header__content-feed">
                 <li class="header__content-item">
                     <div class="header__content">
-                        <ul class="header__content-menu">
-                            <li><a href="#" class="header__content-link">Архив</a></li>
-                            <li><a href="#" class="header__content-link">Общая информация</a></li>
-                            <li><a href="#" class="header__content-link">Цели и тематика журнала</a></li>
-                            <li><a href="#" class="header__content-link">Индексирование</a></li>
-                            <li><a href="#" class="header__content-link">Правила предоставления рукописей</a></li>
-                            <li><a href="#" class="header__content-link">Порядок рецензирования рукописей</a></li>
-                            <li><a href="#" class="header__content-link">Авторы</a></li>
-                            <li><a href="#" class="header__content-link">Издательская этика</a></li>
-                            <li><a href="#" class="header__content-link">Рубрики</a></li>
-                            <li><a href="#" class="header__content-link">Новости</a></li>
-                            <li><a href="#" class="header__content-link">Контакты</a></li>
-                            <li><a href="#" class="header__content-link">Ранний доступ</a></li>
-                        </ul>
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">Архив</a></li>
+                                <li><a href="#" class="header__content-link">Общая информация</a></li>
+                                <li><a href="#" class="header__content-link">Цели и тематика журнала</a></li>
+                                <li><a href="#" class="header__content-link">Индексирование</a></li>
+                                <li><a href="#" class="header__content-link">Правила предоставления рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Порядок рецензирования рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Авторы</a></li>
+                                <li><a href="#" class="header__content-link">Издательская этика</a></li>
+                                <li><a href="#" class="header__content-link">Рубрики</a></li>
+                                <li><a href="#" class="header__content-link">Новости</a></li>
+                                <li><a href="#" class="header__content-link">Контакты</a></li>
+                                <li><a href="#" class="header__content-link">Ранний доступ</a></li>
+                            </ul>
+                        </div>
                         <svg class="header__content-close">
                             <use href="/assets/icons/sprite.svg#cross"></use>
                         </svg>
@@ -76,14 +82,16 @@
                         <div class="header__content-menu">
                             <div class="header__content-title">поиск по сайту</div>
                             <div class="header__content-field">
-                                <label class="header__content-label">Поиск по заголовку</label>
-                                <input type="text" class="header__content-form">
+                                <label class="header__content-label">По заголовку:</label>
+                                <input type="text" class="header__content-form" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
                             </div>
                             <div class="header__content-field">
-                                <label class="header__content-label">Поиск по заголовку</label>
+                                <label class="header__content-label">По ключевому слову:</label>
                                 <div class="header__input-wrap">
                                     <input type="text" class="header__content-form" placeholder="Выбрать из списка"
-                                        id="searchInput">
+                                        id="searchInput" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                        spellcheck="false">
                                     <div class="header__content-arrow"></div>
                                 </div>
                                 <div class="header__dropdown">
@@ -107,15 +115,17 @@
                 </li>
                 <li class="header__content-item">
                     <div class="header__content">
-                        <ul class="header__content-menu">
-                            <li><a href="#" class="header__content-link">WoS: 0.13</a></li>
-                            <li><a href="#" class="header__content-link">SCOPUS: 1.2</a></li>
-                            <li><a href="#" class="header__content-link">RSCI</a></li>
-                            <li><a href="#" class="header__content-link">РИНЦ: 0.626</a></li>
-                            <li><a href="#" class="header__content-link">Scimago: Q3</a></li>
-                            <li><a href="#" class="header__content-link">Список ВАК</a></li>
-                            <li><a href="#" class="header__content-link">Журналы СГУ</a></li>
-                        </ul>
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">WoS: 0.13</a></li>
+                                <li><a href="#" class="header__content-link">SCOPUS: 1.2</a></li>
+                                <li><a href="#" class="header__content-link">RSCI</a></li>
+                                <li><a href="#" class="header__content-link">РИНЦ: 0.626</a></li>
+                                <li><a href="#" class="header__content-link">Scimago: Q3</a></li>
+                                <li><a href="#" class="header__content-link">Список ВАК</a></li>
+                                <li><a href="#" class="header__content-link">Журналы СГУ</a></li>
+                            </ul>
+                        </div>
                         <svg class="header__content-close">
                             <use href="/assets/icons/sprite.svg#cross"></use>
                         </svg>
@@ -129,12 +139,14 @@
                                 <label class="header__content-label">Имя пользователя<span
                                         class="required-star">*</span>:</label>
                                 <input type="text" class="header__content-form" id="login-input"
-                                    placeholder="Введите логин">
+                                    placeholder="Введите логин" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
                             </div>
                             <div class="header__content-field">
                                 <label class="header__content-label">Пароль<span class="required-star">*</span>:</label>
                                 <input type="password" class="header__content-form" id="password-input"
-                                    placeholder="Введите пароль">
+                                    placeholder="Введите пароль" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
                             </div>
                             <div class="header__content-message" id="login-message"></div>
                             <div class="header__content-btn">

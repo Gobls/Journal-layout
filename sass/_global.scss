@@ -62,20 +62,39 @@ input::-ms-clear {
   align-items: center;
   justify-content: center;
   border-radius: 10rem;
+  transition: all 0.3s ease;
 
   &--main {
     background-color: $main;
     color: $white;
+
+    @media(hover: hover) {
+      &:hover {
+        background-color: $main-hover;
+      }
+    }
   }
 
   &--gray {
     background-color: $gray;
     color: $dark;
+
+    @media(hover: hover) {
+      &:hover {
+        background-color: $gray-hover;
+      }
+    }
   }
 
-  &--dark-gray{
+  &--dark-gray {
     background-color: $dark-gray;
     color: $white;
+
+    @media(hover: hover) {
+      &:hover {
+        background-color: $dark-gray-hover;
+      }
+    }
   }
 }
 
