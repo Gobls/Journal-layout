@@ -428,6 +428,14 @@
                 transform: translateY(16rem);
                 left: 0;
             }
+
+            &-close{
+                display: none;
+            }
+
+            &-title{
+                text-align: center;
+            }
         }
 
         &__lang {
