@@ -53,22 +53,20 @@
             font-weight: 700;
             font-size: 2rem;
 
-            &--color {
-                background-color: $main;
-                color: $white;
+            &--small {
                 height: 9rem;
                 width: 32.7rem;
+                gap: 2rem;
 
                 svg {
                     stroke: $white;
                 }
             }
 
-            &--gray {
-                background-color: $gray;
-                color: $dark;
+            &--big {
                 height: 9rem;
                 width: 38.5rem;
+                gap: 2rem;
 
                 svg {
                     stroke: $dark;
