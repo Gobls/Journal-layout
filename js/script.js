@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const searchInput = document.getElementById('searchInput');
+    if (!header) return;
     const dropdownList = header.querySelector('.header__dropdown-list');
     const dropdown = header.querySelector('.header__dropdown');
     const arrow = header.querySelector('.header__content-arrow');
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // Функция для отображения элементов списка
+    // Функция для отображения элементов спискa
     function showDropdownItems(itemsArray) {
         dropdownList.innerHTML = '';
 
@@ -144,9 +145,13 @@ document.addEventListener('DOMContentLoaded', function () {
     //  ------------------------------------------------------------------------------------------------------------------------------
 
 
-    const menuItems = document.querySelectorAll('.header__item');
-    const contentItems = document.querySelectorAll('.header__content-item');
-    const closeBtns = document.querySelectorAll('.header__content-close');
+    const menuItems = header.querySelectorAll('.header__item');
+    const contentItems = header.querySelectorAll('.header__content-item');
+    const closeBtns = header.querySelectorAll('.header__content-close');
+    // const menuBtns = header.querySelectorAll('.header__item-btn');
+    // console.log(menu)
+    // let closeIndex = null;
+
 
     menuItems.forEach((item, index) => {
         const menuBtn = item.querySelector('.header__item-btn');
@@ -164,6 +169,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 content[0].classList.add('active');
             }
             menuBtn.classList.add('active');
+
+            // menuBtns[closeIndex].classList.remove('active');
+            // const closeContent = contentItems[closeIndex].querySelectorAll('.header__content');
+            // setTimeout(() => {
+            //     if (closeContent.length > 1) {
+            //         const savedUser = localStorage.getItem('currentUser');
+            //         if (savedUser) {
+            //             closeContent[1].classList.remove('active');
+            //         } else {
+            //             closeContent[0].classList.remove('active');
+            //         }
+            //     } else {
+            //         closeContent[0].classList.remove('active');
+            //     }
+            // }, 500);
+            // closeIndex = index;
         });
     });
 
