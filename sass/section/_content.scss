@@ -28,7 +28,6 @@
     &__card {
         box-sizing: border-box;
         background-color: $white;
-        width: 122rem;
         border-radius: 1.5rem;
         padding: 5rem 4rem 6rem 4rem;
 
@@ -85,6 +84,7 @@
             height: 3.5rem;
             stroke: $dark;
             fill: $dark;
+            flex-shrink: 0;
         }
     }
 
@@ -97,7 +97,7 @@
         font-weight: 400;
         font-size: 2rem;
 
-        margin-top: 4rem;
+        margin-top: 3rem;
 
         &-svg {
             width: 2rem;
@@ -148,6 +148,38 @@
     @media (max-width: 48em) {
         .container {
             width: 45rem;
+        }
+
+        &__card {
+            padding: 4rem 1.5rem;
+            &-title {
+                font-size: 3rem;
+            }
+
+            &-text {
+                font-size: 2rem;
+
+                &--bold {
+                    font-size: 2rem;
+                }
+            }
+
+            &-link {
+                font-size: 2rem;
+            }
+        }
+
+        &__author {
+            gap: 2rem;
+
+            &-name {
+                font-size: 2rem;
+                padding-bottom: 1rem;
+            }
+
+            &-text {
+                font-size: 2rem;
+            }
         }
     }
 }
