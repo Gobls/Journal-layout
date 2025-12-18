@@ -1,6 +1,6 @@
 html {
   font-size: 0.694444444vw;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Golos', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -31,6 +31,7 @@ p {
   color: $dark;
 }
 
+ol,
 ul {
   padding: 0;
   margin: 0;
@@ -68,6 +69,10 @@ input::-ms-clear {
     background-color: $main;
     color: $white;
 
+    .svg {
+      stroke: $white;
+    }
+
     @media(hover: hover) {
       &:hover {
         background-color: $main-hover;
@@ -78,6 +83,10 @@ input::-ms-clear {
   &--gray {
     background-color: $gray;
     color: $dark;
+
+    .svg {
+      stroke: $dark;
+    }
 
     @media(hover: hover) {
       &:hover {

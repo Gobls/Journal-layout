@@ -1,6 +1,71 @@
 .hero {
     overflow: hidden;
 
+    &-article {
+        overflow: hidden;
+
+        .container {
+            height: 75rem;
+            overflow: hidden;
+            background: linear-gradient(154deg, #4d515f 0%, #b4bbd3 100%);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-repeat: no-repeat;
+                background-size: contain;
+                mix-blend-mode: color-burn;
+                z-index: 1;
+                pointer-events: none;
+                background-image: url('/assets/icons/article/background.svg');
+            }
+        }
+
+        .hero {
+            &__info {
+                padding: 8rem 49rem 9rem 15rem;
+
+                &-title {
+                    h1 {
+                        color: $white;
+                        font-weight: 700;
+                        font-size: 4rem;
+                    }
+                }
+
+                &-subtitle {
+                    h2 {
+                        color: $white;
+                        font-weight: 400;
+                        font-size: 2.6rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__go-home {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 2.6rem;
+        color: $gray;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        align-self: start;
+
+        .hero__svg {
+            width: 3rem;
+            height: 3rem;
+            stroke: $gray;
+        }
+    }
+
     .container {
         height: 75rem;
         background-image: url('/assets/img/header.png');
@@ -10,20 +75,14 @@
         overflow: hidden;
     }
 
-    &__text {
-        padding: 5.4rem 0 2.1rem 0;
+    &__header {
         display: flex;
         flex-direction: column;
-        gap: 14.5rem;
-
-        h2 {
-            font-weight: 400;
-            font-size: 2rem;
-            line-height: 150%;
-            text-transform: uppercase;
-            color: $white;
-            margin: 0;
-        }
+        gap: 1rem;
+        font-weight: 400;
+        font-size: 2rem;
+        color: $white;
+        margin: 0;
     }
 
     &__svg {
@@ -32,9 +91,12 @@
     }
 
     &__info {
-        padding-left: 18.5rem;
+        box-sizing: border-box;
+        padding: 8rem 15rem;
         display: flex;
         flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
 
         &-title {
             padding-bottom: 6rem;
@@ -44,6 +106,17 @@
                 font-size: 6.4rem;
                 line-height: 90%;
                 color: $white;
+            }
+        }
+
+        &-subtitle {
+            padding-bottom: 1rem;
+
+            h2 {
+                color: $white;
+                font-weight: 400;
+                font-size: 2.6rem;
+                text-transform: uppercase;
             }
         }
 
@@ -57,20 +130,14 @@
                 height: 9rem;
                 width: 32.7rem;
                 gap: 2rem;
-
-                svg {
-                    stroke: $white;
-                }
+                text-transform: uppercase;
             }
 
             &--big {
                 height: 9rem;
                 width: 38.5rem;
                 gap: 2rem;
-
-                svg {
-                    stroke: $dark;
-                }
+                text-transform: uppercase;
             }
         }
     }

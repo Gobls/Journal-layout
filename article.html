@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/style.css">
+    <title>Journal</title>
+    <link rel="icon" type="image/svg" sizes="16x16" href="/assets/icons/favicon/favicon-16x16.svg">
+    <link rel="icon" type="image/svg" sizes="32x32" href="/assets/icons/favicon/favicon-32x32.svg">
+    <link rel="icon" type="image/svg" sizes="100x100" href="/assets/icons/favicon/favicon-100x100.svg">
+    <link rel="icon" type="image/svg" sizes="200x200" href="/assets/icons/favicon/favicon-200x200.svg">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__lang-switch">
+                    <a href="/ru" hreflang="ru" rel="alternate" class="header__lang-link active" lang="ru"
+                        aria-current="page">рус</a>
+                    <a href="/en" hreflang="en" rel="alternate" class="header__lang-link" lang="en">en</a>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="/assets/icons/sprite.svg#menu"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="/assets/icons/sprite.svg#search"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="/assets/icons/sprite.svg#rating"></use>
+                        </svg>
+                    </div>
+
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <p class="header__item-text" id="auth-text">Войти</p>
+                        <svg class="header__svg">
+                            <use href="/assets/icons/sprite.svg#login"></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="header__content-feed">
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">Архив</a></li>
+                                <li><a href="#" class="header__content-link">Общая информация</a></li>
+                                <li><a href="#" class="header__content-link">Цели и тематика журнала</a></li>
+                                <li><a href="#" class="header__content-link">Индексирование</a></li>
+                                <li><a href="#" class="header__content-link">Правила предоставления рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Порядок рецензирования рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Авторы</a></li>
+                                <li><a href="#" class="header__content-link">Издательская этика</a></li>
+                                <li><a href="#" class="header__content-link">Рубрики</a></li>
+                                <li><a href="#" class="header__content-link">Новости</a></li>
+                                <li><a href="#" class="header__content-link">Контакты</a></li>
+                                <li><a href="#" class="header__content-link">Ранний доступ</a></li>
+                            </ul>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="/assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">поиск по сайту</div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">По заголовку:</label>
+                                <input type="text" class="header__content-form" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">По ключевому слову:</label>
+                                <div class="header__input-wrap">
+                                    <input type="text" class="header__content-form" placeholder="Выбрать из списка"
+                                        id="searchInput" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                        spellcheck="false">
+                                    <div class="header__content-arrow"></div>
+                                </div>
+                                <div class="header__dropdown">
+                                    <ul class="header__dropdown-list">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--small btn--main btn">
+                                    <div class="header__content-text--big">Найти</div>
+                                </div>
+                                <div class="header__content-btn--highlight btn">
+                                    <div class="header__content-text--tiny">Cбросить</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="/assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">WoS: 0.13</a></li>
+                                <li><a href="#" class="header__content-link">SCOPUS: 1.2</a></li>
+                                <li><a href="#" class="header__content-link">RSCI</a></li>
+                                <li><a href="#" class="header__content-link">РИНЦ: 0.626</a></li>
+                                <li><a href="#" class="header__content-link">Scimago: Q3</a></li>
+                                <li><a href="#" class="header__content-link">Список ВАК</a></li>
+                                <li><a href="#" class="header__content-link">Журналы СГУ</a></li>
+                            </ul>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="/assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content" id="login-content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">Личный кабинет</div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">Имя пользователя<span
+                                        class="required-star">*</span>:</label>
+                                <input type="text" class="header__content-form" id="login-input"
+                                    placeholder="Введите логин" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">Пароль<span class="required-star">*</span>:</label>
+                                <input type="password" class="header__content-form" id="password-input"
+                                    placeholder="Введите пароль" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-message" id="login-message"></div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--small btn--main btn" id="login-btn">
+                                    <div class="header__content-text--big">Войти</div>
+                                </div>
+                                <div class="header__content-btn--highlight btn">
+                                    <div class="header__content-text--tiny">Забыли пароль?</div>
+                                </div>
+                                <div class="header__content-btn--big btn--dark-gray btn">
+                                    <div class="header__content-text--small">Регистрация</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="/assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                    <div class="header__content" id="user-content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">Личный кабинет</div>
+                            <div class="header__content-info">
+                                <picture class="header__content-picture">
+                                    <!-- <source srcset="/assets/img/user/photo.avif" type="image/avif"> -->
+                                    <!-- <source srcset="/assets/img/user/photo.webp" type="image/webp"> -->
+                                    <img class="header__content-img" src="/assets/img/user/photo.svg" alt="user_photo">
+                                </picture>
+                                <div class="header__content-surname" id="user-surname"></div>
+                                <div class="header__content-name" id="user-name"></div>
+                                <div class="header__content-id" id="user-id"></div>
+                            </div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--big btn--main btn">
+                                    <div class="header__content-text--big">профиль</div>
+                                </div>
+                                <div class="header__content-btn--small btn--dark-gray btn" id="logout-btn">
+                                    <div class="header__content-text--small">Выйти</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="/assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero-article">
+            <div class="container">
+                <div class="hero__info">
+                    <a href="/" class="hero__go-home">
+                        <svg class="hero__svg">
+                            <use href="/assets/icons/sprite.svg#go-home__arrow"></use>
+                        </svg>
+                        <span>на главную</span>
+                    </a>
+                    <div class="hero__info-content">
+                        <div class="hero__info-subtitle">
+                            <h2>Курилова Е. В., Кулаков М. П., Фрисман Е. Я.</h2>
+                        </div>
+                        <div class="hero__info-title">
+                            <h1>Нелинейная динамика цилиндрического резонатора волнового твердотельного гироскопа при
+                                разном
+                                числе электростатических датчиков управления</h1>
+                        </div>
+                        <div class="hero__info-button">
+                            <div class="btn btn--main hero__info-button--big">
+                                <svg class="svg hero__svg">
+                                    <use href="/assets/icons/sprite.svg#hero-download"></use>
+                                </svg>
+                                <span>скачать статью</span>
+                            </div>
+                            <div class="btn btn--gray hero__info-button--small">
+                                <svg class="svg hero__svg">
+                                    <use href="/assets/icons/sprite.svg#hero-info"></use>
+                                </svg>
+                                <span>подробности</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
+                <div class="content__cards">
+                    <div class="content__card">
+                        <div class="content__card-title">Для цитирования:</div>
+                        <div class="content__card-text">
+                            <span>Курилова Е. В., Кулаков М. П., Фрисман Е. Я. Механизмы
+                                формирования пачечной динамики в системе миграционно связанных сообществ типа
+                                хищник–жертва
+                                // Известия вузов. ПНД. 2023. Т. 31, вып. 2. С. 143-169.
+                            </span>
+                            <a href="/" class="content__card-link"> DOI: 10.18500/0869-6632-003030,
+                                EDN: FGDHHM</a>
+                        </div>
+                        <div class="content__btn-wrap">
+                            <div class="btn btn--gray content__btn">
+                                <svg class="svg content__btn-svg">
+                                    <use href="/assets/icons/sprite.svg#copy"></use>
+                                </svg>
+                                <span>Копировать</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content__card">
+                        <div class="content__card-title">Общая информация:</div>
+                        <ul class="content__card-ul">
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#checklist"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Статья опубликована на условиях лицензии:
+                                    </span>
+                                    <a href="/" class="content__card-link">Creative Commons Attribution 4.0
+                                        International (CC-BY 4.0)</a>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#world"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Язык публикации:
+                                    </span>
+                                    <span class="content__card-text">русский</span>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#hash"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Рубрика:
+                                    </span>
+                                    <a href="/" class="content__card-link">Прикладные задачи нелинейной теории колебаний
+                                        и волн</a>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#notebook"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Тип статьи:
+                                    </span>
+                                    <span class="content__card-text">Научная статья</span>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#tag"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        УДК:
+                                    </span>
+                                    <a href="/" class="content__card-link">517.9:574.34</a>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#tag"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        DOI:
+                                    </span>
+                                    <a href="/" class="content__card-link">10.18500/0869-6632-2010-18-6-25-41</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content__card">
+                        <div class="content__card-title">Авторы:</div>
+                        <ul class="content__author-list">
+                            <li>
+                                <div class="content__author">
+                                    <picture class="content__author-photo">
+                                        <!-- <source srcset="/assets/img/user/photo.avif" type="image/avif"> -->
+                                        <!-- <source srcset="/assets/img/user/photo.webp" type="image/webp"> -->
+                                        <img class="header__content-img" src="/assets/img/user/photo.svg"
+                                            alt="author_photo">
+                                    </picture>
+                                    <div class="content__author-info">
+                                        <div class="content__author-name">Курилова Екатерина Викторовна</div>
+                                        <div class="content__author-text">Институт комплексного анализа региональных
+                                            проблем
+                                            Дальневосточного отделения Российской академии наук</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content__author">
+                                    <picture class="content__author-photo">
+                                        <!-- <source srcset="/assets/img/user/photo.avif" type="image/avif"> -->
+                                        <!-- <source srcset="/assets/img/user/photo.webp" type="image/webp"> -->
+                                        <img class="header__content-img" src="/assets/img/user/user1.jpg"
+                                            alt="author_photo">
+                                    </picture>
+                                    <div class="content__author-info">
+                                        <div class="content__author-name">Кулаков Матвей Павлович</div>
+                                        <div class="content__author-text">Институт комплексного анализа региональных
+                                            проблем
+                                            Дальневосточного отделения Российской академии наук</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="content__author">
+                                    <picture class="content__author-photo">
+                                        <!-- <source srcset="/assets/img/user/photo.avif" type="image/avif"> -->
+                                        <!-- <source srcset="/assets/img/user/photo.webp" type="image/webp"> -->
+                                        <img class="header__content-img" src="/assets/img/user/photo.svg"
+                                            alt="author_photo">
+                                    </picture>
+                                    <div class="content__author-info">
+                                        <div class="content__author-name">Фрисман Ефим Яковлевич</div>
+                                        <div class="content__author-text">Институт комплексного анализа региональных
+                                            проблем
+                                            Дальневосточного отделения Российской академии наук</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content__card">
+                        <div class="content__card-title">Аннотация:</div>
+                        <div class="content__card-text">
+                            <p><strong>Цель работы</strong> — изучение периодических режимов динамики миграционно
+                                связанных неидентичных
+                                сообществ типа хищник–жертва, возникающих при частичной синхронизации колебаний их
+                                численностей. Комбинация этих колебаний приводит к образованию режимов динамики,
+                                объединяющих в себе как быстрые всплески численностей (пачечная динамика), так и
+                                медленные
+                                релаксационные колебания (тоническая динамика), которые характеризуются различным
+                                соотношением синхронной и несинхронной динамики в определенные периоды времени. В работе
+                                особое внимание уделено описанию сценариев перехода между разными типами пачечной
+                                активности. Эти типы отличаются между собой не столько размерами, формой и числом
+                                быстрых
+                                всплесков численностей в пачке, сколько очередностью появления этих всплесков
+                                относительно
+                                релаксационного цикла.</p>
+                            <p><strong>Методы.</strong> При исследовании предложенной модели динамики миграционно
+                                связанных сообществ используются методы бифуркационного анализа динамических систем, а
+                                также геометрические методы, основанные на разделении полной системы на быстрые и
+                                медленные уравнения (две подсистемы).</p>
+                            <p><strong>Результаты.</strong> Показано, что динамика первой подсистемы с релаксационным
+                                циклом определяет динамику второй — с пачечной динамикой — посредством гладкой
+                                зависимости режима от численности хищника и не гладкой зависимости от численности жертв.
+                                Были сконструированы инвариантные многообразия, на которых реализуются участки с
+                                тонической (медленное многообразие) и пачечной (быстрое многообразие) активностью
+                                рассматриваемой системы.</p>
+                            <p><strong>Заключение.</strong> Описаны сценарии возникновения пачек с различной формой,
+                                которые определяются внешним видом быстрого инвариантного многообразия и расположения
+                                его частей относительно релаксационного цикла. Показано, что переходы между разными
+                                типами пачек сопровождаются сменой периода колебаний, степенью синхронизации, и в итоге
+                                система переходит к квазипериодической динамике, когда оба сообщества не синхронны между
+                                собой.</p>
+                        </div>
+                    </div>
+                    <div class="content__card">
+                        <div class="content__card-title">Ключевые слова:</div>
+                        <ul>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#hash"></use>
+                                </svg>
+                                <a href="/" class="content__card-link">хищник–жертва</a>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#hash"></use>
+                                </svg>
+                                <a href="/" class="content__card-link">хищник–жертва</a>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#hash"></use>
+                                </svg>
+                                <a href="/" class="content__card-link">хищник–жертва</a>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#hash"></use>
+                                </svg>
+                                <a href="/" class="content__card-link">хищник–жертва</a>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#hash"></use>
+                                </svg>
+                                <a href="/" class="content__card-link">хищник–жертва</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content__card" id="list-of-sources">
+                        <div class="content__card-title">Список источников:</div>
+                        <ol class="content__card-ol">
+                            <li class="content__card-text">
+                                Фрисман Е. Я., Кулаков М. П., Ревуцкая О. Л., Жданова О. Л., Неверова Г. П. Основные
+                                направления и обзор современного состояния исследований динамики структурированных и
+                                взаимодействующих популяций // Компьютерные исследования и моделирование. 2019. Т.
+                                11, №
+                                1. С. 119–151. DOI: 10.20537/2076-7633-2019-11-1-119-151.
+                            </li>
+                            <li class="content__card-text">
+                                Mukhopadhyay B., Bhattacharyya R. Role of predator switching in an eco-epidemiological
+                                model with disease in the prey // Ecological Modelling. 2009. Vol. 220, no. 7. P.
+                                931–939. DOI: 10.1016/j.ecolmodel.2009.01.016.
+                            </li>
+                            <li class="content__card-text">
+                                Saifuddin M., Biswas S., Samanta S., Sarkar S., Chattopadhyay J. Complex dynamics of an
+                                ecoepidemiological model with different competition coefficients and weak Allee in the
+                                predator // Chaos, Solitons & Fractals. 2016. Vol. 91. P. 270–285. DOI:
+                                10.1016/j.chaos.2016.06.009.
+                            </li>
+                            <li class="content__card-text">
+                                Jansen V. A. A. The dynamics of two diffusively coupled predator–prey populations //
+                                Theoretical Population Biology. 2001. Vol. 59, no. 2. P. 119–131. DOI:
+                                10.1006/tpbi.2000.1506.
+                            </li>
+                            <li class="content__card-text">
+                                Фрисман Е. Я., Кулаков М. П., Ревуцкая О. Л., Жданова О. Л., Неверова Г. П. Основные
+                                направления и обзор современного состояния исследований динамики структурированных и
+                                взаимодействующих популяций // Компьютерные исследования и моделирование. 2019. Т.
+                                11, №
+                                1. С. 119–151. DOI: 10.20537/2076-7633-2019-11-1-119-151.
+                            </li>
+                            <li class="content__card-text">
+                                Mukhopadhyay B., Bhattacharyya R. Role of predator switching in an eco-epidemiological
+                                model with disease in the prey // Ecological Modelling. 2009. Vol. 220, no. 7. P.
+                                931–939. DOI: 10.1016/j.ecolmodel.2009.01.016.
+                            </li>
+                            <li class="content__card-text">
+                                Saifuddin M., Biswas S., Samanta S., Sarkar S., Chattopadhyay J. Complex dynamics of an
+                                ecoepidemiological model with different competition coefficients and weak Allee in the
+                                predator // Chaos, Solitons & Fractals. 2016. Vol. 91. P. 270–285. DOI:
+                                10.1016/j.chaos.2016.06.009.
+                            </li>
+                            <li class="content__card-text">
+                                Jansen V. A. A. The dynamics of two diffusively coupled predator–prey populations //
+                                Theoretical Population Biology. 2001. Vol. 59, no. 2. P. 119–131. DOI:
+                                10.1006/tpbi.2000.1506.
+                            </li>
+                        </ol>
+                        <div class="btn content__btn--highlight">Показать далее</div>
+                    </div>
+                    <div class="content__card">
+                        <div class="content__card-title">Редакция:</div>
+                        <ul class="content__card-ul">
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#calendar"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Поступила в редакцию:
+                                    </span>
+                                    <span class="content__card-text">22.09.2022</span>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#calendar"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Принята к публикации:
+                                    </span>
+                                    <span class="content__card-text">26.12.2022</span>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#calendar"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Опубликована онлайн:
+                                    </span>
+                                    <span class="content__card-text">27.02.2023</span>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#calendar"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Опубликована:
+                                    </span>
+                                    <span class="content__card-text">31.03.2023</span>
+                                </div>
+                            </li>
+                            <li class="content__card-item">
+                                <svg class="svg content__card-svg">
+                                    <use href="/assets/icons/article/sprite.svg#book"></use>
+                                </svg>
+                                <div>
+                                    <span class="content__card-text--bold">
+                                        Журнал:
+                                    </span>
+                                    <a href="/" class="content__card-link">«Известия вузов. ПНД», 2023, т. 31, №2</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__info">
+                <p class="footer__text">© 2013-2023 Дизайн и программное обеспечение сайта. ФГБОУ ВО «Саратовский
+                    национальный исследовательский государственный университет имени Н.Г. Чернышевского»</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+</body>
+
+</html>

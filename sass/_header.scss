@@ -10,7 +10,6 @@
             background-color: $dark;
             height: 100%;
             display: flex;
-            flex-wrap: wrap;
             flex-direction: column;
             padding: 0;
             align-items: center;
@@ -314,6 +313,7 @@
             text-align: center;
             fill: $gray;
             transition: all 0.3s ease;
+            cursor: pointer;
 
             p {
                 transition: all 0.3s ease;
