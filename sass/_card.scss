@@ -34,27 +34,27 @@
     }
 
     &[data-bg-icon="icon-1.png"]::before {
-        background-image: url(/assets/icons/background-card/icon-1.png);
+        background-image: url('../assets/icons/background-card/icon-1.png');
     }
 
     &[data-bg-icon="icon-2.png"]::before {
-        background-image: url(/assets/icons/background-card/icon-2.png);
+        background-image: url('../assets/icons/background-card/icon-2.png');
     }
 
     &[data-bg-icon="icon-3.png"]::before {
-        background-image: url(/assets/icons/background-card/icon-3.png);
+        background-image: url('../assets/icons/background-card/icon-3.png');
     }
 
     &[data-bg-icon="icon-4.png"]::before {
-        background-image: url(/assets/icons/background-card/icon-4.png);
+        background-image: url('../assets/icons/background-card/icon-4.png');
     }
 
     &[data-bg-icon="icon-5.png"]::before {
-        background-image: url(/assets/icons/background-card/icon-5.png);
+        background-image: url('../assets/icons/background-card/icon-5.png');
     }
 
     &[data-bg-icon="icon-6.png"]::before {
-        background-image: url(/assets/icons/background-card/icon-6.png);
+        background-image: url('../assets/icons/background-card/icon-6.png');
     }
 
     &__text {
