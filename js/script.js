@@ -148,43 +148,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuItems = header.querySelectorAll('.header__item');
     const contentItems = header.querySelectorAll('.header__content-item');
     const closeBtns = header.querySelectorAll('.header__content-close');
-    // const menuBtns = header.querySelectorAll('.header__item-btn');
-    // console.log(menu)
-    // let closeIndex = null;
+    const menuBtns = header.querySelectorAll('.header__item-btn');
+    console.log(menuBtns)
+    let closeIndex = null;
 
 
     menuItems.forEach((item, index) => {
         const menuBtn = item.querySelector('.header__item-btn');
         menuBtn.addEventListener('click', function () {
-            closeAllMenus();
             const content = contentItems[index].querySelectorAll('.header__content');
             if (content.length > 1) {
                 const savedUser = localStorage.getItem('currentUser');
                 if (savedUser) {
-                    content[1].classList.add('active');
+                    content[1].classList.toggle('active');
                 } else {
-                    content[0].classList.add('active');
+                    content[0].classList.toggle('active');
                 }
             } else {
-                content[0].classList.add('active');
+                content[0].classList.toggle('active');
             }
-            menuBtn.classList.add('active');
-
-            // menuBtns[closeIndex].classList.remove('active');
-            // const closeContent = contentItems[closeIndex].querySelectorAll('.header__content');
-            // setTimeout(() => {
-            //     if (closeContent.length > 1) {
-            //         const savedUser = localStorage.getItem('currentUser');
-            //         if (savedUser) {
-            //             closeContent[1].classList.remove('active');
-            //         } else {
-            //             closeContent[0].classList.remove('active');
-            //         }
-            //     } else {
-            //         closeContent[0].classList.remove('active');
-            //     }
-            // }, 500);
-            // closeIndex = index;
+            menuBtn.classList.toggle('active');
+            if (closeIndex != null && closeIndex != index) {
+                menuBtns[closeIndex].classList.remove('active');
+                const closeContent = contentItems[closeIndex].querySelectorAll('.header__content');
+                setTimeout(() => {
+                    if (closeContent.length > 1) {
+                        const savedUser = localStorage.getItem('currentUser');
+                        if (savedUser) {
+                            closeContent[1].classList.remove('active');
+                        } else {
+                            closeContent[0].classList.remove('active');
+                        }
+                    } else {
+                        closeContent[0].classList.remove('active');
+                    }
+                }, 500);
+            }
+            closeIndex = index;
         });
     });
 
