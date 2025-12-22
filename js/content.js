@@ -48,4 +48,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         isExpanded = !isExpanded;
     };
+
+
+    //---------------------------------------------------------------------------------------------
+
+
+    const card = document.getElementById('copy-card');
+
+    card.querySelector('.content__btn').addEventListener('click', function () {
+        const textElement = card.querySelector('.content__card-text');
+        const textToCopy = textElement.textContent;
+
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                const buttonText = this.querySelector('span');
+                const originalText = buttonText.textContent;
+
+                buttonText.textContent = 'Скопировано!';
+
+                setTimeout(() => {
+                    buttonText.textContent = originalText;
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('Ошибка при копировании: ', err);
+                alert('Не удалось скопировать текст');
+            });
+    });
 });
