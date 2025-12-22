@@ -130,6 +130,16 @@
         }
     }
 
+    @media (hover: hover) {
+        &__go-home {
+
+            &:hover {
+                color: $main;
+            }
+        }
+    }
+
+
     @media (max-width: 48em) {
         .container {
             height: 94rem;

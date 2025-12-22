@@ -369,9 +369,9 @@ function updateAuthState() {
         // Пользователь авторизован
         authText.textContent = 'Профиль';
         if (currentUser.photo) {
-            userPhoto.src = `/assets/img/user/${currentUser.photo}`;
+            userPhoto.src = `./assets/img/user/${currentUser.photo}`;
         } else {
-            userPhoto.src = '/assets/img/user/photo.svg';
+            userPhoto.src = './assets/img/user/photo.svg';
         }
 
         // Обновляем информацию в профиле

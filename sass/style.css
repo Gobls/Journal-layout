@@ -839,6 +839,11 @@ input::-ms-clear {
   gap: 2rem;
   text-transform: uppercase;
 }
+@media (hover: hover) {
+  .hero__go-home:hover {
+    color: #ee5656;
+  }
+}
 @media (max-width: 48em) {
   .hero .container {
     height: 94rem;
