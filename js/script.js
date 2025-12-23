@@ -149,39 +149,38 @@ document.addEventListener('DOMContentLoaded', function () {
     const contentItems = header.querySelectorAll('.header__content-item');
     const closeBtns = header.querySelectorAll('.header__content-close');
     const menuBtns = header.querySelectorAll('.header__item-btn');
+    const heroBg = document.querySelector('.hero__bg');
     console.log(menuBtns)
     let closeIndex = null;
+
+    function manageClass(elements, className, action) {
+        if (!elements || !elements.length) return;
+        const user = localStorage.getItem('currentUser');
+        const idx = (elements.length > 1 && user) ? 1 : 0;
+        elements[idx].classList[action](className);
+    }
 
 
     menuItems.forEach((item, index) => {
         const menuBtn = item.querySelector('.header__item-btn');
         menuBtn.addEventListener('click', function () {
             const content = contentItems[index].querySelectorAll('.header__content');
-            if (content.length > 1) {
-                const savedUser = localStorage.getItem('currentUser');
-                if (savedUser) {
-                    content[1].classList.toggle('active');
-                } else {
-                    content[0].classList.toggle('active');
-                }
+            manageClass(content, 'active', 'toggle');
+            manageClass(content, 'menu-layer', 'toggle');
+            if (closeIndex === index) {
+                document.body.classList.toggle('no-scroll');
+                heroBg.classList.toggle('active');
             } else {
-                content[0].classList.toggle('active');
+                document.body.classList.add('no-scroll');
+                heroBg.classList.add('active');
             }
             menuBtn.classList.toggle('active');
             if (closeIndex != null && closeIndex != index) {
                 menuBtns[closeIndex].classList.remove('active');
                 const closeContent = contentItems[closeIndex].querySelectorAll('.header__content');
+                manageClass(closeContent, 'menu-layer', 'remove');
                 setTimeout(() => {
-                    if (closeContent.length > 1) {
-                        const savedUser = localStorage.getItem('currentUser');
-                        if (savedUser) {
-                            closeContent[1].classList.remove('active');
-                        } else {
-                            closeContent[0].classList.remove('active');
-                        }
-                    } else {
-                        closeContent[0].classList.remove('active');
-                    }
+                    manageClass(closeContent, 'active', 'remove');
                 }, 500);
             }
             closeIndex = index;
@@ -201,7 +200,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeAllMenus() {
         allContents.forEach(items => {
             items.classList.remove('active');
+            items.classList.remove('menu-layer');
         });
+
+        heroBg.classList.remove('active');
+        document.body.classList.remove('no-scroll');
 
         document.querySelectorAll('.header__item-btn.active').forEach(btn => {
             btn.classList.remove('active');

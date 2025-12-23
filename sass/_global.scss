@@ -53,8 +53,16 @@ input::-ms-clear {
   display: none;
 }
 
+.menu-layer{
+  z-index: 10;
+}
+
 .required-star {
   color: $main;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .btn {
