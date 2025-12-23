@@ -118,6 +118,41 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-Medium.eot");
+  src: local("Golos Text Medium"), local("GolosText-Medium"), url("../fonts/Golos-Text/GolosText-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Medium.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Medium.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-Black.eot");
+  src: local("Golos Text Black"), local("GolosText-Black"), url("../fonts/Golos-Text/GolosText-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Black.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Black.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-DemiBold.eot");
+  src: local("Golos Text DemiBold"), local("GolosText-DemiBold"), url("../fonts/Golos-Text/GolosText-DemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-DemiBold.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-DemiBold.woff") format("woff"), url("../fonts/Golos-Text/GolosText-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-Bold.eot");
+  src: local("Golos Text Bold"), local("GolosText-Bold"), url("../fonts/Golos-Text/GolosText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Bold.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Bold.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Golos Text";
+  src: url("../fonts/Golos-Text/GolosText-Regular.eot");
+  src: local("Golos Text Regular"), local("GolosText-Regular"), url("../fonts/Golos-Text/GolosText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Regular.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Regular.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 html {
   font-size: 0.694444444vw;
   font-family: "Golos", sans-serif;
@@ -186,6 +221,8 @@ input::-ms-clear {
 }
 
 .btn {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -230,6 +267,9 @@ input::-ms-clear {
 @media (max-width: 48em) {
   html {
     font-size: 2.00833333vw;
+  }
+  .no-scroll {
+    overflow: scroll;
   }
 }
 .header {
@@ -769,13 +809,13 @@ input::-ms-clear {
   background-size: cover;
   overflow: hidden;
 }
-.hero-article .hero__info {
-  padding: 8rem 49rem 9rem 15rem;
-}
 .hero-article .hero__info-title h1 {
   color: #FFF;
   font-weight: 700;
   font-size: 4rem;
+}
+.hero-article .hero__info-subtitle {
+  padding-bottom: 2rem;
 }
 .hero-article .hero__info-subtitle h2 {
   color: #FFF;
@@ -820,7 +860,7 @@ input::-ms-clear {
 }
 .hero__info {
   box-sizing: border-box;
-  padding: 8rem 15rem;
+  padding: 8rem 49rem 9rem 15rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -832,7 +872,6 @@ input::-ms-clear {
 .hero__info-title h1 {
   font-weight: 500;
   font-size: 6.4rem;
-  line-height: 90%;
   color: #FFF;
 }
 .hero__info-subtitle {
@@ -871,6 +910,9 @@ input::-ms-clear {
   .hero .container {
     height: 94rem;
     background-position: center;
+  }
+  .hero__bg::before {
+    display: none;
   }
   .hero-article {
     overflow: hidden;
@@ -1042,6 +1084,7 @@ input::-ms-clear {
   font-size: 2.6rem;
   text-decoration: underline;
   color: #ee5656;
+  padding-bottom: 1rem;
 }
 .content__author-text {
   font-weight: 400;

@@ -53,7 +53,7 @@ input::-ms-clear {
   display: none;
 }
 
-.menu-layer{
+.menu-layer {
   z-index: 10;
 }
 
@@ -66,6 +66,8 @@ input::-ms-clear {
 }
 
 .btn {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -118,5 +120,9 @@ input::-ms-clear {
 @media (max-width: 48em) {
   html {
     font-size: 2.00833333vw;
+  }
+
+  .no-scroll {
+    overflow: scroll;
   }
 }
