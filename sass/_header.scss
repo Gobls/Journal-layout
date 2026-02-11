@@ -31,13 +31,13 @@
         height: 75rem;
         top: 0;
         background-color: $dark;
-        transition: all 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
 
         &-feed {
             z-index: 1;
         }
 
-        &-list{
+        &-list {
             display: flex;
             flex-direction: column;
             gap: 2rem;
@@ -111,7 +111,7 @@
             gap: 2rem;
             padding-top: 1rem;
 
-            .btn--dark-gray{
+            .btn--dark-gray {
                 margin-top: 2rem;
             }
 
@@ -227,7 +227,7 @@
             color: $gray;
             font-weight: 400;
             font-size: 2rem;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
         }
 
 
@@ -240,7 +240,7 @@
             height: 2.5rem;
             width: 2.5rem;
             fill: $gray;
-            transition: all 0.3s ease;
+            transition: fill 0.3s ease;
         }
     }
 
@@ -313,11 +313,11 @@
             justify-content: center;
             text-align: center;
             fill: $gray;
-            transition: all 0.3s ease;
+            transition: fill 0.3s ease;
             cursor: pointer;
 
             p {
-                transition: all 0.3s ease;
+                transition: color 0.3s ease;
             }
 
             &.active {
@@ -415,26 +415,32 @@
     }
 
     @media (max-width: 48em) {
+        &:has(~ main .archive) .header__content {
+            height: 60rem;
+            &-menu{
+                padding-bottom: 6rem;
+            }
+        }
+
         width: 100%;
-        height: 16rem;
+        height: 16.1rem;
 
         &__content {
             width: 100%;
-            height: auto;
+            height: 78rem;
             left: 0rem;
-            top: 0;
-            transform: translateY(-100%);
+            top: -62rem;
 
             &.active {
-                transform: translateY(16rem);
+                transform: translateY(78rem);
                 left: 0;
             }
 
-            &-close{
+            &-close {
                 display: none;
             }
 
-            &-title{
+            &-title {
                 text-align: center;
             }
         }

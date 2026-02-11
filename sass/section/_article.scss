@@ -1,0 +1,95 @@
+.article {
+    .hero {
+        &__bg {
+            background-image: url('../assets/img/article__background.png');
+        }
+
+        &__info {
+
+            &-title {
+                h1 {
+                    color: $white;
+                    font-weight: 700;
+                    font-size: 4rem;
+                }
+            }
+
+            &-subtitle {
+                padding-bottom: 2rem;
+
+                h2 {
+                    color: $white;
+                    font-weight: 400;
+                    font-size: 2.6rem;
+                }
+            }
+        }
+    }
+
+    .cards {
+        padding: 8rem 0 10rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .btn{
+        &--highlight{
+            color: $main;
+            font-weight: 400;
+            font-size: 2.6rem;
+        }
+    }
+
+    .card {
+        background-color: $white;
+        padding: 5rem 4rem 6rem 4rem;
+        gap: 3rem;
+
+        &__btn {
+            width: 22rem;
+            height: 6rem;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        &__list {
+            gap: 3rem;
+
+            &--ol {
+                overflow: hidden;
+                transition: height 0.4s ease;
+            }
+
+            &-item {
+                gap: 2rem;
+            }
+
+            &-icon {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+
+            &-picture {
+                width: 11rem;
+                height: 11rem;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+        }
+
+        &__text {
+            p {
+                padding-bottom: 3rem;
+            }
+        }
+
+        &__info {
+            gap: 1rem;
+            flex-direction: column;
+        }
+        @media (max-width: 48em) {
+            padding: 4rem 1.5rem 5rem;
+        }
+    }
+}

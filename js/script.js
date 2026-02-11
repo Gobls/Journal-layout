@@ -150,7 +150,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtns = header.querySelectorAll('.header__content-close');
     const menuBtns = header.querySelectorAll('.header__item-btn');
     const heroBg = document.querySelector('.hero__bg');
-    console.log(menuBtns)
     let closeIndex = null;
 
     function manageClass(elements, className, action) {
@@ -164,6 +163,10 @@ document.addEventListener('DOMContentLoaded', function () {
     menuItems.forEach((item, index) => {
         const menuBtn = item.querySelector('.header__item-btn');
         menuBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
             const content = contentItems[index].querySelectorAll('.header__content');
             manageClass(content, 'active', 'toggle');
             manageClass(content, 'menu-layer', 'toggle');

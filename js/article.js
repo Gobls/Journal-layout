@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const listOfSources = document.querySelector('#list-of-sources');
-    const ol = listOfSources.querySelector('.content__card-ol');
+    const ol = listOfSources.querySelector('.card__list--ol');
     const btn = listOfSources.querySelector('.btn');
     const items = ol.querySelectorAll('li');
+
 
     if (!btn || !ol || items.length <= 4) return;
 
@@ -36,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     maxHeight = calculateMaxHeight();
     minHeight = calculateMinHeight();
-    ol.style.height = `${minHeight}rem`;
+    ol.style.height = `${minHeight + 9}rem`;
 
     btn.onclick = () => {
         if (isExpanded) {
-            ol.style.height = `${minHeight}rem`;
+            ol.style.height = `${minHeight + 9}rem`;
             btn.textContent = 'Показать далее';
         } else {
-            ol.style.height = `${maxHeight}rem`;
+            ol.style.height = `${maxHeight + 3 * items.length - 3}rem`;
             btn.textContent = 'Скрыть';
         }
         isExpanded = !isExpanded;
@@ -53,26 +54,29 @@ document.addEventListener('DOMContentLoaded', () => {
     //---------------------------------------------------------------------------------------------
 
 
-    const card = document.getElementById('copy-card');
 
-    card.querySelector('.content__btn').addEventListener('click', function () {
-        const textElement = card.querySelector('.content__card-text');
-        const textToCopy = textElement.textContent;
+    const copyBtn = document.querySelector('#copy-card .card__btn');
 
-        navigator.clipboard.writeText(textToCopy)
-            .then(() => {
-                const buttonText = this.querySelector('span');
-                const originalText = buttonText.textContent;
-
-                buttonText.textContent = 'Скопировано!';
-
-                setTimeout(() => {
-                    buttonText.textContent = originalText;
-                }, 2000);
+    copyBtn.addEventListener('click', function () {
+        const textContainer = document.querySelector('#copy-card .card__text');
+        const htmlContent = textContainer.innerHTML
+            .replace(/class="[^"]*"/g, '')
+            .replace(/<a/g, '<a style="color: #0066cc; text-decoration: underline;"');
+        const textContent = textContainer.textContent;
+        navigator.clipboard.write([
+            new ClipboardItem({
+                'text/html': new Blob([htmlContent], { type: 'text/html' }),
+                'text/plain': new Blob([textContent], { type: 'text/plain' })
             })
-            .catch(err => {
-                console.error('Ошибка при копировании: ', err);
-                alert('Не удалось скопировать текст');
-            });
+        ]);
+        showCopySuccess(this);
     });
+
+    function showCopySuccess(button) {
+        const buttonText = button.querySelector('span');
+        const originalText = buttonText.textContent;
+
+        buttonText.textContent = 'Скопировано!';
+        setTimeout(() => buttonText.textContent = originalText, 2000);
+    }
 });

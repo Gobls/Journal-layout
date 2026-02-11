@@ -1,4 +1,10 @@
 .footer {
+    .container { 
+        width: 100%;
+        background-color: $dark;
+        padding: 0;
+    }
+
     &__info {
         padding: 5.5rem 30rem;
         text-align: center;

@@ -8,7 +8,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: $dark;
+  background-color: aliceblue;
 }
 
 h1,
@@ -19,6 +19,19 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font: inherit;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
@@ -43,9 +56,16 @@ ul li {
   list-style: none;
 }
 
-.container {
+img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 120rem;
   margin: 0 auto;
+  padding: 10rem 0 10rem 0;
 }
 
 input::-ms-reveal,
@@ -74,6 +94,11 @@ input::-ms-clear {
   justify-content: center;
   border-radius: 10rem;
   transition: all 0.3s ease;
+
+  &--highlight {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
 
   &--main {
     background-color: $main;
@@ -124,5 +149,9 @@ input::-ms-clear {
 
   .no-scroll {
     overflow: scroll;
+  }
+
+  .container {
+    width: 45rem;
   }
 }
