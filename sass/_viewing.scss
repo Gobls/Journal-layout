@@ -1,0 +1,28 @@
+.viewing {
+    width: 25rem;
+    padding: 7rem 0 0 4rem;
+    
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 2rem;
+    }
+    
+    &__number{
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    
+    &__line {
+        width: 100%;
+        height: .3rem;
+        background: linear-gradient(to right, $main 0%, $main var(--progress), $gray var(--progress), $gray 100%);
+        border-radius: 10rem;
+        transition: background 0.1s linear;
+    }
+}

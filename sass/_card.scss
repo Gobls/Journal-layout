@@ -8,6 +8,12 @@
     justify-content: space-between;
     border-radius: 1.5rem;
 
+    ol{
+        .card__list-item{ 
+            display: list-item;
+        }
+    }
+
     &__header {
         font-weight: 700;
         font-size: 4rem;
@@ -29,7 +35,7 @@
         }
     }
 
-    &__footer{
+    &__footer {
         display: flex;
     }
 
@@ -39,6 +45,10 @@
 
         &--bold {
             font-weight: 700;
+        }
+
+        p {
+            padding-bottom: 3rem;
         }
     }
 
@@ -96,14 +106,17 @@
             display: block;
         }
     }
+
     @media (max-width: 48em) {
-        &__header{
+        &__header {
             font-size: 3rem;
         }
-        &__text{
+
+        &__text {
             font-size: 2rem;
         }
-        &__link{
+
+        &__link {
             font-size: 2rem;
         }
     }

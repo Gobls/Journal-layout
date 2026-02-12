@@ -27,7 +27,7 @@
     }
 
     .cards {
-        padding: 8rem 0 10rem 0;
+        padding: 8rem 0 0 0;
         display: flex;
         flex-direction: column;
         gap: 5rem;
@@ -75,12 +75,6 @@
                 height: 11rem;
                 border-radius: 50%;
                 overflow: hidden;
-            }
-        }
-
-        &__text {
-            p {
-                padding-bottom: 3rem;
             }
         }
 
