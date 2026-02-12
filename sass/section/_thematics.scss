@@ -38,8 +38,6 @@
 
                 .card__list-item {
                     counter-increment: ol-counter;
-                    position: relative;
-                    padding-left: 5.5rem;
 
                     &::before {
                         content: counter(ol-counter, decimal-leading-zero) ".";
@@ -73,6 +71,27 @@
                 background-color: $main;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+        }
+
+        @media (max-width: 48em) {
+            padding: 4rem 1.5rem 5rem;
+            &__header{
+                &-title{
+                    font-size: 3rem;
+                }
+                &-subtitle{
+                    font-size: 2rem;
+                }
+            }
+            &__list{
+                &--ol{
+                    .card__list-item {
+                        &::before{
+                            font-size: 2rem;
+                        }
+                    }
+                }
             }
         }
     }

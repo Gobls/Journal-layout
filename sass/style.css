@@ -1549,8 +1549,6 @@ input::-ms-clear {
 }
 .thematics .card__list--ol .card__list-item {
   counter-increment: ol-counter;
-  position: relative;
-  padding-left: 5.5rem;
 }
 .thematics .card__list--ol .card__list-item::before {
   content: counter(ol-counter, decimal-leading-zero) ".";
@@ -1577,4 +1575,18 @@ input::-ms-clear {
   background-color: #ee5656;
   top: 50%;
   transform: translateY(-50%);
+}
+@media (max-width: 48em) {
+  .thematics .card {
+    padding: 4rem 1.5rem 5rem;
+  }
+  .thematics .card__header-title {
+    font-size: 3rem;
+  }
+  .thematics .card__header-subtitle {
+    font-size: 2rem;
+  }
+  .thematics .card__list--ol .card__list-item::before {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
