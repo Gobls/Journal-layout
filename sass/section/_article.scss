@@ -5,22 +5,9 @@
         }
 
         &__info {
-
             &-title {
                 h1 {
-                    color: $white;
-                    font-weight: 700;
                     font-size: 4rem;
-                }
-            }
-
-            &-subtitle {
-                padding-bottom: 2rem;
-
-                h2 {
-                    color: $white;
-                    font-weight: 400;
-                    font-size: 2.6rem;
                 }
             }
         }

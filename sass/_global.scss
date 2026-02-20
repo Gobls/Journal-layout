@@ -85,63 +85,6 @@ input::-ms-clear {
   overflow: hidden;
 }
 
-.btn {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10rem;
-  transition: all 0.3s ease;
-
-  &--highlight {
-    text-decoration: underline;
-    text-decoration-style: dashed;
-  }
-
-  &--main {
-    background-color: $main;
-    color: $white;
-
-    .svg {
-      stroke: $white;
-    }
-
-    @media(hover: hover) {
-      &:hover {
-        background-color: $main-hover;
-      }
-    }
-  }
-
-  &--gray {
-    background-color: $gray;
-    color: $dark;
-
-    .svg {
-      stroke: $dark;
-    }
-
-    @media(hover: hover) {
-      &:hover {
-        background-color: $gray-hover;
-      }
-    }
-  }
-
-  &--dark-gray {
-    background-color: $dark-gray;
-    color: $white;
-
-    @media(hover: hover) {
-      &:hover {
-        background-color: $dark-gray-hover;
-      }
-    }
-  }
-}
-
 @media (max-width: 48em) {
   html {
     font-size: 2.00833333vw;

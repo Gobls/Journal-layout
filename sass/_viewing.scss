@@ -25,4 +25,8 @@
         border-radius: 10rem;
         transition: background 0.1s linear;
     }
+
+    @media (max-width: 48em) {
+        padding: 3rem 0 0 1.5rem;
+    }
 }

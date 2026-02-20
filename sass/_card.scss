@@ -8,8 +8,27 @@
     justify-content: space-between;
     border-radius: 1.5rem;
 
-    ol{
-        .card__list-item{ 
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    &__picture {
+        display: block;
+    }
+
+    &__location {
+        display: flex;
+    }
+
+    ol {
+        .card__list-item {
             display: list-item;
         }
     }
@@ -39,32 +58,9 @@
         display: flex;
     }
 
-    &__text {
-        font-weight: 400;
-        font-size: 2.6rem;
-
-        &--bold {
-            font-weight: 700;
-        }
-
-        p {
-            padding-bottom: 3rem;
-        }
-    }
 
     &__info {
         display: flex;
-    }
-
-    &__link {
-        font-weight: 400;
-        text-decoration: underline;
-        color: #ee5656;
-        font-size: 2.6rem;
-
-        &--bold {
-            font-weight: 700;
-        }
     }
 
     &__btns {

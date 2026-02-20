@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/style.css">
+    <title>Journal</title>
+    <link rel="icon" type="image/svg" sizes="16x16" href="./assets/icons/favicon/favicon-16x16.svg">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./assets/icons/favicon/favicon-32x32.svg">
+    <link rel="icon" type="image/svg" sizes="100x100" href="./assets/icons/favicon/favicon-100x100.svg">
+    <link rel="icon" type="image/svg" sizes="200x200" href="./assets/icons/favicon/favicon-200x200.svg">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__lang-switch">
+                    <a href="./ru" hreflang="ru" rel="alternate" class="header__lang-link active" lang="ru"
+                        aria-current="page">рус</a>
+                    <a href="./en" hreflang="en" rel="alternate" class="header__lang-link" lang="en">en</a>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="./assets/icons/sprite.svg#menu"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="./assets/icons/sprite.svg#search"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="./assets/icons/sprite.svg#rating"></use>
+                        </svg>
+                    </div>
+
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <p class="header__item-text" id="auth-text">Войти</p>
+                        <svg class="header__svg">
+                            <use href="./assets/icons/sprite.svg#login"></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="header__content-feed">
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">Архив</a></li>
+                                <li><a href="#" class="header__content-link">Общая информация</a></li>
+                                <li><a href="#" class="header__content-link">Цели и тематика журнала</a></li>
+                                <li><a href="#" class="header__content-link">Индексирование</a></li>
+                                <li><a href="#" class="header__content-link">Правила предоставления рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Порядок рецензирования рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Авторы</a></li>
+                                <li><a href="#" class="header__content-link">Издательская этика</a></li>
+                                <li><a href="#" class="header__content-link">Рубрики</a></li>
+                                <li><a href="#" class="header__content-link">Новости</a></li>
+                                <li><a href="#" class="header__content-link">Контакты</a></li>
+                                <li><a href="#" class="header__content-link">Ранний доступ</a></li>
+                            </ul>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">поиск по сайту</div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">По заголовку:</label>
+                                <input type="text" class="header__content-form" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">По ключевому слову:</label>
+                                <div class="header__input-wrap">
+                                    <input type="text" class="header__content-form" placeholder="Выбрать из списка"
+                                        id="searchInput" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                        spellcheck="false">
+                                    <div class="header__content-arrow"></div>
+                                </div>
+                                <div class="header__dropdown">
+                                    <ul class="header__dropdown-list">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--small btn--main btn">
+                                    <div class="header__content-text--big">Найти</div>
+                                </div>
+                                <div class="header__content-btn--highlight btn">
+                                    <div class="header__content-text--tiny">Cбросить</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">WoS: 0.13</a></li>
+                                <li><a href="#" class="header__content-link">SCOPUS: 1.2</a></li>
+                                <li><a href="#" class="header__content-link">RSCI</a></li>
+                                <li><a href="#" class="header__content-link">РИНЦ: 0.626</a></li>
+                                <li><a href="#" class="header__content-link">Scimago: Q3</a></li>
+                                <li><a href="#" class="header__content-link">Список ВАК</a></li>
+                                <li><a href="#" class="header__content-link">Журналы СГУ</a></li>
+                            </ul>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content" id="login-content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">Личный кабинет</div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">Имя пользователя<span
+                                        class="required-star">*</span>:</label>
+                                <input type="text" class="header__content-form" id="login-input"
+                                    placeholder="Введите логин" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">Пароль<span class="required-star">*</span>:</label>
+                                <input type="password" class="header__content-form" id="password-input"
+                                    placeholder="Введите пароль" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-message" id="login-message"></div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--small btn--main btn" id="login-btn">
+                                    <div class="header__content-text--big">Войти</div>
+                                </div>
+                                <div class="header__content-btn--highlight btn">
+                                    <div class="header__content-text--tiny">Забыли пароль?</div>
+                                </div>
+                                <div class="header__content-btn--big btn--dark-gray btn">
+                                    <div class="header__content-text--small">Регистрация</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                    <div class="header__content" id="user-content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">Личный кабинет</div>
+                            <div class="header__content-info">
+                                <picture class="header__content-picture">
+                                    <!-- <source srcset="./assets/img/user/photo.avif" type="image/avif"> -->
+                                    <!-- <source srcset="./assets/img/user/photo.webp" type="image/webp"> -->
+                                    <img class="header__content-img" src="./assets/img/user/photo.svg" alt="user_photo">
+                                </picture>
+                                <div class="header__content-surname" id="user-surname"></div>
+                                <div class="header__content-name" id="user-name"></div>
+                                <div class="header__content-id" id="user-id"></div>
+                            </div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--big btn--main btn">
+                                    <div class="header__content-text--big">профиль</div>
+                                </div>
+                                <div class="header__content-btn--small btn--dark-gray btn" id="logout-btn">
+                                    <div class="header__content-text--small">Выйти</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="editors">
+            <section class="hero">
+                <div class="hero__bg">
+                    <div class="hero__info">
+                        <a href="./" class="hero__go-home">
+                            <svg class="hero__svg">
+                                <use href="./assets/icons/sprite.svg#go-home__arrow"></use>
+                            </svg>
+                            <span>на главную</span>
+                        </a>
+                        <div class="hero__info-content">
+                            <div class="hero__info-subtitle">
+                                <h2>Известия Саратовского университета. Новая серия. «Прикладная нелинейная динамика»
+                                </h2>
+                            </div>
+                            <div class="hero__info-title">
+                                <h1>Редакционная коллегия</h1>
+                            </div>
+                            <div class="hero__info-button">
+                                <div class="btn btn--gray hero__info-button--small">
+                                    <svg class="svg svg--dark">
+                                        <use href="./assets/icons/archive/sprite.svg#hero-arrow"></use>
+                                    </svg>
+                                    <span>читать</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="cards">
+                        <div class="card-wrap">
+                            <div class="title">Главный редактор</div>
+                            <div class="card">
+                                <div class="card__header">
+                                    <a href="/">
+                                        <picture class="circle-picture">
+                                            <!-- <source srcset="./assets/img/user/photo.avif" type="image/avif"> -->
+                                            <!-- <source srcset="./assets/img/user/photo.webp" type="image/webp"> -->
+                                            <img src="./assets/img/editors/kossovich.jpg" alt="author_photo">
+                                        </picture>
+                                    </a>
+                                    <div>
+                                        <div class="card__location">
+                                            <svg class="card__svg">
+                                                <use href="./assets/icons/editors/sprite.svg#location"></use>
+                                            </svg>
+                                            <p>Саратов, Россия</p>
+                                        </div>
+                                        <a href="/" class="title link">Коссович Леонид Юрьевич</a>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Доктор физико-математических наук, профессор, заведующий кафедрой математической
+                                    теории упругости и биомеханики, профессор, научный
+                                    руководитель Образовательно-научного института наноструктур и биосистем ФГБОУ
+                                    ВО «СГУ имени Н.Г. Чернышевского»
+                                </div>
+                                <div class="accordion">
+                                    <ul class="accordion__list">
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Индексы</div>
+                                            <div class="accordion-dropdown">
+                                                <ul class="accordion-dropdown__list">
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Scopus Author ID:</div>
+                                                        <a href="/" class="link">6602360247</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ORCID ID:</div>
+                                                        <a href="/" class="link">0000-0002-4775-7348</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ResearcherID:</div>
+                                                        <a href="/" class="link">P-6661-2015</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Math-Net.Ru:</div>
+                                                        <a href="/" class="link">14470</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Author ID (eLibrary.Ru):</div>
+                                                        <a href="/" class="link">2935</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ZentralBlatt:</div>
+                                                        <a href="/" class="link">ZentralBlatt</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Google Scholar:</div>
+                                                        <a href="/" class="link">Google Scholar</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="line--thin"></div>
+                                        </li>
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Дополнительные сведения</div>
+                                            <div class="accordion-dropdown">
+                                                <div class="text">
+                                                    Научные интересы. Физика твёдого тела, радиофизика, электроника
+                                                    и информатика. Один из основателей новых научных направлений:
+                                                    акустоэлектроники, акустооптики, спин-волновой электроники.
+                                                    Выдвинул
+                                                    и разработал идею использования поверхностно-акустических волн
+                                                    (ПАВ)
+                                                    в электронике, предсказал и исследовал новый тип ПАВ, известных
+                                                    как волны Гуляева-Блюстейна, предсказал и исследовал новый класс
+                                                    транспортных явлений в твёрдых телах, связанных с увлечением
+                                                    электронов акустическими волнами, исследовал дифракцию света
+                                                    на акустических волнах в анизотропных, проводящих и активных
+                                                    средах,
+                                                    резонансные и нелинейные акустоэлектронные и акустооптические
+                                                    явления, акустооптические явления в оптических волокнах,
+                                                    исследовал
+                                                    взаимодействие спиновых волн с электромагнитными полями
+                                                    и электронами в слоистых структурах ферромагнетик-полупроводник.
+                                                </div>
+                                            </div>
+                                            <div class="line--thin"></div>
+                                        </li>
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Список источников</div>
+                                            <div class="accordion-dropdown">
+                                                <ol class="sources-list">
+                                                    <li class="sources-list__item">
+                                                        <div class="text"> Фрисман Е.Я., Кулаков М.П.,
+                                                            Ревуцкая О.Л., Жданова О.Л., Неверова Г.П.
+                                                            <a href="/" class="link">Основные направления и обзор
+                                                                современного состояния исследований динамики
+                                                                структурированных и взаимодействующих популяций
+                                                            </a>
+                                                            // Компьютерные исследования и моделирование. 2019. Т.
+                                                            11, № 1. С. 119–151. DOI:
+                                                            10.20537/2076–7633–2019–11–1-119–151.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Mukhopadhyay B., Bhattacharyya R.
+                                                            <a href="/" class="link">Role of predator switching in
+                                                                an eco-epidemiological model with disease in the
+                                                                prey
+                                                            </a>
+                                                            // Ecological Modelling. 2009. Vol. 220, no. 7. P.
+                                                            931–939. DOI: 10.1016/j.ecolmodel.2009.01.016.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Saifuddin M., Biswas S., Samanta S.,
+                                                            Sarkar S., Chattopadhyay J.
+                                                            <a href="/" class="link">Complex dynamics of an
+                                                                ecoepidemiological model with different
+                                                                competition coefficients and weak Allee in the
+                                                                predator
+                                                            </a>
+                                                            // Chaos,
+                                                            Solitons & Fractals. 2016. Vol. 91. P. 270–285. DOI:
+                                                            10.1016/j.chaos.2016.06.009.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Jansen V. A. A.
+                                                            <a href="/" class="link">The dynamics of two diffusively
+                                                                coupled
+                                                                predator-prey populations
+                                                            </a>
+                                                            // Theoretical Population Biology. 2001.
+                                                            Vol. 59, no. 2. P. 119–131. DOI: 10.1006/tpbi.2000.1506.
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="title">Заместитель главного редактора</div>
+                            <div class="card">
+                                <div class="card__header">
+                                    <a href="/">
+                                        <picture class="circle-picture">
+                                            <!-- <source srcset="./assets/img/user/photo.avif" type="image/avif"> -->
+                                            <!-- <source srcset="./assets/img/user/photo.webp" type="image/webp"> -->
+                                            <img src="./assets/img/editors/prohorovdv.jpg" alt="author_photo">
+                                        </picture>
+                                    </a>
+                                    <div>
+                                        <div class="card__location">
+                                            <svg class="card__svg">
+                                                <use href="./assets/icons/editors/sprite.svg#location"></use>
+                                            </svg>
+                                            <p>Саратов, Россия</p>
+                                        </div>
+                                        <a href="/" class="title link">Прохоров Дмитрий Валентинович</a>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Доктор физико-математических наук, профессор, профессор кафедры математического
+                                    анализа ФГБОУ ВО «СГУ имени  Н. Г. Чернышевского»
+                                </div>
+                                <div class="accordion">
+                                    <ul class="accordion__list">
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Индексы</div>
+                                            <div class="accordion-dropdown">
+                                                <ul class="accordion-dropdown__list">
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Scopus Author ID:</div>
+                                                        <a href="/" class="link">6602360247</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ORCID ID:</div>
+                                                        <a href="/" class="link">0000-0002-4775-7348</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ResearcherID:</div>
+                                                        <a href="/" class="link">P-6661-2015</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Math-Net.Ru:</div>
+                                                        <a href="/" class="link">14470</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Author ID (eLibrary.Ru):</div>
+                                                        <a href="/" class="link">2935</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ZentralBlatt:</div>
+                                                        <a href="/" class="link">ZentralBlatt</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Google Scholar:</div>
+                                                        <a href="/" class="link">Google Scholar</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="line--thin"></div>
+                                        </li>
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Дополнительные сведения</div>
+                                            <div class="accordion-dropdown">
+                                                <div class="text">
+                                                    Научные интересы. Физика твёдого тела, радиофизика, электроника
+                                                    и информатика. Один из основателей новых научных направлений:
+                                                    акустоэлектроники, акустооптики, спин-волновой электроники.
+                                                    Выдвинул
+                                                    и разработал идею использования поверхностно-акустических волн
+                                                    (ПАВ)
+                                                    в электронике, предсказал и исследовал новый тип ПАВ, известных
+                                                    как волны Гуляева-Блюстейна, предсказал и исследовал новый класс
+                                                    транспортных явлений в твёрдых телах, связанных с увлечением
+                                                    электронов акустическими волнами, исследовал дифракцию света
+                                                    на акустических волнах в анизотропных, проводящих и активных
+                                                    средах,
+                                                    резонансные и нелинейные акустоэлектронные и акустооптические
+                                                    явления, акустооптические явления в оптических волокнах,
+                                                    исследовал
+                                                    взаимодействие спиновых волн с электромагнитными полями
+                                                    и электронами в слоистых структурах ферромагнетик-полупроводник.
+                                                </div>
+                                            </div>
+                                            <div class="line--thin"></div>
+                                        </li>
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Список источников</div>
+                                            <div class="accordion-dropdown">
+                                                <ol class="sources-list">
+                                                    <li class="sources-list__item">
+                                                        <div class="text"> Фрисман Е.Я., Кулаков М.П.,
+                                                            Ревуцкая О.Л., Жданова О.Л., Неверова Г.П.
+                                                            <a href="/" class="link">Основные направления и обзор
+                                                                современного состояния исследований динамики
+                                                                структурированных и взаимодействующих популяций
+                                                            </a>
+                                                            // Компьютерные исследования и моделирование. 2019. Т.
+                                                            11, № 1. С. 119–151. DOI:
+                                                            10.20537/2076–7633–2019–11–1-119–151.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Mukhopadhyay B., Bhattacharyya R.
+                                                            <a href="/" class="link">Role of predator switching in
+                                                                an eco-epidemiological model with disease in the
+                                                                prey
+                                                            </a>
+                                                            // Ecological Modelling. 2009. Vol. 220, no. 7. P.
+                                                            931–939. DOI: 10.1016/j.ecolmodel.2009.01.016.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Saifuddin M., Biswas S., Samanta S.,
+                                                            Sarkar S., Chattopadhyay J.
+                                                            <a href="/" class="link">Complex dynamics of an
+                                                                ecoepidemiological model with different
+                                                                competition coefficients and weak Allee in the
+                                                                predator
+                                                            </a>
+                                                            // Chaos,
+                                                            Solitons & Fractals. 2016. Vol. 91. P. 270–285. DOI:
+                                                            10.1016/j.chaos.2016.06.009.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Jansen V. A. A.
+                                                            <a href="/" class="link">The dynamics of two diffusively
+                                                                coupled
+                                                                predator-prey populations
+                                                            </a>
+                                                            // Theoretical Population Biology. 2001.
+                                                            Vol. 59, no. 2. P. 119–131. DOI: 10.1006/tpbi.2000.1506.
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="title">Ответственный секретарь</div>
+                            <div class="card">
+                                <div class="card__header">
+                                    <a href="/">
+                                        <picture class="circle-picture">
+                                            <!-- <source srcset="./assets/img/user/photo.avif" type="image/avif"> -->
+                                            <!-- <source srcset="./assets/img/user/photo.webp" type="image/webp"> -->
+                                            <img src="./assets/img/editors/shevcova.jpg" alt="author_photo">
+                                        </picture>
+                                    </a>
+                                    <div>
+                                        <div class="card__location">
+                                            <svg class="card__svg">
+                                                <use href="./assets/icons/editors/sprite.svg#location"></use>
+                                            </svg>
+                                            <p>Саратов, Россия</p>
+                                        </div>
+                                        <a href="/" class="title link">Шевцова Юлия Владиславовна</a>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Кандидат физико-математических наук, доцент кафедры геометрии ФГБОУ ВО «СГУ
+                                    имени Н. Г. Чернышевского»
+                                </div>
+                                <div class="accordion">
+                                    <ul class="accordion__list">
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Индексы</div>
+                                            <div class="accordion-dropdown">
+                                                <ul class="accordion-dropdown__list">
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Scopus Author ID:</div>
+                                                        <a href="/" class="link">6602360247</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ORCID ID:</div>
+                                                        <a href="/" class="link">0000-0002-4775-7348</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ResearcherID:</div>
+                                                        <a href="/" class="link">P-6661-2015</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Math-Net.Ru:</div>
+                                                        <a href="/" class="link">14470</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Author ID (eLibrary.Ru):</div>
+                                                        <a href="/" class="link">2935</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ZentralBlatt:</div>
+                                                        <a href="/" class="link">ZentralBlatt</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Google Scholar:</div>
+                                                        <a href="/" class="link">Google Scholar</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="line--thin"></div>
+                                        </li>
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Дополнительные сведения</div>
+                                            <div class="accordion-dropdown">
+                                                <div class="text">
+                                                    Научные интересы. Физика твёдого тела, радиофизика, электроника
+                                                    и информатика. Один из основателей новых научных направлений:
+                                                    акустоэлектроники, акустооптики, спин-волновой электроники.
+                                                    Выдвинул
+                                                    и разработал идею использования поверхностно-акустических волн
+                                                    (ПАВ)
+                                                    в электронике, предсказал и исследовал новый тип ПАВ, известных
+                                                    как волны Гуляева-Блюстейна, предсказал и исследовал новый класс
+                                                    транспортных явлений в твёрдых телах, связанных с увлечением
+                                                    электронов акустическими волнами, исследовал дифракцию света
+                                                    на акустических волнах в анизотропных, проводящих и активных
+                                                    средах,
+                                                    резонансные и нелинейные акустоэлектронные и акустооптические
+                                                    явления, акустооптические явления в оптических волокнах,
+                                                    исследовал
+                                                    взаимодействие спиновых волн с электромагнитными полями
+                                                    и электронами в слоистых структурах ферромагнетик-полупроводник.
+                                                </div>
+                                            </div>
+                                            <div class="line--thin"></div>
+                                        </li>
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Список источников</div>
+                                            <div class="accordion-dropdown">
+                                                <ol class="sources-list">
+                                                    <li class="sources-list__item">
+                                                        <div class="text"> Фрисман Е.Я., Кулаков М.П.,
+                                                            Ревуцкая О.Л., Жданова О.Л., Неверова Г.П.
+                                                            <a href="/" class="link">Основные направления и обзор
+                                                                современного состояния исследований динамики
+                                                                структурированных и взаимодействующих популяций
+                                                            </a>
+                                                            // Компьютерные исследования и моделирование. 2019. Т.
+                                                            11, № 1. С. 119–151. DOI:
+                                                            10.20537/2076–7633–2019–11–1-119–151.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Mukhopadhyay B., Bhattacharyya R.
+                                                            <a href="/" class="link">Role of predator switching in
+                                                                an eco-epidemiological model with disease in the
+                                                                prey
+                                                            </a>
+                                                            // Ecological Modelling. 2009. Vol. 220, no. 7. P.
+                                                            931–939. DOI: 10.1016/j.ecolmodel.2009.01.016.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Saifuddin M., Biswas S., Samanta S.,
+                                                            Sarkar S., Chattopadhyay J.
+                                                            <a href="/" class="link">Complex dynamics of an
+                                                                ecoepidemiological model with different
+                                                                competition coefficients and weak Allee in the
+                                                                predator
+                                                            </a>
+                                                            // Chaos,
+                                                            Solitons & Fractals. 2016. Vol. 91. P. 270–285. DOI:
+                                                            10.1016/j.chaos.2016.06.009.
+                                                        </div>
+                                                    </li>
+                                                    <li class="sources-list__item">
+                                                        <div class="text">Jansen V. A. A.
+                                                            <a href="/" class="link">The dynamics of two diffusively
+                                                                coupled
+                                                                predator-prey populations
+                                                            </a>
+                                                            // Theoretical Population Biology. 2001.
+                                                            Vol. 59, no. 2. P. 119–131. DOI: 10.1006/tpbi.2000.1506.
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="title">Члены редакционной коллегии</div>
+                            <div class="card">
+                                <div class="card__header">
+                                    <a href="/">
+                                        <picture class="circle-picture">
+                                            <!-- <source srcset="./assets/img/user/photo.avif" type="image/avif"> -->
+                                            <!-- <source srcset="./assets/img/user/photo.webp" type="image/webp"> -->
+                                            <img src="./assets/img/editors/andreychenko.jpg" alt="author_photo">
+                                        </picture>
+                                    </a>
+                                    <div>
+                                        <div class="card__location">
+                                            <svg class="card__svg">
+                                                <use href="./assets/icons/editors/sprite.svg#location"></use>
+                                            </svg>
+                                            <p>Саратов, Россия</p>
+                                        </div>
+                                        <a href="/" class="title link">Андрейченко Дмитрий Константинович</a>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Доктор физико-математических наук, профессор, заведующий кафедрой
+                                    математического обеспечения вычислительных комплексов и информационных систем
+                                    профессор ФГБОУ ВО «СГУ имени Н.Г. Чернышевского»
+                                </div>
+                                <div class="accordion">
+                                    <ul class="accordion__list">
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Индексы</div>
+                                            <div class="accordion-dropdown">
+                                                <ul class="accordion-dropdown__list">
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Scopus Author ID:</div>
+                                                        <a href="/" class="link">6602360247</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ORCID ID:</div>
+                                                        <a href="/" class="link">0000-0002-4775-7348</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ResearcherID:</div>
+                                                        <a href="/" class="link">P-6661-2015</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Math-Net.Ru:</div>
+                                                        <a href="/" class="link">14470</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Author ID (eLibrary.Ru):</div>
+                                                        <a href="/" class="link">2935</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ZentralBlatt:</div>
+                                                        <a href="/" class="link">ZentralBlatt</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Google Scholar:</div>
+                                                        <a href="/" class="link">Google Scholar</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="line--thin"></div>
+                                        </li>
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Дополнительные сведения</div>
+                                            <div class="accordion-dropdown">
+                                                <div class="text">
+                                                    Научные интересы. Физика твёдого тела, радиофизика, электроника
+                                                    и информатика. Один из основателей новых научных направлений:
+                                                    акустоэлектроники, акустооптики, спин-волновой электроники.
+                                                    Выдвинул
+                                                    и разработал идею использования поверхностно-акустических волн
+                                                    (ПАВ)
+                                                    в электронике, предсказал и исследовал новый тип ПАВ, известных
+                                                    как волны Гуляева-Блюстейна, предсказал и исследовал новый класс
+                                                    транспортных явлений в твёрдых телах, связанных с увлечением
+                                                    электронов акустическими волнами, исследовал дифракцию света
+                                                    на акустических волнах в анизотропных, проводящих и активных
+                                                    средах,
+                                                    резонансные и нелинейные акустоэлектронные и акустооптические
+                                                    явления, акустооптические явления в оптических волокнах,
+                                                    исследовал
+                                                    взаимодействие спиновых волн с электромагнитными полями
+                                                    и электронами в слоистых структурах ферромагнетик-полупроводник.
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card__header">
+                                    <a href="/">
+                                        <picture class="circle-picture">
+                                            <!-- <source srcset="./assets/img/user/photo.avif" type="image/avif"> -->
+                                            <!-- <source srcset="./assets/img/user/photo.webp" type="image/webp"> -->
+                                            <img src="./assets/img/editors/bauer.jpg" alt="author_photo">
+                                        </picture>
+                                    </a>
+                                    <div>
+                                        <div class="card__location">
+                                            <svg class="card__svg">
+                                                <use href="./assets/icons/editors/sprite.svg#location"></use>
+                                            </svg>
+                                            <p>Саратов, Россия</p>
+                                        </div>
+                                        <a href="/" class="title link">Бауэр Светлана Михайловнч</a>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    Доктор физико-математических наук, профессор кафедры прикладной и теоретической
+                                    механики Санкт-Петербургского государственного университета
+                                </div>
+                                <div class="accordion">
+                                    <ul class="accordion__list">
+                                        <li class="accordion__list-item">
+                                            <div class="accordion__trigger">Индексы</div>
+                                            <div class="accordion-dropdown">
+                                                <ul class="accordion-dropdown__list">
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Scopus Author ID:</div>
+                                                        <a href="/" class="link">6602360247</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ORCID ID:</div>
+                                                        <a href="/" class="link">0000-0002-4775-7348</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ResearcherID:</div>
+                                                        <a href="/" class="link">P-6661-2015</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Math-Net.Ru:</div>
+                                                        <a href="/" class="link">14470</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Author ID (eLibrary.Ru):</div>
+                                                        <a href="/" class="link">2935</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">ZentralBlatt:</div>
+                                                        <a href="/" class="link">ZentralBlatt</a>
+                                                    </li>
+                                                    <li class="accordion-dropdown__list-item">
+                                                        <div class="text">Google Scholar:</div>
+                                                        <a href="/" class="link">Google Scholar</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__info">
+                <p class="footer__text">© 2013-2026 Дизайн и программное обеспечение сайта. ФГБОУ ВО «Саратовский
+                    национальный исследовательский государственный университет имени Н.Г. Чернышевского»</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/accordion.js"></script>
+</body>
+
+</html>
