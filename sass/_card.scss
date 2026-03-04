@@ -8,7 +8,7 @@
     justify-content: space-between;
     border-radius: 1.5rem;
 
-    &__content{
+    &__content {
         display: flex;
         flex-direction: column;
     }
@@ -103,6 +103,64 @@
         }
     }
 
+    &__link {
+        &-svg {
+            border-radius: 100%;
+            border: .2rem solid $main;
+            width: 5rem;
+            height: 5rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &--arrow {
+                width: 1.8rem;
+                height: 1.8rem;
+                stroke: $main;
+            }
+        }
+    }
+
+    &__download {
+        transition: transform $transition;
+
+        &-svg {
+            border-radius: 100%;
+            width: 5rem;
+            height: 5rem;
+            background-color: $main;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            &--arrow {
+                width: 1rem;
+                height: 1.4rem;
+                stroke: $white;
+                transition: stroke $transition;
+            }
+
+            &--line {
+                width: 1.9rem;
+                height: 0.6rem;
+                padding-bottom: 0.5rem;
+                stroke: $white;
+                transition: stroke $transition;
+            }
+
+            &--pdf {
+                width: 2.5rem;
+                height: 1rem;
+                fill: $white;
+                transition: fill $transition;
+            }
+        }
+
+    }
+
     @media (max-width: 48em) {
         &__header {
             font-size: 3rem;
@@ -112,8 +170,8 @@
             font-size: 2rem;
         }
 
-        &__link {
-            font-size: 2rem;
+        &-wrap {
+            gap: 2rem;
         }
     }
 }

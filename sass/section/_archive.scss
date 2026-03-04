@@ -85,6 +85,13 @@
             gap: 1rem;
         }
 
+        &__download {
+            z-index: 2;
+            position: absolute;
+            right: 3rem;
+            top: 3rem;
+        }
+
         &__footer {
             gap: 2rem;
             align-items: center;
@@ -97,53 +104,9 @@
                 transition: color 0.3s ease-in-out;
             }
 
-            &-svg{
+            &-svg {
                 transition: stroke 0.3s ease-in-out;
             }
-        }
-
-        &__download {
-            z-index: 2;
-            position: absolute;
-            right: 3rem;
-            top: 3rem;
-            width: 4.7rem;
-            height: 4.7rem;
-            transition: transform 0.3s ease-in-out;
-
-            &-svg {
-                border-radius: 100%;
-                width: 4.7rem;
-                height: 4.7rem;
-                background-color: $main;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                &--arrow {
-                    width: 1rem;
-                    height: 1.4rem;
-                    stroke: $white;
-                    transition: stroke 0.3s ease-in-out;
-                }
-
-                &--line {
-                    width: 1.9rem;
-                    height: 0.6rem;
-                    padding-bottom: 0.5rem;
-                    stroke: $white;
-                    transition: stroke 0.3s ease-in-out;
-                }
-
-                &--pdf {
-                    width: 2.5rem;
-                    height: 1rem;
-                    fill: $white;
-                    transition: fill 0.3s ease-in-out;
-                }
-            }
-
         }
     }
 
@@ -242,17 +205,5 @@
                 }
             }
         }
-    }
-}
-
-@keyframes bounceArrow {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-0.3rem);
     }
 }

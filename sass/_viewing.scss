@@ -1,6 +1,6 @@
 .viewing {
     width: 25rem;
-    padding: 7rem 0 0 4rem;
+    padding-top: 7rem;
     
     &-wrap {
         display: flex;
@@ -27,6 +27,6 @@
     }
 
     @media (max-width: 48em) {
-        padding: 3rem 0 0 1.5rem;
+        padding-top: 3rem;
     }
 }

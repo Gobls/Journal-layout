@@ -1,0 +1,142 @@
+.journal {
+    .cards {
+        gap: 8rem;
+    }
+
+    .hero {
+        &__info {
+            padding: 7rem 38rem 9rem 16rem;
+
+            &-subtitle {
+                text-transform: uppercase;
+            }
+        }
+
+        .card__download-svg {
+            background-color: $white;
+
+            &--line {
+                stroke: $main;
+            }
+
+            &--arrow {
+                stroke: $main;
+            }
+
+            &--pdf {
+                fill: $main;
+            }
+        }
+    }
+
+    .text-wrap {
+        padding-right: 6rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .block-wrap {
+        padding-top: 5rem;
+    }
+
+    .viewing {
+        padding-top: 3rem;
+    }
+
+    .dots {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .number {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .dots::after {
+        content: '....................................................................................................................';
+        position: absolute;
+        padding-left: 1.5rem;
+        font-weight: 400;
+        font-size: 2.6rem;
+        bottom: 0;
+    }
+
+    .svg {
+        &-wrap {
+            gap: .5rem;
+        }
+    }
+
+    .card {
+        background-color: $white;
+        padding: 5rem 4rem 6rem;
+
+        &__list {
+            gap: 4rem;
+
+            &-item {
+                gap: 2rem;
+            }
+        }
+
+        &__info {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    @media (hover: hover) {
+        .hero__info-button--small:hover {
+            .card__download-svg--arrow {
+                animation: bounceArrow 1s ease infinite;
+            }
+        }
+
+        .card__download-svg:hover {
+            .card__download-svg--arrow {
+                animation: bounceArrow 1s ease infinite;
+            }
+        }
+
+        .card__link-svg:hover {
+            .card__link-svg--arrow {
+                animation: bounceLinkArrow 1s ease infinite;
+            }
+        }
+    }
+
+    @media(max-width: 48rem) {
+        .hero {
+            &__info {
+                padding: 20rem 1.5rem 10rem;
+            }
+        }
+
+        .cards{
+            gap: 7rem;
+        }
+
+        .card{
+            padding: 4rem 1.5rem 5rem;
+            &__list{
+                &-item{
+                    flex-direction: column;
+                }
+            }
+
+            &__info{
+                order: 1;
+            }
+        }
+
+        .svg-wrap{
+            order: 2;
+        }
+
+        .block-wrap{
+            padding-top: 2rem;
+        }
+    }
+}

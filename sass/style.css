@@ -1,161 +1,41 @@
 @font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-ExtraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-ExtraLightItalic.ttf") format("truetype");
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-ThinItalic.ttf") format("truetype");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "Golos Text";
-  src: url("../fonts/Golos-Text/GolosText-Medium.eot");
-  src: local("Golos Text Medium"), local("GolosText-Medium"), url("../fonts/Golos-Text/GolosText-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Medium.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Medium.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Medium.ttf") format("truetype");
+  src: url("../assets/fonts/Golos-Text/GolosText-Medium.eot");
+  src: local("Golos Text Medium"), local("GolosText-Medium"), url("../assets/fonts/Golos-Text/GolosText-Medium.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Golos-Text/GolosText-Medium.woff2") format("woff2"), url("../assets/fonts/Golos-Text/GolosText-Medium.woff") format("woff"), url("../assets/fonts/Golos-Text/GolosText-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/Golos-Text/GolosText-Black.eot");
-  src: local("Golos Text Black"), local("GolosText-Black"), url("../fonts/Golos-Text/GolosText-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Black.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Black.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Black.ttf") format("truetype");
+  src: url("../assets/fonts/Golos-Text/GolosText-Black.eot");
+  src: local("Golos Text Black"), local("GolosText-Black"), url("../assets/fonts/Golos-Text/GolosText-Black.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Golos-Text/GolosText-Black.woff2") format("woff2"), url("../assets/fonts/Golos-Text/GolosText-Black.woff") format("woff"), url("../assets/fonts/Golos-Text/GolosText-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/Golos-Text/GolosText-DemiBold.eot");
-  src: local("Golos Text DemiBold"), local("GolosText-DemiBold"), url("../fonts/Golos-Text/GolosText-DemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-DemiBold.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-DemiBold.woff") format("woff"), url("../fonts/Golos-Text/GolosText-DemiBold.ttf") format("truetype");
+  src: url("../assets/fonts/Golos-Text/GolosText-DemiBold.eot");
+  src: local("Golos Text DemiBold"), local("GolosText-DemiBold"), url("../assets/fonts/Golos-Text/GolosText-DemiBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Golos-Text/GolosText-DemiBold.woff2") format("woff2"), url("../assets/fonts/Golos-Text/GolosText-DemiBold.woff") format("woff"), url("../assets/fonts/Golos-Text/GolosText-DemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/Golos-Text/GolosText-Bold.eot");
-  src: local("Golos Text Bold"), local("GolosText-Bold"), url("../fonts/Golos-Text/GolosText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Bold.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Bold.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Bold.ttf") format("truetype");
+  src: url("../assets/fonts/Golos-Text/GolosText-Bold.eot");
+  src: local("Golos Text Bold"), local("GolosText-Bold"), url("../assets/fonts/Golos-Text/GolosText-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Golos-Text/GolosText-Bold.woff2") format("woff2"), url("../assets/fonts/Golos-Text/GolosText-Bold.woff") format("woff"), url("../assets/fonts/Golos-Text/GolosText-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Golos Text";
-  src: url("../fonts/Golos-Text/GolosText-Regular.eot");
-  src: local("Golos Text Regular"), local("GolosText-Regular"), url("../fonts/Golos-Text/GolosText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Golos-Text/GolosText-Regular.woff2") format("woff2"), url("../fonts/Golos-Text/GolosText-Regular.woff") format("woff"), url("../fonts/Golos-Text/GolosText-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/Golos-Text/GolosText-Regular.eot");
+  src: local("Golos Text Regular"), local("GolosText-Regular"), url("../assets/fonts/Golos-Text/GolosText-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Golos-Text/GolosText-Regular.woff2") format("woff2"), url("../assets/fonts/Golos-Text/GolosText-Regular.woff") format("woff"), url("../assets/fonts/Golos-Text/GolosText-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 html {
   font-size: 0.694444444vw;
-  font-family: "Golos", sans-serif;
+  font-family: "Golos Text", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -585,15 +465,15 @@ input::-ms-clear {
   }
 }
 @media (max-width: 48em) {
-  .header {
-    width: 100%;
-    height: 16.1rem;
-  }
   .header:has(~ main .archive) .header__content {
     height: 60rem;
   }
   .header:has(~ main .archive) .header__content-menu {
     padding-bottom: 6rem;
+  }
+  .header {
+    width: 100%;
+    height: 16.1rem;
   }
   .header__content {
     width: 100%;
@@ -756,6 +636,53 @@ input::-ms-clear {
 .card__list-picture {
   display: block;
 }
+.card__link-svg {
+  border-radius: 100%;
+  border: 0.2rem solid #ee5656;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card__link-svg--arrow {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: #ee5656;
+}
+.card__download {
+  transition: transform 0.5s ease;
+}
+.card__download-svg {
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  background-color: #ee5656;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card__download-svg--arrow {
+  width: 1rem;
+  height: 1.4rem;
+  stroke: #FFF;
+  transition: stroke 0.5s ease;
+}
+.card__download-svg--line {
+  width: 1.9rem;
+  height: 0.6rem;
+  padding-bottom: 0.5rem;
+  stroke: #FFF;
+  transition: stroke 0.5s ease;
+}
+.card__download-svg--pdf {
+  width: 2.5rem;
+  height: 1rem;
+  fill: #FFF;
+  transition: fill 0.5s ease;
+}
 @media (max-width: 48em) {
   .card__header {
     font-size: 3rem;
@@ -763,8 +690,8 @@ input::-ms-clear {
   .card__text {
     font-size: 2rem;
   }
-  .card__link {
-    font-size: 2rem;
+  .card-wrap {
+    gap: 2rem;
   }
 }
 
@@ -924,7 +851,7 @@ input::-ms-clear {
 
 .viewing {
   width: 25rem;
-  padding: 7rem 0 0 4rem;
+  padding-top: 7rem;
 }
 .viewing-wrap {
   display: flex;
@@ -948,7 +875,7 @@ input::-ms-clear {
 }
 @media (max-width: 48em) {
   .viewing {
-    padding: 3rem 0 0 1.5rem;
+    padding-top: 3rem;
   }
 }
 
@@ -1002,6 +929,11 @@ input::-ms-clear {
   display: flex;
   gap: 1rem;
 }
+@media (max-width: 48em) {
+  .accordion__trigger {
+    font-size: 2rem;
+  }
+}
 
 .text {
   font-weight: 400;
@@ -1020,15 +952,26 @@ input::-ms-clear {
   }
 }
 
+.block-wrap {
+  display: flex;
+}
+
 .svg {
   width: 3.5rem;
   height: 3.5rem;
   flex-shrink: 0;
   transition: fill 0.5s ease, stroke 0.5s ease;
 }
+.svg-wrap {
+  display: flex;
+}
 .svg--small {
   width: 3.3rem;
   height: 3.3rem;
+}
+.svg--big {
+  width: 5rem;
+  height: 5rem;
 }
 .svg--main {
   fill: #ee5656;
@@ -1053,6 +996,14 @@ input::-ms-clear {
 }
 .link--bold {
   font-weight: 700;
+}
+.link-wrap {
+  padding-bottom: 1rem;
+}
+@media (max-width: 48em) {
+  .link {
+    font-size: 2rem;
+  }
 }
 
 .title {
@@ -1174,6 +1125,22 @@ input::-ms-clear {
   }
 }
 
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.3rem);
+  }
+}
+@keyframes bounceLinkArrow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0.3rem, -0.3rem);
+  }
+}
 .hero__bg {
   height: 75rem;
   background-image: url("../assets/img/header.png");
@@ -1199,9 +1166,9 @@ input::-ms-clear {
   font-size: 2.6rem;
   color: #d8e0f5;
   display: flex;
-  justify-content: center;
   gap: 2rem;
   align-self: start;
+  align-items: center;
 }
 .hero__go-home .hero__svg {
   width: 3rem;
@@ -1244,7 +1211,6 @@ input::-ms-clear {
   color: #FFF;
   font-weight: 400;
   font-size: 2.6rem;
-  text-transform: uppercase;
 }
 .hero__info-button {
   display: flex;
@@ -1303,6 +1269,7 @@ input::-ms-clear {
   }
   .hero__go-home {
     align-self: center;
+    font-size: 2rem;
   }
   .hero__text {
     text-align: center;
@@ -1314,10 +1281,10 @@ input::-ms-clear {
     font-size: 1.6rem;
   }
   .hero__info {
-    padding: 20rem 1.5rem 10rem 1.5rem;
+    padding: 20rem 1.5rem 8rem 1.5rem;
   }
   .hero__info-title {
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
   }
   .hero__info-title h1 {
     font-size: 4.8rem;
@@ -1410,6 +1377,12 @@ input::-ms-clear {
   flex-direction: column;
   gap: 1rem;
 }
+.archive .card__download {
+  z-index: 2;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+}
 .archive .card__footer {
   gap: 2rem;
   align-items: center;
@@ -1423,44 +1396,6 @@ input::-ms-clear {
 }
 .archive .card__footer-svg {
   transition: stroke 0.3s ease-in-out;
-}
-.archive .card__download {
-  z-index: 2;
-  position: absolute;
-  right: 3rem;
-  top: 3rem;
-  width: 4.7rem;
-  height: 4.7rem;
-  transition: transform 0.3s ease-in-out;
-}
-.archive .card__download-svg {
-  border-radius: 100%;
-  width: 4.7rem;
-  height: 4.7rem;
-  background-color: #ee5656;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.archive .card__download-svg--arrow {
-  width: 1rem;
-  height: 1.4rem;
-  stroke: #FFF;
-  transition: stroke 0.3s ease-in-out;
-}
-.archive .card__download-svg--line {
-  width: 1.9rem;
-  height: 0.6rem;
-  padding-bottom: 0.5rem;
-  stroke: #FFF;
-  transition: stroke 0.3s ease-in-out;
-}
-.archive .card__download-svg--pdf {
-  width: 2.5rem;
-  height: 1rem;
-  fill: #FFF;
-  transition: fill 0.3s ease-in-out;
 }
 @media (hover: hover) {
   .archive .card-wrap:hover .card {
@@ -1529,14 +1464,6 @@ input::-ms-clear {
   }
 }
 
-@keyframes bounceArrow {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-0.3rem);
-  }
-}
 .primary .cards {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -1611,6 +1538,14 @@ input::-ms-clear {
 }
 .article .hero__info-title h1 {
   font-size: 4rem;
+}
+@media (max-width: 48em) {
+  .article .hero__info-title h1 {
+    font-size: 3rem;
+  }
+}
+.article .hero__info-subtitle h2 {
+  text-transform: none;
 }
 .article .cards {
   padding: 8rem 0 0 0;
@@ -1719,12 +1654,17 @@ input::-ms-clear {
 .editors .hero__bg {
   background-image: url("../assets/img/background/editors__background.png");
 }
+@media (max-width: 48em) {
+  .editors .hero__bg {
+    height: 76rem;
+  }
+}
 .editors .accordion {
   padding-top: 2rem;
 }
 @media (max-width: 48em) {
   .editors .accordion {
-    padding-top: 3rem;
+    padding-top: 1rem;
   }
 }
 .editors .circle-picture {
@@ -1751,11 +1691,21 @@ input::-ms-clear {
 .editors .card-wrap:last-child {
   padding-bottom: 0;
 }
+@media (max-width: 48em) {
+  .editors .card-wrap {
+    padding-bottom: 7rem;
+  }
+}
 .editors .card__location {
   gap: 1rem;
   font-weight: 600;
   font-size: 2rem;
   padding-bottom: 2rem;
+}
+@media (max-width: 48em) {
+  .editors .card__location {
+    padding-bottom: 1rem;
+  }
 }
 .editors .card__svg {
   width: 1.5rem;
@@ -1790,5 +1740,105 @@ input::-ms-clear {
   }
   50% {
     transform: translateY(-0.5rem);
+  }
+}
+.journal .cards {
+  gap: 8rem;
+}
+.journal .hero__info {
+  padding: 7rem 38rem 9rem 16rem;
+}
+.journal .hero__info-subtitle {
+  text-transform: uppercase;
+}
+.journal .hero .card__download-svg {
+  background-color: #FFF;
+}
+.journal .hero .card__download-svg--line {
+  stroke: #ee5656;
+}
+.journal .hero .card__download-svg--arrow {
+  stroke: #ee5656;
+}
+.journal .hero .card__download-svg--pdf {
+  fill: #ee5656;
+}
+.journal .text-wrap {
+  padding-right: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.journal .block-wrap {
+  padding-top: 5rem;
+}
+.journal .viewing {
+  padding-top: 3rem;
+}
+.journal .dots {
+  position: relative;
+  overflow: hidden;
+}
+.journal .number {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.journal .dots::after {
+  content: "....................................................................................................................";
+  position: absolute;
+  padding-left: 1.5rem;
+  font-weight: 400;
+  font-size: 2.6rem;
+  bottom: 0;
+}
+.journal .svg-wrap {
+  gap: 0.5rem;
+}
+.journal .card {
+  background-color: #FFF;
+  padding: 5rem 4rem 6rem;
+}
+.journal .card__list {
+  gap: 4rem;
+}
+.journal .card__list-item {
+  gap: 2rem;
+}
+.journal .card__info {
+  flex-direction: column;
+  width: 100%;
+}
+@media (hover: hover) {
+  .journal .hero__info-button--small:hover .card__download-svg--arrow {
+    animation: bounceArrow 1s ease infinite;
+  }
+  .journal .card__download-svg:hover .card__download-svg--arrow {
+    animation: bounceArrow 1s ease infinite;
+  }
+  .journal .card__link-svg:hover .card__link-svg--arrow {
+    animation: bounceLinkArrow 1s ease infinite;
+  }
+}
+@media (max-width: 48rem) {
+  .journal .hero__info {
+    padding: 20rem 1.5rem 10rem;
+  }
+  .journal .cards {
+    gap: 7rem;
+  }
+  .journal .card {
+    padding: 4rem 1.5rem 5rem;
+  }
+  .journal .card__list-item {
+    flex-direction: column;
+  }
+  .journal .card__info {
+    order: 1;
+  }
+  .journal .svg-wrap {
+    order: 2;
+  }
+  .journal .block-wrap {
+    padding-top: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

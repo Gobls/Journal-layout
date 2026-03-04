@@ -8,6 +8,15 @@
             &-title {
                 h1 {
                     font-size: 4rem;
+
+                    @media (max-width: 48em) {
+                        font-size: 3rem;
+                    }
+                }
+            }
+            &-subtitle {
+                h2{
+                    text-transform: none;
                 }
             }
         }

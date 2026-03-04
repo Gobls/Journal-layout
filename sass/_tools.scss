@@ -1,7 +1,7 @@
 .text {
     font-weight: 400;
     font-size: 2.6rem;
-    transition: color  $transition;
+    transition: color $transition;
 
     &--bold {
         font-weight: 700;
@@ -16,28 +16,41 @@
     }
 }
 
-.svg{
+.block-wrap{
+    display: flex;
+}
+
+.svg {
     width: 3.5rem;
     height: 3.5rem;
     flex-shrink: 0;
     transition: fill $transition, stroke $transition;
+
+    &-wrap {
+        display: flex;
+    }
 
     &--small {
         width: 3.3rem;
         height: 3.3rem;
     }
 
-    &--main{
+    &--big {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &--main {
         fill: $main;
         stroke: $main;
     }
 
-    &--dark{
+    &--dark {
         fill: $dark;
         stroke: $dark;
     }
 
-    &--white{
+    &--white {
         fill: $white;
         stroke: $white;
     }
@@ -53,6 +66,14 @@
 
     &--bold {
         font-weight: 700;
+    }
+
+    &-wrap {
+        padding-bottom: 1rem;
+    }
+
+    @media (max-width: 48em) {
+        font-size: 2rem;
     }
 }
 
@@ -187,5 +208,30 @@
                 background-color: $dark-gray-hover;
             }
         }
+    }
+}
+
+
+@keyframes bounceArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.3rem);
+    }
+}
+
+@keyframes bounceLinkArrow {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0.3rem, -0.3rem);
     }
 }
