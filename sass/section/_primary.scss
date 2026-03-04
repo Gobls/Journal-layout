@@ -1,4 +1,24 @@
 .primary {
+    .hero {
+        &__bg {
+            background-image: url('../assets/img/header.png');
+        }
+
+        &__info {
+            padding: 7rem 48rem 9rem 16rem;
+
+            &-subtitle {
+                text-transform: uppercase;
+            }
+
+            &-title {
+                h1 {
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+
     .cards {
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
@@ -27,6 +47,7 @@
             mix-blend-mode: color-burn;
             z-index: 1;
             pointer-events: none;
+            transition: mix-blend-mode $transition;
         }
 
         &[data-bg-icon="icon-1.png"]::before {
@@ -71,11 +92,23 @@
                 }
             }
         }
+    }
 
+    @media (max-width: 48em) {
+        .hero {
+            &__info {
+                padding: 20rem 1.5rem 10rem;
 
-        @media (max-width: 48em) {
-            padding: 1.8rem 1.5rem;
-            height: 17.9rem;
+                &-subtitle {
+                    h2 {
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+
+        .card {
+            padding: 1.75rem 1.5rem;
         }
     }
 }

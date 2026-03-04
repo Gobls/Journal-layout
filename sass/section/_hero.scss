@@ -1,7 +1,6 @@
 .hero {
     &__bg {
         height: 75rem;
-        background-image: url('../assets/img/header.png');
         background-size: cover;
 
 
@@ -52,34 +51,27 @@
         font-weight: 400;
         font-size: 2rem;
         color: $white;
-        margin: 0;
-    }
-
-    &__svg {
-        height: 3.5rem;
-        width: 3.5rem;
     }
 
     &__info {
         box-sizing: border-box;
-        padding: 8rem 49rem 9rem 16rem;
         display: flex;
         flex-direction: column;
         height: 100%;
         justify-content: space-between;
 
         &-title {
-            padding-bottom: 7rem;
+            padding-bottom: 6rem;
 
             h1 {
-                font-weight: 700;
+                font-weight: 500;
                 font-size: 6.4rem;
                 color: $white;
             }
         }
 
         &-subtitle {
-            padding-bottom: 2rem;
+            padding-bottom: 1rem;
 
             h2 {
                 color: $white;
@@ -95,17 +87,15 @@
             font-size: 2rem;
 
             &--small {
+                width: 30.7rem;
                 height: 9rem;
-                width: 32.7rem;
                 gap: 2rem;
-                text-transform: uppercase;
             }
 
             &--big {
+                width: 36.5rem;
                 height: 9rem;
-                width: 38.5rem;
                 gap: 2rem;
-                text-transform: uppercase;
             }
         }
     }
@@ -125,39 +115,9 @@
         &__bg {
             height: 94rem;
             background-position: center;
+
             &::before {
                 display: none;
-            }
-        }
-
-        &-article {
-            overflow: hidden;
-
-            .container {
-                height: 94rem;
-                background-image: url('../assets/img/article__background-mobile.png');
-            }
-
-            .hero {
-                &__info {
-                    padding: 20rem 1.5rem 10rem 1.5rem;
-
-                    &-title {
-                        padding-bottom: 3rem;
-
-                        h1 {
-                            font-size: 3rem;
-                            text-align: center;
-                        }
-                    }
-
-                    &-subtitle {
-                        h2 {
-                            font-size: 2rem;
-                            text-align: center;
-                        }
-                    }
-                }
             }
         }
 
@@ -178,10 +138,8 @@
         }
 
         &__info {
-            padding: 20rem 1.5rem 8rem 1.5rem;
-
             &-title {
-                padding-bottom: 3rem;
+                padding-bottom: 5rem;
 
                 h1 {
                     font-size: 4.8rem;
