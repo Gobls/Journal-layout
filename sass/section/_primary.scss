@@ -5,8 +5,6 @@
         }
 
         &__info {
-            padding: 7rem 48rem 9rem 16rem;
-
             &-subtitle {
                 text-transform: uppercase;
             }
@@ -97,8 +95,6 @@
     @media (max-width: 48em) {
         .hero {
             &__info {
-                padding: 20rem 1.5rem 10rem;
-
                 &-subtitle {
                     h2 {
                         line-height: 150%;

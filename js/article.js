@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const listOfSources = document.querySelector('#list-of-sources');
-    const ol = listOfSources.querySelector('.card__list--ol');
+    const ol = listOfSources.querySelector('.sources-list');
     const btn = listOfSources.querySelector('.btn');
     const items = ol.querySelectorAll('li');
 
@@ -37,14 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     maxHeight = calculateMaxHeight();
     minHeight = calculateMinHeight();
-    ol.style.height = `${minHeight + 9}rem`;
+    ol.style.height = `${minHeight + 4.5}rem`;
 
     btn.onclick = () => {
         if (isExpanded) {
-            ol.style.height = `${minHeight + 9}rem`;
+            ol.style.height = `${minHeight + 4.5}rem`;
             btn.textContent = 'Показать далее';
         } else {
-            ol.style.height = `${maxHeight + 3 * items.length - 3}rem`;
+            ol.style.height = `${maxHeight + 1.5 * items.length - 1.5}rem`;
             btn.textContent = 'Скрыть';
         }
         isExpanded = !isExpanded;

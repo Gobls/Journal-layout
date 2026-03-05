@@ -16,7 +16,7 @@
     }
 }
 
-.block-wrap{
+.block-wrap {
     display: flex;
 }
 
@@ -28,6 +28,11 @@
 
     &-wrap {
         display: flex;
+    }
+
+    &--tiny {
+        width: 2rem;
+        height: 2rem;
     }
 
     &--small {
@@ -139,16 +144,26 @@
     @media (max-width: 48em) {
         width: 12rem;
         height: 12rem;
+
+        &--small {
+            width: 11rem;
+            height: 11rem;
+        }
     }
 }
 
 .sources-list {
-    font-weight: 400;
-    font-size: 2.6rem;
-
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    overflow: hidden;
+    padding-left: 4rem;
+
+    transition: height $transition;
+
+    @media (max-width: 48em) {
+        padding-left: 3rem;
+    }
 }
 
 

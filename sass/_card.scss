@@ -19,18 +19,8 @@
         gap: 3rem;
     }
 
-    &__picture {
-        display: block;
-    }
-
     &__location {
         display: flex;
-    }
-
-    ol {
-        .card__list-item {
-            display: list-item;
-        }
     }
 
     &__header {
@@ -58,49 +48,14 @@
         display: flex;
     }
 
-
-    &__info {
-        display: flex;
-    }
-
-    &__btns {
-        display: flex;
-        justify-content: center;
-    }
-
     &__btn {
         font-weight: 400;
         font-size: 2rem;
     }
 
-    &__svg {
-        stroke: $main;
-        fill: $main;
-        width: 3.3rem;
-        height: 3.3rem;
-    }
-
-    &__list {
+    &__btns {
         display: flex;
-        flex-direction: column;
-
-        &--ol {
-            padding-left: 3rem;
-        }
-
-        &-item {
-            display: flex;
-        }
-
-        &-icon {
-            fill: $dark;
-            stroke: $dark;
-            flex-shrink: 0;
-        }
-
-        &-picture {
-            display: block;
-        }
+        justify-content: center;
     }
 
     &__link {
@@ -164,10 +119,6 @@
     @media (max-width: 48em) {
         &__header {
             font-size: 3rem;
-        }
-
-        &__text {
-            font-size: 2rem;
         }
 
         &-wrap {

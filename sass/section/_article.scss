@@ -5,36 +5,77 @@
         }
 
         &__info {
+            &-subtitle {
+                padding-bottom: 2rem;
+            }
+
             &-title {
+                padding-bottom: 7rem;
+
                 h1 {
                     font-size: 4rem;
+                    font-weight: 700;
+                }
+            }
 
-                    @media (max-width: 48em) {
-                        font-size: 3rem;
-                    }
+            &-button {
+                &--big {
+                    width: 34rem;
+                }
+
+                &--small {
+                    width: 31.5rem;
                 }
             }
-            &-subtitle {
-                h2{
-                    text-transform: none;
-                }
-            }
+        }
+    }
+
+    .btn {
+        &--highlight {
+            color: $main;
+            font-weight: 400;
+            font-size: 2.6rem;
+
+            text-transform: none;
         }
     }
 
     .cards {
-        padding: 8rem 0 0 0;
-        display: flex;
-        flex-direction: column;
         gap: 5rem;
     }
 
-    .btn{
-        &--highlight{
-            color: $main;
-            font-weight: 400;
-            font-size: 2.6rem;
+    .list {
+        gap: 3rem;
+
+        &:has(.circle-picture) {
+            gap: 3.4rem;
         }
+
+        &-item {
+            gap: 2rem;
+
+            &:has(.circle-picture) {
+                align-items: start;
+            }
+        }
+    }
+
+    .text {
+        p {
+            padding-bottom: 2.6rem;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .circle-picture {
+        margin-right: 3rem;
+    }
+
+    .viewing {
+        padding: 5rem 0 0 4rem;
     }
 
     .card {
@@ -42,44 +83,67 @@
         padding: 5rem 4rem 6rem 4rem;
         gap: 3rem;
 
+        &__btns {
+            padding-top: 1rem;
+        }
+
         &__btn {
-            width: 22rem;
+            width: 23.7rem;
             height: 6rem;
+            text-transform: none;
             gap: 2rem;
-            margin-top: 1rem;
         }
 
-        &__list {
-            gap: 3rem;
-
-            &--ol {
-                overflow: hidden;
-                transition: height 0.4s ease;
-            }
-
-            &-item {
-                gap: 2rem;
-            }
-
-            &-icon {
-                width: 3.5rem;
-                height: 3.5rem;
-            }
-
-            &-picture {
-                width: 11rem;
-                height: 11rem;
-                border-radius: 50%;
-                overflow: hidden;
-            }
-        }
-
-        &__info {
+        &__content {
             gap: 1rem;
-            flex-direction: column;
         }
-        @media (max-width: 48em) {
+    }
+
+    @media(max-width: 48em) {
+        .hero {
+            &__info {
+                &-title {
+                    padding-bottom: 3rem;
+
+                    h1 {
+                        font-size: 3rem;
+                    }
+                }
+
+                &-button {
+                    &--big {
+                        width: 33rem;
+                    }
+
+                    &--small {
+                        width: 33rem;
+                    }
+                }
+            }
+        }
+
+        .cards {
+            gap: 4rem;
+        }
+
+        .card {
             padding: 4rem 1.5rem 5rem;
+        }
+
+        .circle-picture {
+            margin-right: 0;
+        }
+
+        .list:has(.circle-picture) {
+            gap: 3rem;
+        }
+
+        .btn--highlight{
+            font-size: 2rem;
+        }
+
+        .viewing{
+            padding: 3rem 0 0 1.5rem;
         }
     }
 }
