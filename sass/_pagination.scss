@@ -14,8 +14,9 @@
         border-radius: 1.5rem;
         background-color: $pagination-background;
         display: flex;
-        gap: 5rem;
+        gap: 5.35rem;
         align-items: center;
+        height: 6rem;
     }
 
     &-list {
@@ -86,7 +87,7 @@
     }
 
     &__box {
-        padding: 1.4rem 2rem;
+        padding: 1.2rem 2rem;
         border: .2rem solid $gray;
         border-radius: 1.5rem;
         background: $white;
@@ -190,6 +191,10 @@
     @media (max-width: 48em) {
         &__label {
             padding-right: 0;
+            font-size: 2rem;
+        }
+        &-wrap {
+            width: 21.5rem;
         }
     }
 }

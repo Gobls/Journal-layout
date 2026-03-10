@@ -563,18 +563,6 @@ input::-ms-clear {
   justify-content: space-between;
   border-radius: 1.5rem;
 }
-.card__content {
-  display: flex;
-  flex-direction: column;
-}
-.card-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-.card__location {
-  display: flex;
-}
 .card__header {
   font-weight: 700;
   font-size: 4rem;
@@ -584,15 +572,19 @@ input::-ms-clear {
   flex-direction: column;
   gap: 1rem;
 }
-.card__header-title {
-  text-transform: uppercase;
-  font-size: 3.2rem;
-}
-.card__header-subtitle {
-  font-weight: 500;
-  font-size: 2rem;
+.card__content {
+  display: flex;
+  flex-direction: column;
 }
 .card__footer {
+  display: flex;
+}
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.card__location {
   display: flex;
 }
 .card__btn {
@@ -618,38 +610,6 @@ input::-ms-clear {
   height: 1.8rem;
   stroke: #ee5656;
 }
-.card__download {
-  transition: transform 0.5s ease;
-}
-.card__download-svg {
-  border-radius: 100%;
-  width: 5rem;
-  height: 5rem;
-  background-color: #ee5656;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.card__download-svg--arrow {
-  width: 1rem;
-  height: 1.4rem;
-  stroke: #FFF;
-  transition: stroke 0.5s ease;
-}
-.card__download-svg--line {
-  width: 1.9rem;
-  height: 0.6rem;
-  padding-bottom: 0.5rem;
-  stroke: #FFF;
-  transition: stroke 0.5s ease;
-}
-.card__download-svg--pdf {
-  width: 2.5rem;
-  height: 1rem;
-  fill: #FFF;
-  transition: fill 0.5s ease;
-}
 @media (max-width: 48em) {
   .card__header {
     font-size: 3rem;
@@ -674,8 +634,9 @@ input::-ms-clear {
   border-radius: 1.5rem;
   background-color: #ecf1fb;
   display: flex;
-  gap: 5rem;
+  gap: 5.35rem;
   align-items: center;
+  height: 6rem;
 }
 .pagination-list {
   display: flex;
@@ -729,7 +690,7 @@ input::-ms-clear {
   border-width: 0.2rem;
 }
 .selector__box {
-  padding: 1.4rem 2rem;
+  padding: 1.2rem 2rem;
   border: 0.2rem solid #d8e0f5;
   border-radius: 1.5rem;
   background: #FFF;
@@ -810,6 +771,10 @@ input::-ms-clear {
 @media (max-width: 48em) {
   .selector__label {
     padding-right: 0;
+    font-size: 2rem;
+  }
+  .selector-wrap {
+    width: 21.5rem;
   }
 }
 
@@ -920,6 +885,39 @@ input::-ms-clear {
   display: flex;
 }
 
+.download-svg__wrap {
+  transition: transform 0.5s ease;
+}
+.download-svg {
+  border-radius: 100%;
+  width: 4.7rem;
+  height: 4.7rem;
+  background-color: #ee5656;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.download-svg--arrow {
+  width: 1rem;
+  height: 1.4rem;
+  stroke: #FFF;
+  transition: stroke 0.5s ease;
+}
+.download-svg--line {
+  width: 1.9rem;
+  height: 0.6rem;
+  padding-bottom: 0.5rem;
+  stroke: #FFF;
+  transition: stroke 0.5s ease;
+}
+.download-svg--pdf {
+  width: 2.5rem;
+  height: 1rem;
+  fill: #FFF;
+  transition: fill 0.5s ease;
+}
+
 .svg {
   width: 3.5rem;
   height: 3.5rem;
@@ -934,6 +932,10 @@ input::-ms-clear {
   height: 2rem;
 }
 .svg--small {
+  width: 3rem;
+  height: 3rem;
+}
+.svg--medium {
   width: 3.2rem;
   height: 3.2rem;
 }
@@ -980,7 +982,7 @@ input::-ms-clear {
 }
 .title--big {
   font-weight: 400;
-  font-size: 96px;
+  font-size: 9.6rem;
   text-align: center;
   padding-bottom: 2rem;
 }
@@ -1258,37 +1260,49 @@ input::-ms-clear {
 .archive .hero__bg {
   background-image: url("../assets/img/background/archive__background.png");
 }
+.archive .hero__info-title {
+  padding-bottom: 7rem;
+}
+.archive .hero__info-title h1 {
+  font-weight: 700;
+}
+.archive .hero__info-subtitle {
+  padding-bottom: 2rem;
+}
 .archive .title {
   font-size: 3.2rem;
   text-transform: uppercase;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.5s ease;
 }
 .archive .subtitle {
   font-weight: 500;
   font-size: 2rem;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.5s ease;
 }
 .archive .cards {
   grid-template-columns: repeat(3, 1fr);
-  gap: 5rem 2rem;
+  gap: 4.7rem 2rem;
+  padding-bottom: 2.7rem;
+}
+.archive .download-svg {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
 }
 .archive .card {
   background: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
   position: relative;
-  transition: background 0.3s ease-in-out;
-  height: 23rem;
+  transition: background 0.5s ease;
+  height: 22.5rem;
   padding: 3.5rem 3rem 4rem;
-}
-.archive .card-wrap {
-  position: relative;
 }
 .archive .card::before {
   content: "";
   position: absolute;
   right: 5rem;
   bottom: -1rem;
-  width: 14rem;
-  height: 21rem;
+  width: 14.7rem;
+  height: 21.4rem;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
@@ -1315,98 +1329,98 @@ input::-ms-clear {
 .archive .card[data-bg-icon="icon-6.png"]::before {
   background-image: url("../assets/icons/archive/bg-image/icon-6.png");
 }
-.archive .card__svg {
-  width: 3rem;
-  height: 3rem;
+.archive .card__content {
+  justify-content: space-between;
+  height: 100%;
 }
 .archive .card__header {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.archive .card__download {
-  z-index: 2;
-  position: absolute;
-  right: 3rem;
-  top: 3rem;
-}
 .archive .card__footer {
   gap: 2rem;
   align-items: center;
 }
-.archive .card__footer-text {
+.archive .card__footer .text {
   font-weight: 700;
   font-size: 2rem;
   color: #ee5656;
   text-transform: uppercase;
-  transition: color 0.3s ease-in-out;
-}
-.archive .card__footer-svg {
-  transition: stroke 0.3s ease-in-out;
 }
 @media (hover: hover) {
-  .archive .card-wrap:hover .card {
+  .archive .card:hover {
     background: #ee5656;
   }
-  .archive .card-wrap:hover .card::before {
+  .archive .card:hover::before {
     transform: rotate(15deg);
   }
-  .archive .card-wrap:hover .card__footer-text,
-  .archive .card-wrap:hover .title,
-  .archive .card-wrap:hover .subtitle {
+  .archive .card:hover .text,
+  .archive .card:hover .title,
+  .archive .card:hover .subtitle {
     color: #FFF;
   }
-  .archive .card-wrap:hover .card__footer-svg {
+  .archive .card:hover .svg--main {
     stroke: #FFF;
   }
-  .archive .card-wrap:hover .card__download-svg {
+  .archive .card:hover .download-svg {
     background-color: #FFF;
   }
-  .archive .card-wrap:hover .card__download-svg--line {
+  .archive .card:hover .download-svg--line {
     stroke: #ee5656;
   }
-  .archive .card-wrap:hover .card__download-svg--arrow {
+  .archive .card:hover .download-svg--arrow {
     stroke: #ee5656;
   }
-  .archive .card-wrap:hover .card__download-svg--pdf {
+  .archive .card:hover .download-svg--pdf {
     fill: #ee5656;
   }
-  .archive .card-wrap__download:hover {
+  .archive .card:hover .download-svg:hover {
     transform: scale(1.2);
   }
-  .archive .card-wrap__download:hover .card__download-svg--arrow {
+  .archive .card:hover .download-svg:hover .download-svg--arrow {
+    animation: bounceArrow 1s ease infinite;
+  }
+  .archive .hero .btn:hover .svg {
     animation: bounceArrow 1s ease infinite;
   }
 }
 @media (max-width: 48em) {
-  .archive .hero .container {
+  .archive .hero__bg {
     height: 76rem;
   }
   .archive .hero__info {
     padding-bottom: 8rem;
   }
+  .archive .hero__info-title {
+    padding-bottom: 3rem;
+  }
+  .archive .hero__info-button--small {
+    width: 30.7rem;
+  }
   .archive .cards {
     grid-template-columns: repeat(1, 1fr);
   }
-  .archive__line {
-    margin-bottom: 1rem;
+  .archive .card:before {
+    right: 6rem;
+    bottom: -1.5rem;
   }
-  .archive__line--second {
-    display: none;
-  }
-  .archive__line--first {
-    display: block;
-  }
-  .archive__pagination {
+  .archive .pagination {
     flex-direction: column;
-    gap: 1rem;
-    padding-bottom: 4rem;
+    gap: 2rem;
+    padding-bottom: 6rem;
   }
-  .archive__pagination-selector {
-    flex-direction: column;
-    gap: 1rem;
+  .archive .pagination-selector {
+    justify-content: space-between;
   }
-  .archive__pagination-item:nth-last-child(1), .archive__pagination-item:nth-last-child(2) {
+  .archive .pagination-wrap {
+    gap: 4.175rem;
+    padding: 0 2rem;
+  }
+  .archive .pagination-list {
+    gap: 4.175rem;
+  }
+  .archive .pagination-item:nth-last-child(1), .archive .pagination-item:nth-last-child(2) {
     display: none;
   }
 }
