@@ -465,10 +465,10 @@ input::-ms-clear {
   }
 }
 @media (max-width: 48em) {
-  .header:has(~ main .archive) .header__content {
+  .header:has(~ main .archive, ~ main .thematics) .header__content {
     height: 60rem;
   }
-  .header:has(~ main .archive) .header__content-menu {
+  .header:has(~ main .archive, ~ main .thematics) .header__content-menu {
     padding-bottom: 6rem;
   }
   .header {
@@ -996,6 +996,11 @@ input::-ms-clear {
   font-weight: 700;
   font-size: 2.6rem;
 }
+@media (max-width: 48em) {
+  .subtitle {
+    font-size: 2rem;
+  }
+}
 
 .list {
   display: flex;
@@ -1012,6 +1017,7 @@ input::-ms-clear {
 }
 .list-item--point::before {
   content: "";
+  top: 1rem;
   left: 2.3rem;
   position: absolute;
   width: 1rem;
@@ -1611,51 +1617,60 @@ input::-ms-clear {
 .thematics .hero__bg {
   background-image: url("../assets/img/background/thematics__background.png");
 }
+.thematics .hero__info-title {
+  padding-bottom: 7rem;
+}
+.thematics .hero__info-title h1 {
+  font-weight: 700;
+}
+.thematics .hero__info-subtitle {
+  padding-bottom: 2rem;
+}
+.thematics .hero__info-button--small {
+  width: 23.5rem;
+}
+.thematics ol.list {
+  list-style: none;
+  counter-reset: ol-counter;
+}
+.thematics ol.list .list-item {
+  counter-increment: ol-counter;
+  position: relative;
+  padding-left: 5.5rem;
+}
+.thematics ol.list .list-item::before {
+  content: counter(ol-counter, decimal-leading-zero) ".";
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-weight: 500;
+  font-size: 2.6rem;
+}
 .thematics .card {
   background-color: #FFF;
   padding: 5rem 4rem 3rem 4rem;
   gap: 3rem;
 }
-.thematics .card__text {
-  padding-bottom: 3rem;
-}
-.thematics .card__list {
-  padding-bottom: 3rem;
-  gap: 1rem;
-}
-.thematics .card__list--ol {
-  list-style: none;
-  counter-reset: ol-counter;
-}
-.thematics .card__list--ol .card__list-item {
-  counter-increment: ol-counter;
-}
-.thematics .card__list--ol .card__list-item::before {
-  content: counter(ol-counter, decimal-leading-zero) ".";
-  position: absolute;
-  left: 0;
-  font-weight: 500;
-  font-size: 2.6rem;
-}
-.thematics .card__list-item {
-  position: relative;
-  align-items: center;
-  padding-left: 5.5rem;
-}
-.thematics .card__list-item .card__text {
-  padding-bottom: 0;
+@media (hover: hover) {
+  .thematics .hero .btn:hover .svg {
+    animation: bounceArrow 1s ease infinite;
+  }
 }
 @media (max-width: 48em) {
+  .thematics .hero__bg {
+    height: 76rem;
+  }
+  .thematics .hero__info {
+    padding: 20rem 1.5rem 8rem;
+  }
+  .thematics .hero__info-title {
+    padding-bottom: 3rem;
+  }
   .thematics .card {
     padding: 4rem 1.5rem 5rem;
   }
-  .thematics .card__header-title {
-    font-size: 3rem;
-  }
-  .thematics .card__header-subtitle {
-    font-size: 2rem;
-  }
-  .thematics .card__list--ol .card__list-item::before {
+  .thematics ol.list .list-item::before {
+    left: 1.5rem;
     font-size: 2rem;
   }
 }

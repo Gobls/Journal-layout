@@ -415,7 +415,7 @@
     }
 
     @media (max-width: 48em) {
-        &:has(~ main .archive) .header__content {
+        &:has(~ main .archive, ~ main .thematics) .header__content {
             height: 60rem;
             &-menu{
                 padding-bottom: 6rem;

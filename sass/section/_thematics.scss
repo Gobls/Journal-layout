@@ -3,66 +3,88 @@
         &__bg {
             background-image: url('../assets/img/background/thematics__background.png');
         }
+
+        &__info {
+            &-title {
+                padding-bottom: 7rem;
+
+                h1 {
+                    font-weight: 700;
+                }
+            }
+
+            &-subtitle {
+                padding-bottom: 2rem;
+            }
+
+            &-button {
+                &--small {
+                    width: 23.5rem;
+                }
+            }
+        }
+    }
+
+    ol.list {
+        list-style: none;
+        counter-reset: ol-counter;
+
+        .list-item {
+            counter-increment: ol-counter;
+            position: relative;
+            padding-left: 5.5rem;
+
+            &::before {
+                content: counter(ol-counter, decimal-leading-zero) ".";
+                position: absolute;
+                top: 0;
+                left: .5rem;
+                font-weight: 500;
+                font-size: 2.6rem;
+            }
+        }
     }
 
     .card {
         background-color: $white;
         padding: 5rem 4rem 3rem 4rem;
         gap: 3rem;
+    }
 
-        &__text {
-            padding-bottom: 3rem;
-        }
-
-        &__list {
-            padding-bottom: 3rem;
-            gap: 1rem;
-
-            &--ol {
-                list-style: none;
-                counter-reset: ol-counter;
-
-                .card__list-item {
-                    counter-increment: ol-counter;
-
-                    &::before {
-                        content: counter(ol-counter, decimal-leading-zero) ".";
-                        position: absolute;
-                        left: 0;
-                        font-weight: 500;
-                        font-size: 2.6rem;
-                    }
+    @media (hover: hover) {
+        .hero {
+            .btn:hover {
+                .svg {
+                    animation: bounceArrow 1s ease infinite;
                 }
             }
+        }
+    }
 
-            &-item {
-                position: relative;
-                align-items: center;
-                padding-left: 5.5rem;
+    @media (max-width: 48em) {
+        .hero {
+            &__bg {
+                height: 76rem;
+            }
 
-                .card__text {
-                    padding-bottom: 0;
+            &__info {
+                padding: 20rem 1.5rem 8rem;
+
+                &-title {
+                    padding-bottom: 3rem;
                 }
             }
         }
 
-        @media (max-width: 48em) {
+        .card {
             padding: 4rem 1.5rem 5rem;
-            &__header{
-                &-title{
-                    font-size: 3rem;
-                }
-                &-subtitle{
+        }
+
+        ol.list {
+            .list-item {
+                &::before {
+                    left: 1.5rem;
                     font-size: 2rem;
-                }
-            }
-            &__list{
-                &--ol{
-                    .card__list-item {
-                        &::before{
-                            font-size: 2rem;
-                        }
-                    }
                 }
             }
         }
