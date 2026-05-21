@@ -3,6 +3,12 @@
     font-size: 2.6rem;
     transition: color $transition;
 
+    &-wrap {
+        padding-right: 6rem;
+        position: relative;
+        overflow: hidden;
+    }
+
     &--bold {
         font-weight: 700;
     }
@@ -21,20 +27,19 @@
 }
 
 .download-svg {
-
     &__wrap {
         transition: transform $transition;
     }
 
-
     border-radius: 100%;
-    width: 4.7rem;
-    height: 4.7rem;
+    width: 5rem;
+    height: 5rem;
     background-color: $main;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 
     &--arrow {
         width: 1rem;
@@ -56,6 +61,40 @@
         height: 1rem;
         fill: $white;
         transition: fill $transition;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            .download-svg--arrow {
+                animation: bounceArrow 1s ease infinite;
+            }
+        }
+    }
+}
+
+.link-svg {
+    border-radius: 100%;
+    border: .2rem solid $main;
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &--arrow {
+        width: 1.8rem;
+        height: 1.8rem;
+        stroke: $main;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            .link-svg--arrow {
+                animation: bounceLinkArrow 1s ease infinite;
+            }
+        }
     }
 }
 
@@ -159,6 +198,16 @@
     &-item {
         display: flex;
         align-items: center;
+
+        &__header {
+            display: flex;
+            gap: .5rem;
+        }
+
+        &__footer {
+            flex-direction: column;
+            width: 100%;
+        }
 
         &--point {
             padding-left: 5.5rem;

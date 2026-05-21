@@ -4,43 +4,74 @@
     }
 
     .hero {
+        &__bg {
+            background-image: url('../assets/img/background/journals__background.png');
+        }
+
         &__info {
             padding: 7rem 38rem 9rem 16rem;
+
+            &-title {
+                h1 {
+                    line-height: 100%;
+                }
+            }
 
             &-subtitle {
                 text-transform: uppercase;
             }
-        }
 
-        .card__download-svg {
-            background-color: $white;
+            &-button {
+                .download-svg {
+                    background-color: $white;
 
-            &--line {
-                stroke: $main;
-            }
+                    &--arrow,
+                    &--line {
+                        stroke: $main;
+                    }
 
-            &--arrow {
-                stroke: $main;
-            }
-
-            &--pdf {
-                fill: $main;
+                    &--pdf {
+                        fill: $main;
+                    }
+                }
             }
         }
     }
 
-    .text-wrap {
-        padding-right: 6rem;
-        position: relative;
-        overflow: hidden;
+    .list {
+        gap: 4rem;
+
+        &-item {
+            gap: 2rem;
+            align-items: flex-start;
+
+            .download-svg {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            .link-svg {
+                width: 4.6rem;
+                height: 4.6rem;
+            }
+        }
+
+        .link {
+            font-weight: 700;
+        }
     }
 
     .block-wrap {
-        padding-top: 5rem;
+        padding: 5rem 0 0 4rem;
+        gap: 1rem;
+
+        .text {
+            font-size: 2rem;
+        }
     }
 
     .viewing {
-        padding-top: 3rem;
+        padding: 3rem 0 0 4rem;
     }
 
     .dots {
@@ -63,46 +94,15 @@
         bottom: 0;
     }
 
-    .svg {
-        &-wrap {
-            gap: .5rem;
-        }
-    }
-
     .card {
         background-color: $white;
         padding: 5rem 4rem 6rem;
-
-        &__list {
-            gap: 4rem;
-
-            &-item {
-                gap: 2rem;
-            }
-        }
-
-        &__info {
-            flex-direction: column;
-            width: 100%;
-        }
     }
 
     @media (hover: hover) {
         .hero__info-button--small:hover {
-            .card__download-svg--arrow {
+            .download-svg--arrow {
                 animation: bounceArrow 1s ease infinite;
-            }
-        }
-
-        .card__download-svg:hover {
-            .card__download-svg--arrow {
-                animation: bounceArrow 1s ease infinite;
-            }
-        }
-
-        .card__link-svg:hover {
-            .card__link-svg--arrow {
-                animation: bounceLinkArrow 1s ease infinite;
             }
         }
     }
@@ -111,31 +111,62 @@
         .hero {
             &__info {
                 padding: 20rem 1.5rem 10rem;
+
+                &-subtitle {
+                    h2 {
+                        line-height: 150%;
+                    }
+                }
+
+                &-title {
+                    h1 {
+                        line-height: 100%;
+                    }
+                }
             }
         }
 
-        .cards{
+        .title {
+            padding-left: 1.5rem;
+        }
+
+        .cards {
             gap: 7rem;
         }
 
-        .card{
+        .card {
             padding: 4rem 1.5rem 5rem;
-            &__list{
-                &-item{
-                    flex-direction: column;
+        }
+
+        .list {
+            gap: 6rem;
+
+            &-item {
+                flex-direction: column;
+
+                &__header {
+                    order: 2;
+                    width: 100%;
+                    gap: 2rem;
+                }
+
+                &__footer {
+                    order: 1;
+                }
+
+                .download-svg {
+                    width: 6rem;
+                    height: 6rem;
+                }
+
+                .link-svg {
+                    width: 5.6rem;
+                    height: 5.6rem;
                 }
             }
-
-            &__info{
-                order: 1;
-            }
         }
 
-        .svg-wrap{
-            order: 2;
-        }
-
-        .block-wrap{
+        .block-wrap {
             padding-top: 2rem;
         }
     }
