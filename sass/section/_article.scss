@@ -1,7 +1,7 @@
 .article {
     .hero {
         &__bg {
-            background-image: url('../assets/img/article__background.png');
+            background-image: url('../assets/img/background/article__background.png');
         }
 
         &__info {
@@ -38,6 +38,10 @@
 
             text-transform: none;
         }
+
+        &-wrap {
+            padding-top: 1rem;
+        }
     }
 
     .cards {
@@ -57,6 +61,36 @@
             &:has(.circle-picture) {
                 align-items: start;
             }
+        }
+    }
+
+    .download-svg {
+        background-color: transparent;
+        &--arrow {
+            width: 1.4rem;
+            height: 1.9rem;
+        }
+
+        &--line {
+            width: 2.6rem;
+            height: .8rem;
+        }
+    }
+
+    #keywords {
+        .list {
+            gap: 2rem;
+        }
+    }
+
+    #copy-card {
+        .btn {
+            width: 23.7rem;
+            height: 6rem;
+            font-weight: 400;
+            font-size: 2rem;
+            gap: 2rem;
+            text-transform: none;
         }
     }
 
@@ -83,19 +117,16 @@
         padding: 5rem 4rem 6rem 4rem;
         gap: 3rem;
 
-        &__btns {
-            padding-top: 1rem;
-        }
-
-        &__btn {
-            width: 23.7rem;
-            height: 6rem;
-            text-transform: none;
-            gap: 2rem;
-        }
-
         &__content {
             gap: 1rem;
+        }
+    }
+
+    @media (hover: hover) {
+        .hero__info-button--big:hover {
+            .download-svg--arrow {
+                animation: bounceArrow 1s ease infinite;
+            }
         }
     }
 
@@ -138,11 +169,11 @@
             gap: 3rem;
         }
 
-        .btn--highlight{
+        .btn--highlight {
             font-size: 2rem;
         }
 
-        .viewing{
+        .viewing {
             padding: 3rem 0 0 1.5rem;
         }
     }

@@ -74,14 +74,17 @@
             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
-    <symbol id="download" viewBox="0 0 35 35" fill="none">
-        <path
-            d="M3 25.5769V27.8846C3 29.1087 3.48626 30.2826 4.35181 31.1482C5.21737 32.0137 6.39131 32.5 7.61538 32.5H28.3846C29.6087 32.5 30.7826 32.0137 31.6482 31.1482C32.5137 30.2826 33 29.1087 33 27.8846V25.5769"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M11.0769 15.1923L18 23.2692L24.9231 15.1923" stroke-width="2"
+    <symbol id="arrow" viewBox="0 0 14 19" fill="none">
+        <path d="M1 11.1539L6.53846 17.6154L12.0769 11.1539" stroke="white" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M18 23.2692V2.5" stroke-width="2" stroke-linecap="round"
+        <path d="M6.53857 17.6154V1" stroke="white" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" />
+    </symbol>
+
+    <symbol id="line" viewBox="0 0 26 8" fill="none">
+        <path
+            d="M1 1V2.84615C1 3.82541 1.38901 4.76457 2.08145 5.45701C2.77389 6.14945 3.71305 6.53846 4.69231 6.53846H21.3077C22.287 6.53846 23.2261 6.14945 23.9185 5.45701C24.611 4.76457 25 3.82541 25 2.84615V1"
+            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
 
 

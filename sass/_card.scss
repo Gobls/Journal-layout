@@ -34,20 +34,6 @@
         gap: 3rem;
     }
 
-    &__location {
-        display: flex;
-    }
-
-    &__btn {
-        font-weight: 400;
-        font-size: 2rem;
-    }
-
-    &__btns {
-        display: flex;
-        justify-content: center;
-    }
-
     @media (max-width: 48em) {
         &__header {
             font-size: 3rem;

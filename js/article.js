@@ -55,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const copyBtn = document.querySelector('#copy-card .card__btn');
+    const copyBtn = document.querySelector('#copy-card .btn');
 
     copyBtn.addEventListener('click', function () {
-        const textContainer = document.querySelector('#copy-card .card__text');
+        const textContainer = document.querySelector('#copy-card span');
         const htmlContent = textContainer.innerHTML
             .replace(/class="[^"]*"/g, '')
             .replace(/<a/g, '<a style="color: #0066cc; text-decoration: underline;"');

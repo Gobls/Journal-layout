@@ -98,6 +98,12 @@ img {
      object-fit: cover;
 }
 
+picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   width: 120rem;
   margin: 0 auto;
@@ -584,17 +590,6 @@ input::-ms-clear {
   flex-direction: column;
   gap: 3rem;
 }
-.card__location {
-  display: flex;
-}
-.card__btn {
-  font-weight: 400;
-  font-size: 2rem;
-}
-.card__btns {
-  display: flex;
-  justify-content: center;
-}
 @media (max-width: 48em) {
   .card__header {
     font-size: 3rem;
@@ -798,7 +793,6 @@ input::-ms-clear {
   flex-direction: column;
 }
 .accordion__list-item {
-  padding-left: 3.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -807,8 +801,8 @@ input::-ms-clear {
   content: "";
   position: absolute;
   left: 0;
-  top: 1.2rem;
-  width: 1.6rem;
+  top: 1.5rem;
+  width: 2rem;
   height: 0.3rem;
   background-color: #ee5656;
   border-radius: 0.3rem;
@@ -827,8 +821,10 @@ input::-ms-clear {
   cursor: pointer;
   font-weight: 600;
   font-size: 2.6rem;
+  padding-left: 3.5rem;
 }
 .accordion-dropdown {
+  padding-left: 3.5rem;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
@@ -1081,6 +1077,17 @@ input::-ms-clear {
   padding-left: 4rem;
   transition: height 0.5s ease;
 }
+.sources-list > li {
+  counter-increment: item;
+  position: relative;
+}
+.sources-list > li::before {
+  content: counter(item) ".";
+  position: absolute;
+  left: -3rem;
+  font-weight: 400;
+  font-size: 2.6rem;
+}
 @media (max-width: 48em) {
   .sources-list {
     padding-left: 3rem;
@@ -1091,7 +1098,7 @@ input::-ms-clear {
   width: 100%;
   height: 0;
   border: 0.1rem solid #d8e0f5;
-  margin: 2rem 0 2rem;
+  margin: 1.95rem 0 1.95rem;
 }
 
 .btn {
@@ -1135,6 +1142,10 @@ input::-ms-clear {
   .btn--dark-gray:hover {
     background-color: #484b53;
   }
+}
+.btn-wrap {
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes bounceArrow {
@@ -1225,6 +1236,11 @@ input::-ms-clear {
   gap: 2rem;
   font-weight: 700;
   font-size: 2rem;
+}
+.hero__info-button--tiny {
+  width: 23.5rem;
+  height: 9rem;
+  gap: 2rem;
 }
 .hero__info-button--small {
   width: 30.7rem;
@@ -1538,7 +1554,7 @@ input::-ms-clear {
 }
 
 .article .hero__bg {
-  background-image: url("../assets/img/article__background.png");
+  background-image: url("../assets/img/background/article__background.png");
 }
 .article .hero__info-subtitle {
   padding-bottom: 2rem;
@@ -1562,6 +1578,9 @@ input::-ms-clear {
   font-size: 2.6rem;
   text-transform: none;
 }
+.article .btn-wrap {
+  padding-top: 1rem;
+}
 .article .cards {
   gap: 5rem;
 }
@@ -1576,6 +1595,28 @@ input::-ms-clear {
 }
 .article .list-item:has(.circle-picture) {
   align-items: start;
+}
+.article .download-svg {
+  background-color: transparent;
+}
+.article .download-svg--arrow {
+  width: 1.4rem;
+  height: 1.9rem;
+}
+.article .download-svg--line {
+  width: 2.6rem;
+  height: 0.8rem;
+}
+.article #keywords .list {
+  gap: 2rem;
+}
+.article #copy-card .btn {
+  width: 23.7rem;
+  height: 6rem;
+  font-weight: 400;
+  font-size: 2rem;
+  gap: 2rem;
+  text-transform: none;
 }
 .article .text p {
   padding-bottom: 2.6rem;
@@ -1594,17 +1635,13 @@ input::-ms-clear {
   padding: 5rem 4rem 6rem 4rem;
   gap: 3rem;
 }
-.article .card__btns {
-  padding-top: 1rem;
-}
-.article .card__btn {
-  width: 23.7rem;
-  height: 6rem;
-  text-transform: none;
-  gap: 2rem;
-}
 .article .card__content {
   gap: 1rem;
+}
+@media (hover: hover) {
+  .article .hero__info-button--big:hover .download-svg--arrow {
+    animation: bounceArrow 1s ease infinite;
+  }
 }
 @media (max-width: 48em) {
   .article .hero__info-title {
@@ -1708,23 +1745,29 @@ input::-ms-clear {
     height: 76rem;
   }
 }
+@media (max-width: 48em) {
+  .editors .hero__info {
+    padding-bottom: 8rem;
+  }
+}
+.editors .hero__info-title {
+  padding-bottom: 7rem;
+}
+@media (max-width: 48em) {
+  .editors .hero__info-title {
+    padding-bottom: 3rem;
+  }
+}
+.editors .hero__info-subtitle {
+  padding-bottom: 2rem;
+}
 .editors .accordion {
   padding-top: 2rem;
 }
-@media (max-width: 48em) {
-  .editors .accordion {
-    padding-top: 1rem;
-  }
-}
 .editors .circle-picture {
   position: absolute;
-  left: 17rem;
-}
-@media (max-width: 48em) {
-  .editors .circle-picture {
-    position: relative;
-    left: 0;
-  }
+  left: 16rem;
+  flex-shrink: 0;
 }
 .editors .card {
   padding: 5rem 4rem 6rem 25rem;
@@ -1733,6 +1776,13 @@ input::-ms-clear {
 }
 .editors .card__header {
   display: flex;
+  flex-direction: column;
+}
+.editors .card__header-wrap {
+  flex-direction: row;
+  font-weight: 600;
+  font-size: 2rem;
+  padding-bottom: 2rem;
 }
 .editors .card-wrap {
   padding-bottom: 8rem;
@@ -1740,33 +1790,15 @@ input::-ms-clear {
 .editors .card-wrap:last-child {
   padding-bottom: 0;
 }
-@media (max-width: 48em) {
-  .editors .card-wrap {
-    padding-bottom: 7rem;
+@media (hover: hover) {
+  .editors .hero__info-button .btn:hover .svg {
+    animation: bounceArrow 1s ease infinite;
   }
 }
-.editors .card__location {
-  gap: 1rem;
-  font-weight: 600;
-  font-size: 2rem;
-  padding-bottom: 2rem;
-}
 @media (max-width: 48em) {
-  .editors .card__location {
-    padding-bottom: 1rem;
+  .editors .card-wrap > .title {
+    padding-left: 1.5rem;
   }
-}
-.editors .card__svg {
-  width: 1.5rem;
-  height: 2rem;
-}
-.editors .card__link--bold {
-  font-size: 4rem;
-}
-.editors .card__content {
-  gap: 1rem;
-}
-@media (max-width: 48em) {
   .editors .card {
     padding: 4rem 1.5rem 5rem;
     flex-direction: column;
@@ -1776,10 +1808,31 @@ input::-ms-clear {
     gap: 2rem;
     flex-direction: row;
   }
-}
-@media (hover: hover) {
-  .editors .hero__info-button .btn:hover .svg {
-    animation: bounceArrow 1s ease infinite;
+  .editors .card__header-wrap {
+    padding: 0.5rem 0 1rem 0;
+    font-size: 1.6rem;
+  }
+  .editors .card-wrap {
+    padding-bottom: 7rem;
+  }
+  .editors .circle-picture {
+    position: relative;
+    left: 0;
+  }
+  .editors .accordion {
+    padding-top: 1rem;
+  }
+  .editors .accordion__list-item::after, .editors .accordion__list-item::before {
+    top: 1rem;
+  }
+  .editors .hero__bg {
+    height: 76rem;
+  }
+  .editors .hero__info {
+    padding-bottom: 8rem;
+  }
+  .editors .hero__info-title {
+    padding-bottom: 3rem;
   }
 }
 
