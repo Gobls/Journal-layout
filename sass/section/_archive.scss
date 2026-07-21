@@ -1,3 +1,5 @@
+@use '../variable';
+
 .archive {
     .hero {
         &__bg {
@@ -22,13 +24,13 @@
     .title {
         font-size: 3.2rem;
         text-transform: uppercase;
-        transition: color $transition;
+        transition: color variable.$transition;
     }
 
     .subtitle {
         font-weight: 500;
         font-size: 2rem;
-        transition: color $transition;
+        transition: color variable.$transition;
     }
 
     .cards {
@@ -46,7 +48,7 @@
     .card {
         background: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
         position: relative;
-        transition: background $transition;
+        transition: background variable.$transition;
         height: 22.5rem;
         padding: 3.5rem 3rem 4rem;
 
@@ -108,7 +110,7 @@
             .text {
                 font-weight: 700;
                 font-size: 2rem;
-                color: $main;
+                color: variable.$main;
                 text-transform: uppercase;
             }
         }
@@ -116,7 +118,7 @@
 
     @media (hover: hover) {
         .card:hover {
-            background: $main;
+            background: variable.$main;
 
             &::before {
                 transform: rotate(15deg);
@@ -125,26 +127,26 @@
             .text,
             .title,
             .subtitle {
-                color: $white;
+                color: variable.$white;
             }
 
             .svg--main {
-                stroke: $white;
+                stroke: variable.$white;
             }
 
             .download-svg {
-                background-color: $white;
+                background-color: variable.$white;
 
                 &--line {
-                    stroke: $main;
+                    stroke: variable.$main;
                 }
 
                 &--arrow {
-                    stroke: $main;
+                    stroke: variable.$main;
                 }
 
                 &--pdf {
-                    fill: $main;
+                    fill: variable.$main;
                 }
 
                 &:hover {

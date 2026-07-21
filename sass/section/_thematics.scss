@@ -1,3 +1,5 @@
+@use '../variable';
+
 .thematics {
     .hero {
         &__bg {
@@ -46,7 +48,7 @@
     }
 
     .card {
-        background-color: $white;
+        background-color: variable.$white;
         padding: 5rem 4rem 3rem 4rem;
         gap: 3rem;
     }

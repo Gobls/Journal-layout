@@ -1,3 +1,5 @@
+@use '../variable';
+
 .editors {
     .hero {
         &__bg {
@@ -39,7 +41,7 @@
 
     .card {
         padding: 5rem 4rem 6rem 25rem;
-        background-color: $white;
+        background-color: variable.$white;
         gap: 1rem;
 
         &__header {

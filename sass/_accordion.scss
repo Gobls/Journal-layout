@@ -1,3 +1,5 @@
+@use 'variable';
+
 .accordion {
     &__list {
         display: flex;
@@ -16,9 +18,9 @@
                 top: 1.5rem;
                 width: 2rem;
                 height: 0.3rem;
-                background-color: $main;
+                background-color: variable.$main;
                 border-radius: 0.3rem;
-                transition: transform 0.4s ease;
+                transition: transform variable.$transition
             }
 
             &::after {
@@ -49,12 +51,12 @@
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity .5s ease-in-out, max-height .4s ease-out, padding-top .4s ease-out;
+        transition: opacity variable.$transition max-height variable.$transition, padding-top variable.$transition;
 
         &.open {
             padding-top: 2rem;
             opacity: 1;
-            transition: opacity .5s ease-in-out, max-height .4s ease-out, padding-top .4s ease-out;
+            transition: opacity variable.$transition, max-height variable.$transition, padding-top variable.$transition;
         }
 
 

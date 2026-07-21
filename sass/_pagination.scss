@@ -1,3 +1,5 @@
+@use 'variable';
+
 .pagination {
     width: 100%;
     display: flex;
@@ -12,7 +14,7 @@
     &-wrap {
         padding: 0 3.7rem;
         border-radius: 1.5rem;
-        background-color: $pagination-background;
+        background-color: variable.$pagination-background;
         display: flex;
         gap: 5.35rem;
         align-items: center;
@@ -29,17 +31,17 @@
         font-size: 2.6rem;
 
         &.active {
-            color: $main;
+            color: variable.$main;
         }
     }
 
     &-arrow {
         width: 2.4rem;
         height: 2.4rem;
-        stroke: $dark;
+        stroke: variable.$dark;
 
         &.active {
-            stroke: $main;
+            stroke: variable.$main;
         }
     }
 }
@@ -54,7 +56,7 @@
     &__value {
         font-weight: 700;
         font-size: 2.6rem;
-        transition: color 0.3s ease-in-out;
+        transition: color variable.$transition;
     }
 
     &-wrap {
@@ -68,11 +70,11 @@
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
 
-                transition: border-radius 0s ease;
+                transition: border-radius variable.$transition;
             }
 
             .selector__value {
-                color: $main;
+                color: variable.$main;
             }
 
             .selector__arrow {
@@ -88,14 +90,14 @@
 
     &__box {
         padding: 1.2rem 2rem;
-        border: .2rem solid $gray;
+        border: .2rem solid variable.$gray;
         border-radius: 1.5rem;
-        background: $white;
+        background: variable.$white;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        transition: border-radius 0.4s ease 0.3s;
+        transition: border-radius variable.$transition;
     }
 
     &__arrow {
@@ -103,8 +105,8 @@
         height: 0;
         border-left: 1rem solid transparent;
         border-right: 1rem solid transparent;
-        border-top: 1.5rem solid $main;
-        transition: transform 0.3s ease-in-out;
+        border-top: 1.5rem solid variable.$main;
+        transition: transform variable.$transition;
     }
 
     &__dropdown {
@@ -112,10 +114,10 @@
         top: 100%;
         left: 0;
         right: 0;
-        background: $white;
+        background: variable.$white;
         border-radius: 0 0 1.5rem 1.5rem;
         margin-top: -.2rem;
-        border: 0 solid $gray;
+        border: 0 solid variable.$gray;
         border-top: none;
 
         max-height: 0;
@@ -127,7 +129,7 @@
             font-weight: 700;
             font-size: 2.6rem;
             cursor: pointer;
-            transition: color 0.3s ease-in-out;
+            transition: color variable.$transition;
             padding: .2rem;
         }
 
@@ -148,19 +150,19 @@
             }
 
             &::-webkit-scrollbar-track {
-                background: $gray;
+                background: variable.$gray;
                 border-radius: 1.5rem;
                 margin-bottom: 1.4rem;
             }
 
             &::-webkit-scrollbar-thumb {
-                background: $main;
+                background: variable.$main;
                 border-radius: 1.5rem;
                 cursor: pointer;
-                transition: background 0.3s ease-in-out;
+                transition: background variable.$transition;
 
                 &:active {
-                    background: $main-hover;
+                    background: variable.$main-hover;
                 }
             }
         }
@@ -169,13 +171,13 @@
     @media (hover: hover) {
         &__dropdown {
             &-button:hover {
-                color: $main;
+                color: variable.$main;
             }
 
             &-list {
                 &::-webkit-scrollbar-thumb {
                     &:hover {
-                        background: $main-hover;
+                        background: variable.$main-hover;
                     }
                 }
             }
@@ -183,7 +185,7 @@
 
         &__arrow {
             &:hover {
-                border-top: 1.5rem solid $main-hover;
+                border-top: 1.5rem solid variable.$main-hover;
             }
         }
     }

@@ -1,7 +1,9 @@
+@use 'variable';
+
 .footer {
     .container { 
         width: 100%;
-        background-color: $dark;
+        background-color: variable.$dark;
         padding: 0;
     }
 
@@ -13,7 +15,7 @@
     }
 
     &__text {
-        color: $non-active;
+        color: variable.$non-active;
     }
 
     @media (max-width: 48em) {

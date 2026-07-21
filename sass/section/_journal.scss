@@ -1,3 +1,5 @@
+@use '../variable';
+
 .journal {
     .cards {
         gap: 8rem;
@@ -23,15 +25,15 @@
 
             &-button {
                 .download-svg {
-                    background-color: $white;
+                    background-color: variable.$white;
 
                     &--arrow,
                     &--line {
-                        stroke: $main;
+                        stroke: variable.$main;
                     }
 
                     &--pdf {
-                        fill: $main;
+                        fill: variable.$main;
                     }
                 }
             }
@@ -95,7 +97,7 @@
     }
 
     .card {
-        background-color: $white;
+        background-color: variable.$white;
         padding: 5rem 4rem 6rem;
     }
 

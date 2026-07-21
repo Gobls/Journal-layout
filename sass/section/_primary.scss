@@ -1,3 +1,5 @@
+@use '../variable';
+
 .primary {
     .hero {
         &__bg {
@@ -32,7 +34,7 @@
         height: 18rem;
         position: relative;
         background-image: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
-        transition: background $transition;
+        transition: background variable.$transition;
 
         &::before {
             content: '';
@@ -46,7 +48,7 @@
             mix-blend-mode: color-burn;
             z-index: 1;
             pointer-events: none;
-            transition: mix-blend-mode $transition;
+            transition: mix-blend-mode variable.$transition;
         }
 
         &[data-bg-icon="icon-1.png"]::before {
@@ -75,11 +77,11 @@
 
         @media(hover: hover) {
             &:hover {
-                background: $main;
+                background: variable.$main;
 
                 .svg {
-                    stroke: $white;
-                    fill: $white;
+                    stroke: variable.$white;
+                    fill: variable.$white;
                 }
 
                 &::before {
@@ -87,7 +89,7 @@
                 }
 
                 .text {
-                    color: $white;
+                    color: variable.$white;
                 }
             }
         }

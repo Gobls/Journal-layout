@@ -646,7 +646,7 @@ input::-ms-clear {
 .selector__value {
   font-weight: 700;
   font-size: 2.6rem;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.5s ease;
 }
 .selector-wrap {
   position: relative;
@@ -657,7 +657,7 @@ input::-ms-clear {
 .selector-wrap.open .selector__box {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  transition: border-radius 0s ease;
+  transition: border-radius 0.5s ease;
 }
 .selector-wrap.open .selector__value {
   color: #ee5656;
@@ -677,7 +677,7 @@ input::-ms-clear {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: border-radius 0.4s ease 0.3s;
+  transition: border-radius 0.5s ease;
 }
 .selector__arrow {
   width: 0;
@@ -685,7 +685,7 @@ input::-ms-clear {
   border-left: 1rem solid transparent;
   border-right: 1rem solid transparent;
   border-top: 1.5rem solid #ee5656;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease;
 }
 .selector__dropdown {
   position: absolute;
@@ -705,7 +705,7 @@ input::-ms-clear {
   font-weight: 700;
   font-size: 2.6rem;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.5s ease;
   padding: 0.2rem;
 }
 .selector__dropdown-item {
@@ -731,8 +731,8 @@ input::-ms-clear {
   background: #ee5656;
   border-radius: 1.5rem;
   cursor: pointer;
-  -webkit-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+  -webkit-transition: background 0.5s ease;
+  transition: background 0.5s ease;
 }
 .selector__dropdown-list::-webkit-scrollbar-thumb:active {
   background: #fd5f5f;
@@ -806,7 +806,7 @@ input::-ms-clear {
   height: 0.3rem;
   background-color: #ee5656;
   border-radius: 0.3rem;
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
 }
 .accordion__list-item::after {
   transform: rotate(90deg);
@@ -828,12 +828,12 @@ input::-ms-clear {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.5s ease-in-out, max-height 0.4s ease-out, padding-top 0.4s ease-out;
+  transition: opacity 0.5s ease max-height 0.5s ease, padding-top 0.5s ease;
 }
 .accordion-dropdown.open {
   padding-top: 2rem;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out, max-height 0.4s ease-out, padding-top 0.4s ease-out;
+  transition: opacity 0.5s ease, max-height 0.5s ease, padding-top 0.5s ease;
 }
 .accordion-dropdown__list-item {
   display: flex;
@@ -1076,17 +1076,6 @@ input::-ms-clear {
   overflow: hidden;
   padding-left: 4rem;
   transition: height 0.5s ease;
-}
-.sources-list > li {
-  counter-increment: item;
-  position: relative;
-}
-.sources-list > li::before {
-  content: counter(item) ".";
-  position: absolute;
-  left: -3rem;
-  font-weight: 400;
-  font-size: 2.6rem;
 }
 @media (max-width: 48em) {
   .sources-list {

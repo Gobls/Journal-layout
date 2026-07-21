@@ -1,7 +1,9 @@
+@use 'variable';
+
 .text {
     font-weight: 400;
     font-size: 2.6rem;
-    transition: color $transition;
+    transition: color variable.$transition;
 
     &-wrap {
         padding-right: 6rem;
@@ -28,13 +30,13 @@
 
 .download-svg {
     &__wrap {
-        transition: transform $transition;
+        transition: transform variable.$transition;
     }
 
     border-radius: 100%;
     width: 5rem;
     height: 5rem;
-    background-color: $main;
+    background-color: variable.$main;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,23 +46,23 @@
     &--arrow {
         width: 1rem;
         height: 1.4rem;
-        stroke: $white;
-        transition: stroke $transition;
+        stroke: variable.$white;
+        transition: stroke variable.$transition;
     }
 
     &--line {
         width: 1.9rem;
         height: 0.6rem;
         padding-bottom: 0.5rem;
-        stroke: $white;
-        transition: stroke $transition;
+        stroke: variable.$white;
+        transition: stroke variable.$transition;
     }
 
     &--pdf {
         width: 2.5rem;
         height: 1rem;
-        fill: $white;
-        transition: fill $transition;
+        fill: variable.$white;
+        transition: fill variable.$transition;
     }
 
     @media (hover: hover) {
@@ -74,7 +76,7 @@
 
 .link-svg {
     border-radius: 100%;
-    border: .2rem solid $main;
+    border: .2rem solid variable.$main;
     width: 5rem;
     height: 5rem;
 
@@ -86,7 +88,7 @@
     &--arrow {
         width: 1.8rem;
         height: 1.8rem;
-        stroke: $main;
+        stroke: variable.$main;
     }
 
     @media (hover: hover) {
@@ -102,7 +104,7 @@
     width: 3.5rem;
     height: 3.5rem;
     flex-shrink: 0;
-    transition: fill $transition, stroke $transition;
+    transition: fill variable.$transition, stroke variable.$transition;
 
     &-wrap {
         display: flex;
@@ -129,18 +131,18 @@
     }
 
     &--main {
-        fill: $main;
-        stroke: $main;
+        fill: variable.$main;
+        stroke: variable.$main;
     }
 
     &--dark {
-        fill: $dark;
-        stroke: $dark;
+        fill: variable.$dark;
+        stroke: variable.$dark;
     }
 
     &--white {
-        fill: $white;
-        stroke: $white;
+        fill: variable.$white;
+        stroke: variable.$white;
     }
 }
 
@@ -221,7 +223,7 @@
                 width: 1rem;
                 height: 1rem;
                 border-radius: 100%;
-                background-color: $main;
+                background-color: variable.$main;
             }
         }
     }
@@ -257,21 +259,7 @@
     overflow: hidden;
     padding-left: 4rem;
 
-    transition: height $transition;
-
-    &>li {
-        counter-increment: item;
-        position: relative;
-
-        &::before {
-            content: counter(item) ".";
-            position: absolute;
-            left: -3rem;
-
-            font-weight: 400;
-            font-size: 2.6rem;
-        }
-    }
+    transition: height variable.$transition;
 
     @media (max-width: 48em) {
         padding-left: 3rem;
@@ -283,7 +271,7 @@
     &--thin {
         width: 100%;
         height: 0;
-        border: .1rem solid $gray;
+        border: .1rem solid variable.$gray;
         margin: 1.95rem 0 1.95rem;
     }
 }
@@ -297,7 +285,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 10rem;
-    transition: background-color $transition;
+    transition: background-color variable.$transition;
     text-transform: uppercase;
 
     &--highlight {
@@ -306,34 +294,34 @@
     }
 
     &--main {
-        background-color: $main;
-        color: $white;
+        background-color: variable.$main;
+        color: variable.$white;
 
         @media(hover: hover) {
             &:hover {
-                background-color: $main-hover;
+                background-color: variable.$main-hover;
             }
         }
     }
 
     &--gray {
-        background-color: $gray;
-        color: $dark;
+        background-color: variable.$gray;
+        color: variable.$dark;
 
         @media(hover: hover) {
             &:hover {
-                background-color: $gray-hover;
+                background-color: variable.$gray-hover;
             }
         }
     }
 
     &--dark-gray {
-        background-color: $dark-gray;
-        color: $white;
+        background-color: variable.$dark-gray;
+        color: variable.$white;
 
         @media(hover: hover) {
             &:hover {
-                background-color: $dark-gray-hover;
+                background-color: variable.$dark-gray-hover;
             }
         }
     }

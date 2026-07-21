@@ -1,3 +1,5 @@
+@use 'variable';
+
 html {
   font-size: 0.694444444vw;
   font-family: 'Golos Text', sans-serif;
@@ -36,12 +38,12 @@ button {
 
 a {
   text-decoration: none;
-  color: $dark;
+  color: variable.$dark;
 }
 
 p {
   margin: 0;
-  color: $dark;
+  color: variable.$dark;
 }
 
 ol,
@@ -84,7 +86,7 @@ input::-ms-clear {
 }
 
 .required-star {
-  color: $main;
+  color: variable.$main;
 }
 
 .no-scroll {

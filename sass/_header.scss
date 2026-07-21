@@ -1,3 +1,5 @@
+@use 'variable';
+
 .header {
     width: 12rem;
     height: 75rem;
@@ -7,7 +9,7 @@
         height: 100%;
 
         &-list {
-            background-color: $dark;
+            background-color: variable.$dark;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -30,7 +32,7 @@
         width: 49rem;
         height: 75rem;
         top: 0;
-        background-color: $dark;
+        background-color: variable.$dark;
         transition: transform 0.5s ease-in-out, left 0.5s ease-in-out;
 
         &-feed {
@@ -60,14 +62,14 @@
         &-id {
             font-weight: 400;
             font-size: 2rem;
-            color: $gray;
+            color: variable.$gray;
             padding-top: 2rem;
         }
 
         &-surname {
             font-weight: 700;
             font-size: 2.6rem;
-            color: $gray;
+            color: variable.$gray;
         }
 
         &-info {
@@ -79,7 +81,7 @@
         &-name {
             font-weight: 400;
             font-size: 2.6rem;
-            color: $gray;
+            color: variable.$gray;
         }
 
         &.active {
@@ -121,11 +123,11 @@
             }
 
             &--highlight {
-                color: $gray;
+                color: variable.$gray;
                 text-decoration: underline;
                 text-decoration-style: dashed;
                 text-underline-offset: 0.3rem;
-                text-decoration-color: $main;
+                text-decoration-color: variable.$main;
             }
 
             &--big {
@@ -138,7 +140,7 @@
             font-size: 2rem;
             font-weight: 700;
             text-transform: uppercase;
-            color: $gray;
+            color: variable.$gray;
             padding-bottom: 1rem;
         }
 
@@ -156,8 +158,8 @@
                 position: absolute;
                 width: 0.6rem;
                 height: 0.6rem;
-                border-left: 2px solid $main;
-                border-bottom: 2px solid $main;
+                border-left: 2px solid variable.$main;
+                border-bottom: 2px solid variable.$main;
                 transform: translateY(-25%) rotate(-45deg);
                 transition: transform 0.3s ease;
             }
@@ -170,16 +172,16 @@
         }
 
         &-form {
-            border: .1rem solid $main;
+            border: .1rem solid variable.$main;
             border-radius: 1.1rem;
             width: 100%;
             height: 5rem;
-            background-color: $dark;
+            background-color: variable.$dark;
             box-sizing: border-box;
             position: relative;
             font-weight: 400;
             font-size: 1.6rem;
-            color: $gray;
+            color: variable.$gray;
             padding-left: 2rem;
 
 
@@ -188,7 +190,7 @@
             }
 
             &::placeholder {
-                color: $non-active;
+                color: variable.$non-active;
                 font-weight: 400;
                 font-size: 1.6rem;
                 padding-left: 2rem;
@@ -202,7 +204,7 @@
         }
 
         &-label {
-            color: $gray;
+            color: variable.$gray;
             font-size: 2rem;
             font-weight: 400;
             padding-bottom: 1rem;
@@ -224,7 +226,7 @@
 
 
         &-link {
-            color: $gray;
+            color: variable.$gray;
             font-weight: 400;
             font-size: 2rem;
             transition: color 0.3s ease;
@@ -239,7 +241,7 @@
             top: 3.5rem;
             height: 2.5rem;
             width: 2.5rem;
-            fill: $gray;
+            fill: variable.$gray;
             transition: fill 0.3s ease;
         }
     }
@@ -248,7 +250,7 @@
         max-height: 41rem;
         position: absolute;
         width: 100%;
-        border: .1rem solid $main;
+        border: .1rem solid variable.$main;
         border-radius: 1.1rem;
         display: none;
         top: calc(100% - 5rem);
@@ -263,7 +265,7 @@
         &-list {
             overflow-y: auto;
             max-height: 31rem;
-            background: $dark;
+            background: variable.$dark;
             color: white;
             display: flex;
             flex-direction: column;
@@ -277,13 +279,13 @@
             }
 
             &::-webkit-scrollbar-track {
-                background: $non-active;
+                background: variable.$non-active;
                 border-radius: 1.1rem;
                 margin: 2rem 0;
             }
 
             &::-webkit-scrollbar-thumb {
-                background: $gray;
+                background: variable.$gray;
                 border-radius: 1.1rem;
             }
 
@@ -295,13 +297,13 @@
         &-item {
             font-weight: 400;
             font-size: 1.6rem;
-            color: $gray;
+            color: variable.$gray;
         }
 
         &-link {
             font-weight: 400;
             font-size: 1.6rem;
-            color: $gray;
+            color: variable.$gray;
         }
     }
 
@@ -312,7 +314,7 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            fill: $gray;
+            fill: variable.$gray;
             transition: fill 0.3s ease;
             cursor: pointer;
 
@@ -321,16 +323,16 @@
             }
 
             &.active {
-                fill: $main;
+                fill: variable.$main;
 
                 p {
-                    color: $main;
+                    color: variable.$main;
                 }
             }
         }
 
         &-text {
-            color: $gray;
+            color: variable.$gray;
             font-weight: 700;
             font-size: 1.2rem;
         }
@@ -367,7 +369,7 @@
 
     &__lang {
         &-link {
-            color: $non-active;
+            color: variable.$non-active;
             font-weight: 700;
             font-size: 1.2rem;
         }
@@ -379,7 +381,7 @@
             gap: 1rem;
 
             .active {
-                color: $white;
+                color: variable.$white;
             }
         }
     }
@@ -389,10 +391,10 @@
 
             &-btn {
                 &:hover {
-                    fill: $main;
+                    fill: variable.$main;
 
                     p {
-                        color: $main;
+                        color: variable.$main;
                     }
                 }
             }
@@ -402,13 +404,13 @@
 
             &-close {
                 &:hover {
-                    fill: $main;
+                    fill: variable.$main;
                 }
             }
 
             &-link {
                 &:hover {
-                    color: $main;
+                    color: variable.$main;
                 }
             }
         }
