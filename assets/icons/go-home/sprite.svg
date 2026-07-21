@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="go-home__arrow" viewBox="0 0 30 30">
+        <path d="M5 15.5H25M5 15.5L13.3333 6M5 15.5L13.3333 25" stroke-width="3"
+            stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+</svg>
