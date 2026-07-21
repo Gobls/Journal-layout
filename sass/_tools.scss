@@ -261,6 +261,10 @@
 
     transition: height variable.$transition;
 
+    li{
+        list-style-type: decimal;
+    }
+
     @media (max-width: 48em) {
         padding-left: 3rem;
     }

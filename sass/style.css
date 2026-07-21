@@ -828,12 +828,11 @@ input::-ms-clear {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: opacity 0.5s ease max-height 0.5s ease, padding-top 0.5s ease;
+  transition: opacity 0.5s ease, max-height 0.5s ease, padding-top 0.5s ease;
 }
 .accordion-dropdown.open {
   padding-top: 2rem;
   opacity: 1;
-  transition: opacity 0.5s ease, max-height 0.5s ease, padding-top 0.5s ease;
 }
 .accordion-dropdown__list-item {
   display: flex;
@@ -1076,6 +1075,9 @@ input::-ms-clear {
   overflow: hidden;
   padding-left: 4rem;
   transition: height 0.5s ease;
+}
+.sources-list li {
+  list-style-type: decimal;
 }
 @media (max-width: 48em) {
   .sources-list {

@@ -51,12 +51,11 @@
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity variable.$transition max-height variable.$transition, padding-top variable.$transition;
+        transition: opacity variable.$transition, max-height variable.$transition, padding-top variable.$transition;
 
         &.open {
             padding-top: 2rem;
             opacity: 1;
-            transition: opacity variable.$transition, max-height variable.$transition, padding-top variable.$transition;
         }
 
 
