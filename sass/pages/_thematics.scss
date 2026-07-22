@@ -1,4 +1,5 @@
-@use '../variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .thematics {
     .hero {
@@ -11,7 +12,7 @@
                 padding-bottom: 7rem;
 
                 h1 {
-                    font-weight: 700;
+                    font-weight: v.$font-weight-bold;
                 }
             }
 
@@ -41,16 +42,16 @@
                 position: absolute;
                 top: 0;
                 left: .5rem;
-                font-weight: 500;
+                font-weight: v.$font-weight-medium;
                 font-size: 2.6rem;
             }
         }
     }
 
     .card {
-        background-color: variable.$white;
+        background-color: v.$white;
         padding: 5rem 4rem 3rem 4rem;
-        gap: 3rem;
+        gap: v.$gap-lg;
     }
 
     @media (hover: hover) {
@@ -63,7 +64,7 @@
         }
     }
 
-    @media (max-width: 48em) {
+    @include m.to('sm') {
         .hero {
             &__bg {
                 height: 76rem;

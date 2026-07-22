@@ -1,4 +1,5 @@
-@use '../variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .primary {
     .hero {
@@ -22,9 +23,9 @@
 
     .cards {
         grid-template-columns: repeat(4, 1fr);
-        gap: 2rem;
+        gap: v.$gap-md;
 
-        @media (max-width: 48em) {
+        @include m.to('sm') {
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -33,8 +34,8 @@
         padding: 3rem;
         height: 18rem;
         position: relative;
-        background-image: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
-        transition: background variable.$transition;
+        @include m.card-gradient();
+        @include m.transition(background);
 
         &::before {
             content: '';
@@ -48,40 +49,40 @@
             mix-blend-mode: color-burn;
             z-index: 1;
             pointer-events: none;
-            transition: mix-blend-mode variable.$transition;
+            @include m.transition(mix-blend-mode);
         }
 
         &[data-bg-icon="icon-1.png"]::before {
-            background-image: url('../assets/icons/background-card/icon-1.png');
+            background-image: url('../assets/icons/primary/bg-image/icon-1.png');
         }
 
         &[data-bg-icon="icon-2.png"]::before {
-            background-image: url('../assets/icons/background-card/icon-2.png');
+            background-image: url('../assets/icons/primary/bg-image/icon-2.png');
         }
 
         &[data-bg-icon="icon-3.png"]::before {
-            background-image: url('../assets/icons/background-card/icon-3.png');
+            background-image: url('../assets/icons/primary/bg-image/icon-3.png');
         }
 
         &[data-bg-icon="icon-4.png"]::before {
-            background-image: url('../assets/icons/background-card/icon-4.png');
+            background-image: url('../assets/icons/primary/bg-image/icon-4.png');
         }
 
         &[data-bg-icon="icon-5.png"]::before {
-            background-image: url('../assets/icons/background-card/icon-5.png');
+            background-image: url('../assets/icons/primary/bg-image/icon-5.png');
         }
 
         &[data-bg-icon="icon-6.png"]::before {
-            background-image: url('../assets/icons/background-card/icon-6.png');
+            background-image: url('../assets/icons/primary/bg-image/icon-6.png');
         }
 
         @media(hover: hover) {
             &:hover {
-                background: variable.$main;
+                background: v.$main;
 
                 .svg {
-                    stroke: variable.$white;
-                    fill: variable.$white;
+                    stroke: v.$white;
+                    fill: v.$white;
                 }
 
                 &::before {
@@ -89,13 +90,13 @@
                 }
 
                 .text {
-                    color: variable.$white;
+                    color: v.$white;
                 }
             }
         }
     }
 
-    @media (max-width: 48em) {
+    @include m.to('sm') {
         .hero {
             &__info {
                 &-subtitle {

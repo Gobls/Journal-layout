@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    allContents = document.querySelectorAll('.header__content');
+    const allContents = document.querySelectorAll('.header__content');
     // Функция закрытия всех меню
     function closeAllMenus() {
         allContents.forEach(items => {

@@ -1,4 +1,5 @@
-@use '../variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .journal {
     .cards {
@@ -25,15 +26,15 @@
 
             &-button {
                 .download-svg {
-                    background-color: variable.$white;
+                    background-color: v.$white;
 
                     &--arrow,
                     &--line {
-                        stroke: variable.$main;
+                        stroke: v.$main;
                     }
 
                     &--pdf {
-                        fill: variable.$main;
+                        fill: v.$main;
                     }
                 }
             }
@@ -59,13 +60,13 @@
         }
 
         .link {
-            font-weight: 700;
+            font-weight: v.$font-weight-bold;
         }
     }
 
     .block-wrap {
         padding: 5rem 0 0 4rem;
-        gap: 1rem;
+        gap: v.$gap-sm;
 
         .text {
             font-size: 2rem;
@@ -91,13 +92,13 @@
         content: '....................................................................................................................';
         position: absolute;
         padding-left: 1.5rem;
-        font-weight: 400;
+        font-weight: v.$font-weight-regular;
         font-size: 2.6rem;
         bottom: 0;
     }
 
     .card {
-        background-color: variable.$white;
+        background-color: v.$white;
         padding: 5rem 4rem 6rem;
     }
 
@@ -109,7 +110,7 @@
         }
     }
 
-    @media(max-width: 48rem) {
+    @include m.to('sm') {
         .hero {
             &__info {
                 padding: 20rem 1.5rem 10rem;
@@ -149,7 +150,7 @@
                 &__header {
                     order: 2;
                     width: 100%;
-                    gap: 2rem;
+                    gap: v.$gap-md;
                 }
 
                 &__footer {

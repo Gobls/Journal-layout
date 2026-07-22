@@ -1,0 +1,68 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 10rem 0 10rem 0;
+}
+
+
+.menu-layer {
+  z-index: v.$z-menu;
+}
+
+.required-star {
+  color: v.$main;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.block-wrap {
+    display: flex;
+}
+
+.circle-picture {
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    width: 17rem;
+    height: 17rem;
+
+    &--small {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    @media (max-width: 48em) {
+        width: 12rem;
+        height: 12rem;
+
+        &--small {
+            width: 11rem;
+            height: 11rem;
+        }
+    }
+}
+
+
+.line {
+    &--thin {
+        width: 100%;
+        height: 0;
+        border: .1rem solid v.$gray;
+        margin: 1.95rem 0 1.95rem;
+    }
+}
+
+@include m.to('sm') {
+  .no-scroll {
+    overflow: scroll;
+  }
+
+  .container {
+    width: 45rem;
+  }
+}

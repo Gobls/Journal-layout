@@ -1,4 +1,5 @@
-@use 'variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .accordion {
     &__list {
@@ -18,9 +19,9 @@
                 top: 1.5rem;
                 width: 2rem;
                 height: 0.3rem;
-                background-color: variable.$main;
+                background-color: v.$main;
                 border-radius: 0.3rem;
-                transition: transform variable.$transition
+                @include m.transition(transform);
             }
 
             &::after {
@@ -51,7 +52,7 @@
         opacity: 0;
         max-height: 0;
         overflow: hidden;
-        transition: opacity variable.$transition, max-height variable.$transition, padding-top variable.$transition;
+        @include m.transition((opacity, max-height, padding-top));
 
         &.open {
             padding-top: 2rem;
@@ -62,12 +63,12 @@
         &__list {
             &-item {
                 display: flex;
-                gap: 1rem;
+                gap: v.$gap-sm;
             }
         }
     }
 
-    @media (max-width: 48em) {
+    @include m.to('sm') {
         &__trigger {
             font-size: 2rem;
         }

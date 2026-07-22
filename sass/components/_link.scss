@@ -1,0 +1,22 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.link {
+    font-weight: v.$font-weight-regular;
+    font-size: 2.6rem;
+    text-decoration: underline;
+    color: v.$main;
+    text-decoration-skip-ink: none;
+
+    &--bold {
+        font-weight: v.$font-weight-bold;
+    }
+
+    &-wrap {
+        padding-bottom: 1rem;
+    }
+
+    @include m.to('sm') {
+        font-size: 2rem;
+    }
+}

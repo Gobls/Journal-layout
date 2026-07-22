@@ -1,4 +1,5 @@
-@use '../variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .article {
     .hero {
@@ -16,7 +17,7 @@
 
                 h1 {
                     font-size: 4rem;
-                    font-weight: 700;
+                    font-weight: v.$font-weight-bold;
                 }
             }
 
@@ -34,8 +35,8 @@
 
     .btn {
         &--highlight {
-            color: variable.$main;
-            font-weight: 400;
+            color: v.$main;
+            font-weight: v.$font-weight-regular;
             font-size: 2.6rem;
 
             text-transform: none;
@@ -47,18 +48,18 @@
     }
 
     .cards {
-        gap: 5rem;
+        gap: v.$gap-xl;
     }
 
     .list {
-        gap: 3rem;
+        gap: v.$gap-lg;
 
         &:has(.circle-picture) {
             gap: 3.4rem;
         }
 
         &-item {
-            gap: 2rem;
+            gap: v.$gap-md;
 
             &:has(.circle-picture) {
                 align-items: start;
@@ -81,7 +82,7 @@
 
     #keywords {
         .list {
-            gap: 2rem;
+            gap: v.$gap-md;
         }
     }
 
@@ -89,9 +90,9 @@
         .btn {
             width: 23.7rem;
             height: 6rem;
-            font-weight: 400;
+            font-weight: v.$font-weight-regular;
             font-size: 2rem;
-            gap: 2rem;
+            gap: v.$gap-md;
             text-transform: none;
         }
     }
@@ -115,12 +116,12 @@
     }
 
     .card {
-        background-color: variable.$white;
+        background-color: v.$white;
         padding: 5rem 4rem 6rem 4rem;
-        gap: 3rem;
+        gap: v.$gap-lg;
 
         &__content {
-            gap: 1rem;
+            gap: v.$gap-sm;
         }
     }
 
@@ -132,7 +133,7 @@
         }
     }
 
-    @media(max-width: 48em) {
+    @include m.to('sm') {
         .hero {
             &__info {
                 &-title {
@@ -168,7 +169,7 @@
         }
 
         .list:has(.circle-picture) {
-            gap: 3rem;
+            gap: v.$gap-lg;
         }
 
         .btn--highlight {

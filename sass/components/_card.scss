@@ -1,3 +1,6 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
 .cards {
     display: grid;
 }
@@ -9,13 +12,13 @@
     border-radius: 1.5rem;
 
     &__header {
-        font-weight: 700;
+        font-weight: v.$font-weight-bold;
         font-size: 4rem;
 
         &-wrap {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: v.$gap-sm;
         }
     }
 
@@ -31,16 +34,16 @@
     &-wrap {
         display: flex;
         flex-direction: column;
-        gap: 3rem;
+        gap: v.$gap-lg;
     }
 
-    @media (max-width: 48em) {
+    @include m.to('sm') {
         &__header {
             font-size: 3rem;
         }
 
         &-wrap {
-            gap: 2rem;
+            gap: v.$gap-md;
         }
     }
 }

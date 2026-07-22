@@ -1,0 +1,47 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.btn {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10rem;
+    @include m.flex-center();
+    @include m.transition(background-color);
+    text-transform: uppercase;
+
+    &--highlight {
+        text-decoration: underline;
+        text-decoration-style: dashed;
+    }
+
+    &--main {
+        @include m.button-variant(v.$main, v.$white, v.$main-hover);
+    }
+
+    &--gray {
+        @include m.button-variant(v.$gray, v.$dark, v.$gray-hover);
+    }
+
+    &--dark-gray {
+        @include m.button-variant(v.$dark-gray, v.$white, v.$dark-gray-hover);
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: center;
+    }
+}

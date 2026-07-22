@@ -1,24 +1,25 @@
-@use '../variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .editors {
     .hero {
         &__bg {
             background-image: url('../assets/img/background/editors__background.png');
 
-            @media (max-width: 48em) {
+            @include m.to('sm') {
                 height: 76rem;
             }
         }
 
         &__info {
-            @media (max-width: 48em) {
+            @include m.to('sm') {
                 padding-bottom: 8rem;
             }
 
             &-title {
                 padding-bottom: 7rem;
 
-                @media (max-width: 48em) {
+                @include m.to('sm') {
                     padding-bottom: 3rem;
                 }
             }
@@ -41,8 +42,8 @@
 
     .card {
         padding: 5rem 4rem 6rem 25rem;
-        background-color: variable.$white;
-        gap: 1rem;
+        background-color: v.$white;
+        gap: v.$gap-sm;
 
         &__header {
             display: flex;
@@ -75,7 +76,7 @@
         }
     }
 
-    @media (max-width: 48em) {
+    @include m.to('sm') {
         .card-wrap>.title {
             padding-left: 1.5rem;
         }
@@ -83,7 +84,7 @@
         .card {
             padding: 4rem 1.5rem 5rem;
             flex-direction: column;
-            gap: 2rem;
+            gap: v.$gap-md;
 
             &__header {
                 gap: 2rem;
@@ -131,17 +132,5 @@
                 }
             }
         }
-    }
-}
-
-@keyframes bounceArrow {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-0.5rem);
     }
 }

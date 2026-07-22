@@ -1,0 +1,50 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+html {
+    font-size: v.$root-font-desktop;
+    font-family: v.$font-family;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: v.$body-bg;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+ol,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@include m.to('sm') {
+    html {
+        font-size: v.$root-font-mobile;
+    }
+}

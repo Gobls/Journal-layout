@@ -1,0 +1,114 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex-shrink: 0;
+
+    @include m.transition((fill, stroke));
+
+    &-wrap {
+        display: flex;
+    }
+
+    &--tiny {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    &--small {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &--medium {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+
+    &--big {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &--main {
+        fill: v.$main;
+        stroke: v.$main;
+    }
+
+    &--dark {
+        fill: v.$dark;
+        stroke: v.$dark;
+    }
+
+    &--white {
+        fill: v.$white;
+        stroke: v.$white;
+    }
+}
+
+.download-svg {
+    &__wrap {
+        @include m.transition(transform);
+    }
+
+    border-radius: 100%;
+    width: 5rem;
+    height: 5rem;
+    background-color: v.$main;
+    @include m.flex-center(column);
+    flex-shrink: 0;
+
+    &--arrow {
+        width: 1rem;
+        height: 1.4rem;
+        stroke: v.$white;
+        @include m.transition(stroke);
+    }
+
+    &--line {
+        width: 1.9rem;
+        height: 0.6rem;
+        padding-bottom: 0.5rem;
+        stroke: v.$white;
+        @include m.transition(stroke);
+    }
+
+    &--pdf {
+        width: 2.5rem;
+        height: 1rem;
+        fill: v.$white;
+        @include m.transition(fill);
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            .download-svg--arrow {
+                animation: bounceArrow 1s ease infinite;
+            }
+        }
+    }
+}
+
+.link-svg {
+    border-radius: 100%;
+    border: .2rem solid v.$main;
+    width: 5rem;
+    height: 5rem;
+    @include m.flex-center(column);
+
+    &--arrow {
+        width: 1.8rem;
+        height: 1.8rem;
+        stroke: v.$main;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            .link-svg--arrow {
+                animation: bounceLinkArrow 1s ease infinite;
+            }
+        }
+    }
+}

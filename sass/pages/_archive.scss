@@ -1,4 +1,5 @@
-@use '../variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .archive {
     .hero {
@@ -11,7 +12,7 @@
                 padding-bottom: 7rem;
 
                 h1 {
-                    font-weight: 700;
+                    font-weight: v.$font-weight-bold;
                 }
             }
 
@@ -24,13 +25,13 @@
     .title {
         font-size: 3.2rem;
         text-transform: uppercase;
-        transition: color variable.$transition;
+        @include m.transition(color);
     }
 
     .subtitle {
-        font-weight: 500;
+        font-weight: v.$font-weight-medium;
         font-size: 2rem;
-        transition: color variable.$transition;
+        @include m.transition(color);
     }
 
     .cards {
@@ -46,9 +47,9 @@
     }
 
     .card {
-        background: linear-gradient(135deg, #e8f0ff 0%, #c8d1ea 100%);
+        @include m.card-gradient();
         position: relative;
-        transition: background variable.$transition;
+        @include m.transition(background);
         height: 22.5rem;
         padding: 3.5rem 3rem 4rem;
 
@@ -65,7 +66,7 @@
             pointer-events: none;
             transform: rotate(-15deg);
             border-radius: 1.5rem;
-            transition: transform 0.5s ease-in-out;
+            @include m.transition(transform);
         }
 
         &[data-bg-icon="icon-1.png"]::before {
@@ -100,17 +101,17 @@
         &__header {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: v.$gap-sm;
         }
 
         &__footer {
-            gap: 2rem;
+            gap: v.$gap-md;
             align-items: center;
 
             .text {
-                font-weight: 700;
+                font-weight: v.$font-weight-bold;
                 font-size: 2rem;
-                color: variable.$main;
+                color: v.$main;
                 text-transform: uppercase;
             }
         }
@@ -118,7 +119,7 @@
 
     @media (hover: hover) {
         .card:hover {
-            background: variable.$main;
+            background: v.$main;
 
             &::before {
                 transform: rotate(15deg);
@@ -127,26 +128,26 @@
             .text,
             .title,
             .subtitle {
-                color: variable.$white;
+                color: v.$white;
             }
 
             .svg--main {
-                stroke: variable.$white;
+                stroke: v.$white;
             }
 
             .download-svg {
-                background-color: variable.$white;
+                background-color: v.$white;
 
                 &--line {
-                    stroke: variable.$main;
+                    stroke: v.$main;
                 }
 
                 &--arrow {
-                    stroke: variable.$main;
+                    stroke: v.$main;
                 }
 
                 &--pdf {
-                    fill: variable.$main;
+                    fill: v.$main;
                 }
 
                 &:hover {
@@ -168,7 +169,7 @@
         }
     }
 
-    @media (max-width: 48em) {
+    @include m.to('sm') {
         .hero {
             &__bg {
                 height: 76rem;
@@ -202,7 +203,7 @@
 
         .pagination {
             flex-direction: column;
-            gap: 2rem;
+            gap: v.$gap-md;
             padding-bottom: 6rem;
 
             &-selector {

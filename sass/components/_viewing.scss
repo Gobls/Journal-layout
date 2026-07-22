@@ -1,4 +1,5 @@
-@use 'variable';
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
 
 .viewing {
     width: 25rem;
@@ -11,24 +12,24 @@
     }
 
     &__text{
-        font-weight: 400;
+        font-weight: v.$font-weight-regular;
         font-size: 2rem;
     }
     
     &__number{
-        font-weight: 700;
+        font-weight: v.$font-weight-bold;
         font-size: 2rem;
     }
     
     &__line {
         width: 100%;
         height: .3rem;
-        background: linear-gradient(to right, variable.$main 0%, variable.$main var(--progress), variable.$gray var(--progress), variable.$gray 100%);
+        background: linear-gradient(to right, v.$main 0%, v.$main var(--progress), v.$gray var(--progress), v.$gray 100%);
         border-radius: 10rem;
         transition: background 0.1s linear;
     }
 
-    @media (max-width: 48em) {
+    @include m.to('sm') {
         padding-top: 3rem;
     }
 }

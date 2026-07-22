@@ -1,0 +1,55 @@
+// ── Colors ─────────────────────────────────
+$white:                #ffffff;
+$dark:                 #282828;
+$dark-deep:            #1f1f1f;
+$main:                 #ee5656;
+$main-hover:           #fd5f5f;
+$gray:                 #d8e0f5;
+$gray-hover:           #e2eaff;
+$non-active:           #616571;
+$dark-gray:            #3c3d41;
+$dark-gray-hover:      #484b53;
+$pagination-bg:        #ecf1fb;
+$body-bg:              aliceblue;
+$card-bg-from:         #e8f0ff;
+$card-bg-to:           #c8d1ea;
+
+// ── Typography ─────────────────────────────
+$font-family:          'Golos Text', sans-serif;
+$root-font-desktop: calc(10 / 1440 * 100vw);
+$root-font-mobile: calc(10 / 480 * 100vw);
+$font-weight-regular:  400;
+$font-weight-medium:   500;
+$font-weight-bold:     700;
+$font-weight-black:    900;
+
+// ── Spacing ────────────────────────────────
+$gap-xs: 0.5rem;
+$gap-sm: 1rem;
+$gap-md: 2rem;
+$gap-lg: 3rem;
+$gap-xl: 5rem;
+
+// ── Layout ─────────────────────────────────
+$container-width:      120rem;
+$header-width:         12rem;
+$header-height:        75rem;
+$border-radius:        1.5rem;
+$border-radius-pill:   10rem;
+
+// ── Motion ─────────────────────────────────
+$transition-duration:  0.5s;
+$transition-easing:    ease-in-out;
+$transition:           $transition-duration $transition-easing;
+
+// ── Z-index scale ──────────────────────────
+$z-base:    1;
+$z-menu:    10;
+$z-overlay: 100;
+$z-modal:   1000;
+$z-toast:   1100;
+
+// ── Breakpoints (em) ───────────────────────
+$bp-sm: 48em;
+$bp-md: 64em;
+$bp-lg: 90em;
