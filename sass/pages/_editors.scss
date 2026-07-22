@@ -1,0 +1,136 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.editors {
+    .hero {
+        &__bg {
+            background-image: url('../assets/img/background/editors__background.png');
+
+            @include m.to('sm') {
+                height: 76rem;
+            }
+        }
+
+        &__info {
+            @include m.to('sm') {
+                padding-bottom: 8rem;
+            }
+
+            &-title {
+                padding-bottom: 7rem;
+
+                @include m.to('sm') {
+                    padding-bottom: 3rem;
+                }
+            }
+
+            &-subtitle {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    .accordion {
+        padding-top: 2rem;
+    }
+
+    .circle-picture {
+        position: absolute;
+        left: 16rem;
+        flex-shrink: 0;
+    }
+
+    .card {
+        padding: 5rem 4rem 6rem 25rem;
+        background-color: v.$white;
+        gap: v.$gap-sm;
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+
+            &-wrap {
+                flex-direction: row;
+                font-weight: 600;
+                font-size: 2rem;
+                padding-bottom: 2rem;
+            }
+        }
+
+        &-wrap {
+            padding-bottom: 8rem;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    @media (hover: hover) {
+        .hero__info-button {
+            .btn:hover {
+                .svg {
+                    animation: bounceArrow 1s ease infinite;
+                }
+            }
+        }
+    }
+
+    @include m.to('sm') {
+        .card-wrap>.title {
+            padding-left: 1.5rem;
+        }
+
+        .card {
+            padding: 4rem 1.5rem 5rem;
+            flex-direction: column;
+            gap: v.$gap-md;
+
+            &__header {
+                gap: 2rem;
+                flex-direction: row;
+
+                &-wrap {
+                    padding: .5rem 0 1rem 0;
+                    font-size: 1.6rem;
+                }
+            }
+
+            &-wrap {
+                padding-bottom: 7rem;
+            }
+        }
+
+        .circle-picture {
+            position: relative;
+            left: 0;
+        }
+
+        .accordion {
+            padding-top: 1rem;
+
+            &__list{
+                &-item{
+                    &::after,
+                    &::before{
+                        top: 1rem;
+                    }
+                }
+            }
+        }
+
+        .hero {
+            &__bg {
+                height: 76rem;
+            }
+
+            &__info {
+                padding-bottom: 8rem;
+
+                &-title {
+                    padding-bottom: 3rem;
+                }
+            }
+        }
+    }
+}

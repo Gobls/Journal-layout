@@ -1,0 +1,114 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.primary {
+    .hero {
+        &__bg {
+            background-image: url('../assets/img/background/primary__background.png');
+        }
+        
+
+        &__info {
+            &-subtitle {
+                text-transform: uppercase;
+            }
+
+            &-title {
+                h1 {
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: v.$gap-md;
+
+        @include m.to('sm') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .card {
+        padding: 3rem;
+        height: 18rem;
+        position: relative;
+        @include m.card-gradient();
+        @include m.transition(background);
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            mix-blend-mode: color-burn;
+            z-index: 1;
+            pointer-events: none;
+            @include m.transition(mix-blend-mode);
+        }
+
+        &[data-bg-icon="icon-1.png"]::before {
+            background-image: url('../assets/icons/primary/bg-image/icon-1.png');
+        }
+
+        &[data-bg-icon="icon-2.png"]::before {
+            background-image: url('../assets/icons/primary/bg-image/icon-2.png');
+        }
+
+        &[data-bg-icon="icon-3.png"]::before {
+            background-image: url('../assets/icons/primary/bg-image/icon-3.png');
+        }
+
+        &[data-bg-icon="icon-4.png"]::before {
+            background-image: url('../assets/icons/primary/bg-image/icon-4.png');
+        }
+
+        &[data-bg-icon="icon-5.png"]::before {
+            background-image: url('../assets/icons/primary/bg-image/icon-5.png');
+        }
+
+        &[data-bg-icon="icon-6.png"]::before {
+            background-image: url('../assets/icons/primary/bg-image/icon-6.png');
+        }
+
+        @media(hover: hover) {
+            &:hover {
+                background: v.$main;
+
+                .svg {
+                    stroke: v.$white;
+                    fill: v.$white;
+                }
+
+                &::before {
+                    mix-blend-mode: overlay;
+                }
+
+                .text {
+                    color: v.$white;
+                }
+            }
+        }
+    }
+
+    @include m.to('sm') {
+        .hero {
+            &__info {
+                &-subtitle {
+                    h2 {
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+
+        .card {
+            padding: 1.75rem 1.5rem;
+        }
+    }
+}

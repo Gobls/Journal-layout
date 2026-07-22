@@ -1,0 +1,28 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.footer {
+    .container { 
+        width: 100%;
+        background-color: v.$dark;
+        padding: 0;
+    }
+
+    &__info {
+        padding: 5.1rem 12rem;
+        text-align: center;
+        font-weight: v.$font-weight-medium;
+        font-size: 2rem;
+    }
+
+    &__text {
+        color: v.$non-active;
+    }
+
+    @include m.to('sm') {
+        &__info {
+            padding: 3.7rem 1.5rem;
+            font-size: 1.6rem;
+        }
+    }
+}

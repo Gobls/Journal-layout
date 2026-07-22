@@ -1,0 +1,176 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.journal {
+    .cards {
+        gap: 8rem;
+    }
+
+    .hero {
+        &__bg {
+            background-image: url('../assets/img/background/journals__background.png');
+        }
+
+        &__info {
+            padding: 7rem 38rem 9rem 16rem;
+
+            &-title {
+                h1 {
+                    line-height: 100%;
+                }
+            }
+
+            &-subtitle {
+                text-transform: uppercase;
+            }
+
+            &-button {
+                .download-svg {
+                    background-color: v.$white;
+
+                    &--arrow,
+                    &--line {
+                        stroke: v.$main;
+                    }
+
+                    &--pdf {
+                        fill: v.$main;
+                    }
+                }
+            }
+        }
+    }
+
+    .list {
+        gap: 4rem;
+
+        &-item {
+            gap: 2rem;
+            align-items: flex-start;
+
+            .download-svg {
+                width: 5rem;
+                height: 5rem;
+            }
+
+            .link-svg {
+                width: 4.6rem;
+                height: 4.6rem;
+            }
+        }
+
+        .link {
+            font-weight: v.$font-weight-bold;
+        }
+    }
+
+    .block-wrap {
+        padding: 5rem 0 0 4rem;
+        gap: v.$gap-sm;
+
+        .text {
+            font-size: 2rem;
+        }
+    }
+
+    .viewing {
+        padding: 3rem 0 0 4rem;
+    }
+
+    .dots {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .number {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .dots::after {
+        content: '....................................................................................................................';
+        position: absolute;
+        padding-left: 1.5rem;
+        font-weight: v.$font-weight-regular;
+        font-size: 2.6rem;
+        bottom: 0;
+    }
+
+    .card {
+        background-color: v.$white;
+        padding: 5rem 4rem 6rem;
+    }
+
+    @media (hover: hover) {
+        .hero__info-button--small:hover {
+            .download-svg--arrow {
+                animation: bounceArrow 1s ease infinite;
+            }
+        }
+    }
+
+    @include m.to('sm') {
+        .hero {
+            &__info {
+                padding: 20rem 1.5rem 10rem;
+
+                &-subtitle {
+                    h2 {
+                        line-height: 150%;
+                    }
+                }
+
+                &-title {
+                    h1 {
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+
+        .title {
+            padding-left: 1.5rem;
+        }
+
+        .cards {
+            gap: 7rem;
+        }
+
+        .card {
+            padding: 4rem 1.5rem 5rem;
+        }
+
+        .list {
+            gap: 6rem;
+
+            &-item {
+                flex-direction: column;
+
+                &__header {
+                    order: 2;
+                    width: 100%;
+                    gap: v.$gap-md;
+                }
+
+                &__footer {
+                    order: 1;
+                }
+
+                .download-svg {
+                    width: 6rem;
+                    height: 6rem;
+                }
+
+                .link-svg {
+                    width: 5.6rem;
+                    height: 5.6rem;
+                }
+            }
+        }
+
+        .block-wrap {
+            padding-top: 2rem;
+        }
+    }
+}

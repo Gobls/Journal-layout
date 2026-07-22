@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sass/style.css">
+    <title>Journal</title>
+    <link rel="icon" type="image/svg" sizes="16x16" href="./assets/icons/favicon/favicon-16x16.svg">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./assets/icons/favicon/favicon-32x32.svg">
+    <link rel="icon" type="image/svg" sizes="100x100" href="./assets/icons/favicon/favicon-100x100.svg">
+    <link rel="icon" type="image/svg" sizes="200x200" href="./assets/icons/favicon/favicon-200x200.svg">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__lang-switch">
+                    <a href="/ru" hreflang="ru" rel="alternate" class="header__lang-link active" lang="ru"
+                        aria-current="page">рус</a>
+                    <a href="/en" hreflang="en" rel="alternate" class="header__lang-link" lang="en">en</a>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="./assets/icons/header/sprite.svg#menu"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="./assets/icons/header/sprite.svg#search"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <svg class="header__svg">
+                            <use href="./assets/icons/header/sprite.svg#rating"></use>
+                        </svg>
+                    </div>
+
+                </li>
+                <li class="header__item">
+                    <div class="header__item-btn">
+                        <p class="header__item-text" id="auth-text">Войти</p>
+                        <svg class="header__svg">
+                            <use href="./assets/icons/header/sprite.svg#login"></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="header__content-feed">
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">Архив</a></li>
+                                <li><a href="#" class="header__content-link">Общая информация</a></li>
+                                <li><a href="#" class="header__content-link">Цели и тематика журнала</a></li>
+                                <li><a href="#" class="header__content-link">Индексирование</a></li>
+                                <li><a href="#" class="header__content-link">Правила предоставления рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Порядок рецензирования рукописей</a></li>
+                                <li><a href="#" class="header__content-link">Авторы</a></li>
+                                <li><a href="#" class="header__content-link">Издательская этика</a></li>
+                                <li><a href="#" class="header__content-link">Рубрики</a></li>
+                                <li><a href="#" class="header__content-link">Новости</a></li>
+                                <li><a href="#" class="header__content-link">Контакты</a></li>
+                                <li><a href="#" class="header__content-link">Ранний доступ</a></li>
+                            </ul>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">поиск по сайту</div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">По заголовку:</label>
+                                <input type="text" class="header__content-form" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+
+                            <div class="header__content-field">
+                                <label class="header__content-label">По ключевому слову:</label>
+                                <div class="header__input-wrap">
+                                    <input type="text" class="header__content-form" placeholder="Выбрать из списка"
+                                        id="searchInput" autocomplete="off" autocorrect="off" autocapitalize="off"
+                                        spellcheck="false">
+                                    <div class="header__content-arrow"></div>
+                                </div>
+                                <div class="header__dropdown">
+                                    <ul class="header__dropdown-list">
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--small btn--main btn">
+                                    <div class="header__content-text--big">Найти</div>
+                                </div>
+                                <div class="header__content-btn--highlight btn">
+                                    <div class="header__content-text--tiny">Cбросить</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content">
+                        <div class="header__content-menu">
+                            <ul class="header__content-list">
+                                <li><a href="#" class="header__content-link">WoS: 0.13</a></li>
+                                <li><a href="#" class="header__content-link">SCOPUS: 1.2</a></li>
+                                <li><a href="#" class="header__content-link">RSCI</a></li>
+                                <li><a href="#" class="header__content-link">РИНЦ: 0.626</a></li>
+                                <li><a href="#" class="header__content-link">Scimago: Q3</a></li>
+                                <li><a href="#" class="header__content-link">Список ВАК</a></li>
+                                <li><a href="#" class="header__content-link">Журналы СГУ</a></li>
+                            </ul>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+                <li class="header__content-item">
+                    <div class="header__content" id="login-content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">Личный кабинет</div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">Имя пользователя<span
+                                        class="required-star">*</span>:</label>
+                                <input type="text" class="header__content-form" id="login-input"
+                                    placeholder="Введите логин" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-field">
+                                <label class="header__content-label">Пароль<span class="required-star">*</span>:</label>
+                                <input type="password" class="header__content-form" id="password-input"
+                                    placeholder="Введите пароль" autocomplete="off" autocorrect="off"
+                                    autocapitalize="off" spellcheck="false">
+                            </div>
+                            <div class="header__content-message" id="login-message"></div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--small btn--main btn" id="login-btn">
+                                    <div class="header__content-text--big">Войти</div>
+                                </div>
+                                <div class="header__content-btn--highlight btn">
+                                    <div class="header__content-text--tiny">Забыли пароль?</div>
+                                </div>
+                                <div class="header__content-btn--big btn--dark-gray btn">
+                                    <div class="header__content-text--small">Регистрация</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                    <div class="header__content" id="user-content">
+                        <div class="header__content-menu">
+                            <div class="header__content-title">Личный кабинет</div>
+                            <div class="header__content-info">
+                                <picture class="header__content-picture">
+                                    <!-- <source srcset="/assets/img/user/photo.avif" type="image/avif"> -->
+                                    <!-- <source srcset="/assets/img/user/photo.webp" type="image/webp"> -->
+                                    <img class="header__content-img" src="./assets/img/user/photo.svg" alt="user_photo">
+                                </picture>
+                                <div class="header__content-surname" id="user-surname"></div>
+                                <div class="header__content-name" id="user-name"></div>
+                                <div class="header__content-id" id="user-id"></div>
+                            </div>
+                            <div class="header__content-btn">
+                                <div class="header__content-btn--big btn--main btn">
+                                    <div class="header__content-text--big">профиль</div>
+                                </div>
+                                <div class="header__content-btn--small btn--dark-gray btn" id="logout-btn">
+                                    <div class="header__content-text--small">Выйти</div>
+                                </div>
+                            </div>
+                        </div>
+                        <svg class="header__content-close">
+                            <use href="./assets/icons/sprite.svg#cross"></use>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="archive">
+            <section class="hero">
+                <div class="hero__bg">
+                    <div class="hero__info">
+                        <a href="./" class="hero__go-home">
+                            <svg class="hero__svg">
+                                <use href="./assets/icons/go-home/sprite.svg#go-home__arrow"></use>
+                            </svg>
+                            <span>на главную</span>
+                        </a>
+                        <div class="hero__info-content">
+                            <div class="hero__info-subtitle">
+                                <h2>Известия Саратовского университета. Новая серия. «Прикладная нелинейная динамика»
+                                </h2>
+                            </div>
+                            <div class="hero__info-title">
+                                <h1>Архив выпусков</h1>
+                            </div>
+                            <div class="hero__info-button">
+                                <div class="btn btn--gray hero__info-button--small">
+                                    <svg class="svg svg--dark">
+                                        <use href="./assets/icons/archive/sprite.svg#hero-arrow"></use>
+                                    </svg>
+                                    <span>все выпуски</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <div class="pagination">
+                        <div class="pagination-wrap">
+                            <svg class="pagination-arrow">
+                                <use href="./assets/icons/archive/sprite.svg#pagination-arrow--left"></use>
+                            </svg>
+                            <ul class="pagination-list">
+                                <li class="pagination-item active">2025</li>
+                                <li class="pagination-item">2024</li>
+                                <li class="pagination-item">2023</li>
+                                <li class="pagination-item">2022</li>
+                                <li class="pagination-item">2021</li>
+                            </ul>
+                            <svg class="pagination-arrow active">
+                                <use href="./assets/icons/archive/sprite.svg#pagination-arrow--right"></use>
+                            </svg>
+                        </div>
+                        <div class="pagination-selector">
+                            <div class="selector__label">Выбрать год:</div>
+                            <div class="selector-wrap">
+                                <div class="selector__box">
+                                    <span class="selector__value">2025</span>
+                                    <div class="selector__arrow"></div>
+                                </div>
+                                <div class="selector__dropdown">
+                                    <ul class="selector__dropdown-list">
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2024">2024</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2023">2023</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2022">2022</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2021">2021</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2020">2020</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2019">2019</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2018">2018</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2017">2017</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2016">2016</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2015">2015</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2014">2014</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2013">2013</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2012">2012</button>
+                                        </li>
+                                        <li class="selector__dropdown-item">
+                                            <button type="button" class="selector__dropdown-button"
+                                                data-year="2011">2011</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="title--big">2025</div>
+                    <div class="cards">
+                        <div class="card" data-bg-icon="icon-1.png">
+                            <a href="/" class="card__content">
+                                <div class="card__header">
+                                    <div class="title">выпуск 01-02</div>
+                                    <div class="subtitle">т.33/2025</div>
+                                </div>
+                                <div class="card__footer">
+                                    <div class="text">читать</div>
+                                    <svg class="svg svg--main svg--small">
+                                        <use href="./assets/icons/archive/sprite.svg#right-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="/" class="download-svg__wrap">
+                                <div class="download-svg">
+                                    <svg class="download-svg--arrow">
+                                        <use href="./assets/icons/archive/sprite.svg#download-arrow"></use>
+                                    </svg>
+                                    <svg class="download-svg--line">
+                                        <use href="./assets/icons/archive/sprite.svg#download-line"></use>
+                                    </svg>
+                                    <svg class="download-svg--pdf">
+                                        <use href="./assets/icons/archive/sprite.svg#download-pdf"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card" data-bg-icon="icon-2.png">
+                            <a href="/" class="card__content">
+                                <div class="card__header">
+                                    <div class="title">выпуск 02</div>
+                                    <div class="subtitle">т.33/2025</div>
+                                </div>
+                                <div class="card__footer">
+                                    <div class="text">читать</div>
+                                    <svg class="svg svg--main svg--small">
+                                        <use href="./assets/icons/archive/sprite.svg#right-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="/" class="download-svg__wrap">
+                                <div class="download-svg">
+                                    <svg class="download-svg--arrow">
+                                        <use href="./assets/icons/archive/sprite.svg#download-arrow"></use>
+                                    </svg>
+                                    <svg class="download-svg--line">
+                                        <use href="./assets/icons/archive/sprite.svg#download-line"></use>
+                                    </svg>
+                                    <svg class="download-svg--pdf">
+                                        <use href="./assets/icons/archive/sprite.svg#download-pdf"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card" data-bg-icon="icon-3.png">
+                            <a href="/" class="card__content">
+                                <div class="card__header">
+                                    <div class="title">выпуск 03</div>
+                                    <div class="subtitle">т.33/2025</div>
+                                </div>
+                                <div class="card__footer">
+                                    <div class="text">читать</div>
+                                    <svg class="svg svg--main svg--small">
+                                        <use href="./assets/icons/archive/sprite.svg#right-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="/" class="download-svg__wrap">
+                                <div class="download-svg">
+                                    <svg class="download-svg--arrow">
+                                        <use href="./assets/icons/archive/sprite.svg#download-arrow"></use>
+                                    </svg>
+                                    <svg class="download-svg--line">
+                                        <use href="./assets/icons/archive/sprite.svg#download-line"></use>
+                                    </svg>
+                                    <svg class="download-svg--pdf">
+                                        <use href="./assets/icons/archive/sprite.svg#download-pdf"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card" data-bg-icon="icon-4.png">
+                            <a href="/" class="card__content">
+                                <div class="card__header">
+                                    <div class="title">выпуск 04</div>
+                                    <div class="subtitle">т.33/2025</div>
+                                </div>
+                                <div class="card__footer">
+                                    <div class="text">читать</div>
+                                    <svg class="svg svg--main svg--small">
+                                        <use href="./assets/icons/archive/sprite.svg#right-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="/" class="download-svg__wrap">
+                                <div class="download-svg">
+                                    <svg class="download-svg--arrow">
+                                        <use href="./assets/icons/archive/sprite.svg#download-arrow"></use>
+                                    </svg>
+                                    <svg class="download-svg--line">
+                                        <use href="./assets/icons/archive/sprite.svg#download-line"></use>
+                                    </svg>
+                                    <svg class="download-svg--pdf">
+                                        <use href="./assets/icons/archive/sprite.svg#download-pdf"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card" data-bg-icon="icon-5.png">
+                            <a href="/" class="card__content">
+                                <div class="card__header">
+                                    <div class="title">выпуск 05</div>
+                                    <div class="subtitle">т.33/2025</div>
+                                </div>
+                                <div class="card__footer">
+                                    <div class="text">читать</div>
+                                    <svg class="svg svg--main svg--small">
+                                        <use href="./assets/icons/archive/sprite.svg#right-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="/" class="download-svg__wrap">
+                                <div class="download-svg">
+                                    <svg class="download-svg--arrow">
+                                        <use href="./assets/icons/archive/sprite.svg#download-arrow"></use>
+                                    </svg>
+                                    <svg class="download-svg--line">
+                                        <use href="./assets/icons/archive/sprite.svg#download-line"></use>
+                                    </svg>
+                                    <svg class="download-svg--pdf">
+                                        <use href="./assets/icons/archive/sprite.svg#download-pdf"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card" data-bg-icon="icon-6.png">
+                            <a href="/" class="card__content">
+                                <div class="card__header">
+                                    <div class="title">выпуск 06</div>
+                                    <div class="subtitle">т.33/2025</div>
+                                </div>
+                                <div class="card__footer">
+                                    <div class="text">читать</div>
+                                    <svg class="svg svg--main svg--small">
+                                        <use href="./assets/icons/archive/sprite.svg#right-arrow"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="/" class="download-svg__wrap">
+                                <div class="download-svg">
+                                    <svg class="download-svg--arrow">
+                                        <use href="./assets/icons/archive/sprite.svg#download-arrow"></use>
+                                    </svg>
+                                    <svg class="download-svg--line">
+                                        <use href="./assets/icons/archive/sprite.svg#download-line"></use>
+                                    </svg>
+                                    <svg class="download-svg--pdf">
+                                        <use href="./assets/icons/archive/sprite.svg#download-pdf"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__info">
+                <p class="footer__text">© 2013-2026 Дизайн и программное обеспечение сайта. ФГБОУ ВО «Саратовский
+                    национальный исследовательский государственный университет имени Н.Г. Чернышевского»</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/pagination-selector.js"></script>
+</body>
+
+</html>

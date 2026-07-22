@@ -1,0 +1,57 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: v.$gap-sm;
+
+    &-item {
+        display: flex;
+        align-items: center;
+
+        &__header {
+            display: flex;
+            gap: .5rem;
+        }
+
+        &__footer {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &--point {
+            padding-left: 5.5rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                top: 1rem;
+                left: 2.3rem;
+                position: absolute;
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background-color: v.$main;
+            }
+        }
+    }
+}
+
+.sources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: hidden;
+    padding-left: 4rem;
+
+    @include m.transition(height);
+
+    li{
+        list-style-type: decimal;
+    }
+
+    @include m.to('sm') {
+        padding-left: 3rem;
+    }
+}

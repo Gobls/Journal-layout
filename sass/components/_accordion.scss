@@ -1,0 +1,76 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.accordion {
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 1.5rem;
+                width: 2rem;
+                height: 0.3rem;
+                background-color: v.$main;
+                border-radius: 0.3rem;
+                @include m.transition(transform);
+            }
+
+            &::after {
+                transform: rotate(90deg);
+            }
+
+            &:has(.accordion-dropdown.open) {
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+
+    &__trigger {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 2.6rem;
+        padding-left: 3.5rem;
+    }
+
+    &-dropdown {
+        padding-left: 3.5rem;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        @include m.transition((opacity, max-height, padding-top));
+
+        &.open {
+            padding-top: 2rem;
+            opacity: 1;
+        }
+
+
+        &__list {
+            &-item {
+                display: flex;
+                gap: v.$gap-sm;
+            }
+        }
+    }
+
+    @include m.to('sm') {
+        &__trigger {
+            font-size: 2rem;
+        }
+    }
+}

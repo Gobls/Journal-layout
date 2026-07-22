@@ -1,0 +1,231 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.archive {
+    .hero {
+        &__bg {
+            background-image: url('../assets/img/background/archive__background.png');
+        }
+
+        &__info {
+            &-title {
+                padding-bottom: 7rem;
+
+                h1 {
+                    font-weight: v.$font-weight-bold;
+                }
+            }
+
+            &-subtitle {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
+    .title {
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        @include m.transition(color);
+    }
+
+    .subtitle {
+        font-weight: v.$font-weight-medium;
+        font-size: 2rem;
+        @include m.transition(color);
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4.7rem 2rem;
+        padding-bottom: 2.7rem;
+    }
+
+    .download-svg {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+    }
+
+    .card {
+        @include m.card-gradient();
+        position: relative;
+        @include m.transition(background);
+        height: 22.5rem;
+        padding: 3.5rem 3rem 4rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 5rem;
+            bottom: -1rem;
+            width: 14.7rem;
+            height: 21.4rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 1;
+            pointer-events: none;
+            transform: rotate(-15deg);
+            border-radius: 1.5rem;
+            @include m.transition(transform);
+        }
+
+        &[data-bg-icon="icon-1.png"]::before {
+            background-image: url('../assets/icons/archive/bg-image/icon-1.png');
+        }
+
+        &[data-bg-icon="icon-2.png"]::before {
+            background-image: url('../assets/icons/archive/bg-image/icon-2.png');
+        }
+
+        &[data-bg-icon="icon-3.png"]::before {
+            background-image: url('../assets/icons/archive/bg-image/icon-3.png');
+        }
+
+        &[data-bg-icon="icon-4.png"]::before {
+            background-image: url('../assets/icons/archive/bg-image/icon-4.png');
+        }
+
+        &[data-bg-icon="icon-5.png"]::before {
+            background-image: url('../assets/icons/archive/bg-image/icon-5.png');
+        }
+
+        &[data-bg-icon="icon-6.png"]::before {
+            background-image: url('../assets/icons/archive/bg-image/icon-6.png');
+        }
+
+        &__content {
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        &__header {
+            display: flex;
+            flex-direction: column;
+            gap: v.$gap-sm;
+        }
+
+        &__footer {
+            gap: v.$gap-md;
+            align-items: center;
+
+            .text {
+                font-weight: v.$font-weight-bold;
+                font-size: 2rem;
+                color: v.$main;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media (hover: hover) {
+        .card:hover {
+            background: v.$main;
+
+            &::before {
+                transform: rotate(15deg);
+            }
+
+            .text,
+            .title,
+            .subtitle {
+                color: v.$white;
+            }
+
+            .svg--main {
+                stroke: v.$white;
+            }
+
+            .download-svg {
+                background-color: v.$white;
+
+                &--line {
+                    stroke: v.$main;
+                }
+
+                &--arrow {
+                    stroke: v.$main;
+                }
+
+                &--pdf {
+                    fill: v.$main;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+
+                    .download-svg--arrow {
+                        animation: bounceArrow 1s ease infinite;
+                    }
+                }
+            }
+        }
+
+        .hero{
+            .btn:hover{
+                .svg{
+                    animation: bounceArrow 1s ease infinite;
+                }
+            }
+        }
+    }
+
+    @include m.to('sm') {
+        .hero {
+            &__bg {
+                height: 76rem;
+            }
+
+            &__info {
+                padding-bottom: 8rem;
+
+                &-title{
+                    padding-bottom: 3rem;
+                }
+
+                &-button{
+                    &--small{
+                        width: 30.7rem;
+                    }
+                }
+            }
+        }
+
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .card{
+            &:before{
+                right: 6rem;
+                bottom: -1.5rem;
+            }
+        }
+
+        .pagination {
+            flex-direction: column;
+            gap: v.$gap-md;
+            padding-bottom: 6rem;
+
+            &-selector {
+                justify-content: space-between;
+            }
+
+            &-wrap{
+                gap: 4.175rem;
+                padding: 0 2rem;
+            }
+
+            &-list {
+                gap: 4.175rem;
+            }
+
+            &-item {
+
+                &:nth-last-child(1),
+                &:nth-last-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.cards {
+    display: grid;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+
+    &__header {
+        font-weight: v.$font-weight-bold;
+        font-size: 4rem;
+
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: v.$gap-sm;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__footer {
+        display: flex;
+    }
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: v.$gap-lg;
+    }
+
+    @include m.to('sm') {
+        &__header {
+            font-size: 3rem;
+        }
+
+        &-wrap {
+            gap: v.$gap-md;
+        }
+    }
+}

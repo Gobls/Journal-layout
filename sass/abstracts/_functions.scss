@@ -1,0 +1,23 @@
+@keyframes bounceArrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.3rem);
+    }
+}
+
+@keyframes bounceLinkArrow {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0.3rem, -0.3rem);
+    }
+}

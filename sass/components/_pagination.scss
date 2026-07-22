@@ -1,0 +1,204 @@
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixins' as m;
+
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5rem;
+
+    &-selector {
+        display: flex;
+        align-items: center;
+    }
+
+    &-wrap {
+        padding: 0 3.7rem;
+        border-radius: 1.5rem;
+        background-color: v.$pagination-bg;
+        display: flex;
+        gap: 5.35rem;
+        align-items: center;
+        height: 6rem;
+    }
+
+    &-list {
+        display: flex;
+        gap: 6rem;
+    }
+
+    &-item {
+        font-weight: v.$font-weight-bold;
+        font-size: 2.6rem;
+
+        &.active {
+            color: v.$main;
+        }
+    }
+
+    &-arrow {
+        width: 2.4rem;
+        height: 2.4rem;
+        stroke: v.$dark;
+
+        &.active {
+            stroke: v.$main;
+        }
+    }
+}
+
+.selector {
+    &__label {
+        font-weight: v.$font-weight-regular;
+        font-size: 2.6rem;
+        padding-right: 2rem;
+    }
+
+    &__value {
+        font-weight: v.$font-weight-bold;
+        font-size: 2.6rem;
+        @include m.transition(color);
+    }
+
+    &-wrap {
+        position: relative;
+        width: 18rem;
+        z-index: 10;
+        cursor: pointer;
+
+        &.open {
+            .selector__box {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+
+                @include m.transition(border-radius);
+            }
+
+            .selector__value {
+                color: v.$main;
+            }
+
+            .selector__arrow {
+                transform: rotate(180deg);
+            }
+
+            .selector__dropdown {
+                max-height: 35rem;
+                border-width: .2rem;
+            }
+        }
+    }
+
+    &__box {
+        padding: 1.2rem 2rem;
+        border: .2rem solid v.$gray;
+        border-radius: 1.5rem;
+        background: v.$white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include m.transition(border-radius);
+    }
+
+    &__arrow {
+        width: 0;
+        height: 0;
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        border-top: 1.5rem solid v.$main;
+        @include m.transition(transform);
+    }
+
+    &__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: v.$white;
+        border-radius: 0 0 1.5rem 1.5rem;
+        margin-top: -.2rem;
+        border: 0 solid v.$gray;
+        border-top: none;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            border-width 0.2s ease-out;
+
+        &-button {
+            font-weight: v.$font-weight-bold;
+            font-size: 2.6rem;
+            cursor: pointer;
+            @include m.transition(color);
+            padding: .2rem;
+        }
+
+        &-item {
+            padding-left: 2rem;
+        }
+
+        &-list {
+            max-height: 34rem;
+            overflow-y: auto;
+            display: flex;
+            gap: .6rem;
+            flex-direction: column;
+            padding-bottom: 1rem;
+
+            &::-webkit-scrollbar {
+                width: 1rem;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: v.$gray;
+                border-radius: 1.5rem;
+                margin-bottom: 1.4rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: v.$main;
+                border-radius: 1.5rem;
+                cursor: pointer;
+                @include m.transition(background);
+
+                &:active {
+                    background: v.$main-hover;
+                }
+            }
+        }
+    }
+
+    @media (hover: hover) {
+        &__dropdown {
+            &-button:hover {
+                color: v.$main;
+            }
+
+            &-list {
+                &::-webkit-scrollbar-thumb {
+                    &:hover {
+                        background: v.$main-hover;
+                    }
+                }
+            }
+        }
+
+        &__arrow {
+            &:hover {
+                border-top: 1.5rem solid v.$main-hover;
+            }
+        }
+    }
+
+    @include m.to('sm') {
+        &__label {
+            padding-right: 0;
+            font-size: 2rem;
+        }
+
+        &-wrap {
+            width: 21.5rem;
+        }
+    }
+}
